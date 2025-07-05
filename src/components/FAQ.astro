@@ -1,0 +1,115 @@
+---
+import FAQSchema from './FAQSchema.astro';
+
+interface Props {
+  questions: Array<{
+    question: string;
+    answer: string;
+  }>;
+  title?: string;
+  subtitle?: string;
+}
+
+const { questions, title = "Häufig gestellte Fragen", subtitle = "Antworten auf die wichtigsten Fragen rund um die professionelle Gebäudereinigung" } = Astro.props;
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">{title}</h2>
+      <p class="text-xl text-jonas-gray max-w-3xl mx-auto">{subtitle}</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      {questions.map((faq, index) => (
+        <div class="faq-item bg-jonas-light-gray rounded-xl mb-4 overflow-hidden shadow-soft hover:shadow-medium transition-all duration-300">
+          <button 
+            class="faq-button w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white transition-all duration-300 group"
+            data-faq={index}
+            aria-expanded="false"
+            aria-controls={`faq-content-${index}`}
+          >
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors duration-300 pr-4">
+              {faq.question}
+            </h3>
+            <div class="faq-icon flex-shrink-0 w-8 h-8 bg-jonas-blue rounded-full flex items-center justify-center transform transition-all duration-300 group-hover:bg-jonas-accent group-hover:scale-110">
+              <svg class="w-4 h-4 text-white transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out" id={`faq-content-${index}`}>
+            <div class="px-8 pb-6">
+              <p class="text-jonas-gray leading-relaxed">{faq.answer}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  
+  <FAQSchema questions={questions} />
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqButtons = document.querySelectorAll('.faq-button');
+    
+    faqButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const faqItem = this.closest('.faq-item');
+        const content = faqItem.querySelector('.faq-content');
+        const icon = this.querySelector('.faq-icon svg');
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        
+        // Update ARIA attributes
+        this.setAttribute('aria-expanded', !isOpen);
+        
+        // Close all other FAQ items
+        faqButtons.forEach(otherButton => {
+          if (otherButton !== button) {
+            const otherItem = otherButton.closest('.faq-item');
+            const otherContent = otherItem.querySelector('.faq-content');
+            const otherIcon = otherButton.querySelector('.faq-icon svg');
+            
+            otherContent.style.maxHeight = '0px';
+            otherIcon.style.transform = 'rotate(0deg)';
+            otherItem.classList.remove('faq-open');
+            otherButton.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Toggle current FAQ item
+        if (isOpen) {
+          content.style.maxHeight = '0px';
+          icon.style.transform = 'rotate(0deg)';
+          faqItem.classList.remove('faq-open');
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+          faqItem.classList.add('faq-open');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-open {
+    @apply bg-white shadow-medium;
+  }
+  
+  .faq-open .faq-button {
+    @apply bg-white;
+  }
+  
+  @media (max-width: 768px) {
+    .faq-button {
+      @apply px-6 py-5;
+    }
+    
+    .faq-content {
+      @apply px-6;
+    }
+  }
+</style>

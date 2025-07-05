@@ -1,0 +1,315 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+
+const faqCategories = [
+  {
+    name: "Allgemein",
+    questions: [
+      {
+        question: "Wie kann ich ein Angebot für Reinigungsdienstleistungen in Oldenburg anfordern?",
+        answer: "Sie können ganz einfach über unser Kontaktformular, per E-Mail oder telefonisch ein kostenloses und unverbindliches Angebot anfordern. Wir vereinbaren dann einen Termin zur Besichtigung Ihrer Räumlichkeiten in Oldenburg, um Ihnen ein maßgeschneidertes Angebot erstellen zu können."
+      },
+      {
+        question: "In welchem Umkreis um Oldenburg sind Sie tätig?",
+        answer: "Wir sind in ganz Oldenburg und im Umkreis von ca. 50 km tätig. Dazu gehören unter anderem Delmenhorst, Wardenburg, Rastede, Bad Zwischenahn, Westerstede und Brake. Für größere Entfernungen sprechen Sie uns gerne an."
+      },
+      {
+        question: "Arbeiten Sie auch an Wochenenden und Feiertagen?",
+        answer: "Ja, wir bieten flexible Reinigungszeiten an, auch an Wochenenden und Feiertagen. Besonders für Geschäfts- und Büroräume in Oldenburg ist dies oft die beste Lösung, um den laufenden Betrieb nicht zu stören."
+      },
+      {
+        question: "Sind Ihre Mitarbeiter versichert?",
+        answer: "Ja, alle unsere Mitarbeiter sind umfassend versichert. Wir verfügen über eine Betriebshaftpflichtversicherung, eine Schlüsselversicherung sowie alle weiteren notwendigen Versicherungen für ein professionelles Reinigungsunternehmen."
+      },
+      {
+        question: "Wie lange dauert es, bis Sie nach einer Anfrage in Oldenburg beginnen können?",
+        answer: "Nach einer Anfrage und Besichtigung können wir in der Regel innerhalb von 3-7 Werktagen mit der Reinigung beginnen. Bei Notfällen oder dringenden Anfragen sind wir auch kurzfristiger verfügbar."
+      }
+    ]
+  },
+  {
+    name: "Büroreinigung",
+    questions: [
+      {
+        question: "Wie oft sollte eine Büroreinigung in Oldenburg durchgeführt werden?",
+        answer: "Die optimale Häufigkeit hängt von verschiedenen Faktoren ab, wie Größe des Büros, Anzahl der Mitarbeiter und Kundenverkehr. Für die meisten Büros in Oldenburg empfehlen wir eine tägliche oder mindestens 2-3 mal wöchentliche Reinigung der Sanitärbereiche und Böden, sowie eine wöchentliche Reinigung von Oberflächen, Fenstern und anderen Bereichen."
+      },
+      {
+        question: "Können Sie auch außerhalb unserer Geschäftszeiten reinigen?",
+        answer: "Ja, wir passen uns Ihren Betriebszeiten an. Die meisten unserer Kunden in Oldenburg bevorzugen eine Reinigung außerhalb der Geschäftszeiten, um den Arbeitsablauf nicht zu stören. Wir reinigen früh morgens, abends oder am Wochenende, ganz nach Ihren Wünschen."
+      },
+      {
+        question: "Was ist in der Büroreinigung alles enthalten?",
+        answer: "Unsere Standardleistungen umfassen die Reinigung von Böden, Oberflächen, Sanitäranlagen, Küchen/Pausenräumen und Eingangsbereichen. Zusätzlich bieten wir Leistungen wie Fensterreinigung, Teppichreinigung, IT-Gerätereinigung und mehr an. Wir erstellen für Sie ein individuelles Leistungspaket nach Ihren Bedürfnissen."
+      },
+      {
+        question: "Bringen Sie eigene Reinigungsmittel und -geräte mit?",
+        answer: "Ja, wir bringen alle notwendigen professionellen Reinigungsmittel und -geräte mit. Wir verwenden ausschließlich hochwertige, umweltfreundliche Produkte, die speziell für die jeweiligen Oberflächen und Materialien geeignet sind."
+      },
+      {
+        question: "Wie werden vertrauliche Dokumente behandelt?",
+        answer: "Diskretion ist für uns selbstverständlich. Unsere Mitarbeiter sind geschult, keine Dokumente zu verschieben oder einzusehen. Wir respektieren die Vertraulichkeit Ihrer Geschäftsunterlagen und sorgen dafür, dass alles an seinem Platz bleibt."
+      }
+    ]
+  },
+  {
+    name: "Glasreinigung",
+    questions: [
+      {
+        question: "Wie oft sollten Fenster und Glasflächen in Oldenburg gereinigt werden?",
+        answer: "Die optimale Häufigkeit hängt von der Lage und Nutzung ab. In Oldenburg empfehlen wir für Schaufenster eine wöchentliche, für Bürofenster eine monatliche und für Privatfenster eine 2-4 mal jährliche Reinigung. Durch die Nähe zur Nordsee und die oft feuchte Witterung in Oldenburg kann sich Schmutz schneller auf Glasflächen absetzen."
+      },
+      {
+        question: "Reinigen Sie auch schwer zugängliche Fenster und Glasfassaden in Oldenburg?",
+        answer: "Ja, wir verfügen über spezielle Ausrüstung wie Teleskopstangen, Leitern und bei Bedarf auch Hubarbeitsbühnen, um auch schwer zugängliche Fenster und Glasfassaden in Oldenburg sicher und gründlich zu reinigen."
+      },
+      {
+        question: "Welche Methode verwenden Sie für streifenfreie Fenster?",
+        answer: "Wir setzen auf die Kombination aus professionellen Glasreinigern, hochwertigen Abziehern und Mikrofasertüchern. Für besonders anspruchsvolle Objekte in Oldenburg verwenden wir die Reinwasser-Methode mit entmineralisiertem Wasser, die besonders streifenfreie Ergebnisse liefert."
+      },
+      {
+        question: "Können Sie auch bei schlechtem Wetter Fenster reinigen?",
+        answer: "Bei leichtem Regen können wir arbeiten, da die Fenster ohnehin nass werden. Bei starkem Regen, Sturm oder Frost verschieben wir den Termin aus Sicherheitsgründen und für optimale Ergebnisse. In Oldenburg stimmen wir uns mit Ihnen ab und behalten die Wettervorhersage im Auge."
+      },
+      {
+        question: "Reinigen Sie auch Jalousien, Rollos und Rahmen?",
+        answer: "Ja, wir bieten eine umfassende Reinigung an, die neben den Glasflächen auch Rahmen, Dichtungen, Jalousien, Rollos und andere Beschattungssysteme umfasst. So erhalten Sie ein rundum sauberes Ergebnis."
+      }
+    ]
+  },
+  {
+    name: "Grundreinigung",
+    questions: [
+      {
+        question: "Was ist der Unterschied zwischen Grund- und Unterhaltsreinigung?",
+        answer: "Die Grundreinigung ist eine intensive, einmalige Tiefenreinigung, während die Unterhaltsreinigung regelmäßig durchgeführt wird. Die Grundreinigung bereitet Räume für den Erstbezug vor oder beseitigt starke Verschmutzungen nach Bauarbeiten oder Renovierungen."
+      },
+      {
+        question: "Wie lange dauert eine Grundreinigung in Oldenburg?",
+        answer: "Die Dauer hängt von der Objektgröße und dem Verschmutzungsgrad ab. Eine normale Büroetage (200m²) in Oldenburg benötigt etwa 1-2 Tage, während eine Baustellenreinigung 3-5 Tage dauern kann."
+      },
+      {
+        question: "Was kostet eine Grundreinigung in Oldenburg?",
+        answer: "Die Kosten variieren je nach Objektgröße, Verschmutzungsgrad und Aufwand. Grundsätzlich rechnen Sie in Oldenburg mit 8-15€ pro m². Gerne erstellen wir Ihnen ein kostenloses, individuelles Angebot für Ihre Immobilie in Oldenburg."
+      },
+      {
+        question: "Welche Leistungen sind in einer Grundreinigung enthalten?",
+        answer: "Eine Grundreinigung umfasst typischerweise die intensive Reinigung aller Oberflächen, Böden, Wände, Decken, Fenster, Sanitäranlagen, Küchen und schwer zugänglicher Bereiche. Je nach Bedarf kommen spezielle Verfahren wie Teppichreinigung, Polsterreinigung oder Fassadenreinigung hinzu."
+      },
+      {
+        question: "Wann ist eine Grundreinigung notwendig?",
+        answer: "Eine Grundreinigung ist sinnvoll nach Bauarbeiten oder Renovierungen, vor dem Einzug in neue Räumlichkeiten, bei Mieterwechsel, nach besonderen Ereignissen wie Wasserschäden oder einfach, wenn die reguläre Unterhaltsreinigung nicht mehr ausreicht, um hartnäckige Verschmutzungen zu beseitigen."
+      }
+    ]
+  },
+  {
+    name: "Preise & Verträge",
+    questions: [
+      {
+        question: "Wie berechnen Sie Ihre Preise für Reinigungsdienstleistungen in Oldenburg?",
+        answer: "Unsere Preise basieren auf verschiedenen Faktoren wie Objektgröße, Reinigungsumfang, Häufigkeit, Verschmutzungsgrad und besonderen Anforderungen. Wir erstellen individuelle Angebote nach einer kostenlosen Besichtigung Ihrer Räumlichkeiten in Oldenburg."
+      },
+      {
+        question: "Gibt es Mindestlaufzeiten für Reinigungsverträge?",
+        answer: "Für regelmäßige Reinigungsdienstleistungen bieten wir flexible Vertragslaufzeiten an. Typischerweise beginnen wir mit einer Mindestlaufzeit von 3-6 Monaten, um eine optimale Einarbeitung zu gewährleisten. Danach sind kürzere Kündigungsfristen möglich."
+      },
+      {
+        question: "Bieten Sie Sonderkonditionen für Langzeitverträge an?",
+        answer: "Ja, für längerfristige Verträge bieten wir attraktive Konditionen an. Je nach Vertragslaufzeit und Umfang der Reinigungsleistungen können wir Ihnen Preisnachlässe von 5-15% gewähren."
+      },
+      {
+        question: "Wie werden zusätzliche Leistungen abgerechnet?",
+        answer: "Zusätzliche Leistungen außerhalb des vereinbarten Leistungsumfangs werden separat nach Aufwand oder zu festgelegten Pauschalen abgerechnet. Wir besprechen dies immer vorher mit Ihnen, sodass keine unerwarteten Kosten entstehen."
+      },
+      {
+        question: "Kann ich den Reinigungsumfang während der Vertragslaufzeit anpassen?",
+        answer: "Ja, wir bieten flexible Lösungen. Der Reinigungsumfang kann während der Vertragslaufzeit an veränderte Bedürfnisse angepasst werden. Sprechen Sie einfach mit Ihrem persönlichen Ansprechpartner."
+      }
+    ]
+  }
+];
+---
+
+<Layout 
+  title="FAQ - Häufig gestellte Fragen | Jonas Gebäudereinigung Oldenburg"
+  description="Antworten auf häufig gestellte Fragen zur Gebäudereinigung in Oldenburg ✓ Büroreinigung ✓ Glasreinigung ✓ Grundreinigung ✓ Preise ✓ Verträge"
+  keywords="FAQ Gebäudereinigung, Fragen Reinigungsfirma, Gebäudereinigung Oldenburg Fragen, Reinigungsservice Informationen"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue via-jonas-dark-blue to-black text-white py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-20 h-20 bg-jonas-accent rounded-full opacity-20 animate-bounce"></div>
+      <div class="absolute top-40 right-20 w-16 h-16 bg-white rounded-lg opacity-10 animate-spin"></div>
+      <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-jonas-accent rounded-full opacity-15 animate-ping"></div>
+    </div>
+    
+    <div class="relative container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Häufig gestellte <span class="text-jonas-accent animate-pulse">Fragen</span>
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8 opacity-90">
+          Antworten auf Ihre Fragen rund um unsere Reinigungsdienstleistungen in Oldenburg
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#faq-categories" class="group bg-jonas-accent text-jonas-dark-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-pulse">Zu den Fragen</span>
+          </a>
+          <a href="/kontakt" class="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-jonas-blue transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-bounce">Frage stellen</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Categories -->
+  <section id="faq-categories" class="py-12 bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button class="faq-category-btn active px-6 py-3 rounded-full border-2 border-jonas-blue bg-jonas-blue text-white font-semibold transition-all duration-300" data-category="all">
+          Alle Fragen
+        </button>
+        {faqCategories.map(category => (
+          <button class="faq-category-btn px-6 py-3 rounded-full border-2 border-jonas-blue text-jonas-blue hover:bg-jonas-blue hover:text-white font-semibold transition-all duration-300" data-category={category.name.toLowerCase()}>
+            {category.name}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        {faqCategories.map((category, index) => (
+          <div class="faq-category mb-16" data-category={category.name.toLowerCase()}>
+            <h2 class="text-3xl font-bold text-jonas-dark-blue mb-8">{category.name}</h2>
+            <div class="space-y-4">
+              {category.questions.map((faq, faqIndex) => (
+                <div class="faq-item bg-white rounded-xl overflow-hidden shadow-lg">
+                  <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300 focus:outline-none" data-faq={`${index}-${faqIndex}`}>
+                    <h3 class="text-lg font-bold text-jonas-dark-blue pr-4">
+                      {faq.question}
+                    </h3>
+                    <div class="faq-icon flex-shrink-0 w-8 h-8 bg-jonas-blue rounded-full flex items-center justify-center transform transition-all duration-300">
+                      <svg class="w-4 h-4 text-white transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <div class="px-8 pb-6">
+                      <p class="text-jonas-gray">{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Have Questions -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Noch Fragen?</h2>
+        <p class="text-xl text-jonas-gray mb-8">
+          Wenn Sie Ihre Frage hier nicht finden, kontaktieren Sie uns gerne direkt. Wir helfen Ihnen gerne weiter!
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/kontakt">
+            Kontakt aufnehmen
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // FAQ Accordion functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', function() {
+        const answer = this.nextElementSibling;
+        const icon = this.querySelector('.faq-icon svg');
+        
+        // Check if this FAQ is already open
+        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+        
+        // Close all FAQs
+        faqQuestions.forEach(q => {
+          const a = q.nextElementSibling;
+          const i = q.querySelector('.faq-icon svg');
+          
+          if (a !== answer) {
+            a.style.maxHeight = '0px';
+            i.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current FAQ
+        if (isOpen) {
+          answer.style.maxHeight = '0px';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+    
+    // Category filter functionality
+    const categoryButtons = document.querySelectorAll('.faq-category-btn');
+    const faqCategories = document.querySelectorAll('.faq-category');
+    
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const category = this.dataset.category;
+        
+        // Update active button
+        categoryButtons.forEach(btn => {
+          btn.classList.remove('active', 'bg-jonas-blue', 'text-white');
+          btn.classList.add('text-jonas-blue');
+        });
+        this.classList.add('active', 'bg-jonas-blue', 'text-white');
+        this.classList.remove('text-jonas-blue');
+        
+        // Show/hide categories
+        if (category === 'all') {
+          faqCategories.forEach(cat => {
+            cat.style.display = 'block';
+          });
+        } else {
+          faqCategories.forEach(cat => {
+            if (cat.dataset.category === category) {
+              cat.style.display = 'block';
+            } else {
+              cat.style.display = 'none';
+            }
+          });
+        }
+      });
+    });
+  });
+</script>

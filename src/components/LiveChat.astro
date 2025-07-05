@@ -1,0 +1,148 @@
+---
+---
+
+<div id="live-chat" class="fixed bottom-6 right-6 z-50">
+  <!-- Chat Button -->
+  <button id="chat-button" class="bg-jonas-blue text-white w-16 h-16 rounded-full shadow-strong flex items-center justify-center hover:bg-jonas-dark-blue transition-all duration-300 transform hover:scale-110">
+    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+    </svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div id="chat-window" class="hidden absolute bottom-20 right-0 w-80 md:w-96 bg-white rounded-xl shadow-strong overflow-hidden">
+    <!-- Chat Header -->
+    <div class="bg-jonas-blue text-white p-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-jonas-blue font-bold mr-3">
+            JG
+          </div>
+          <div>
+            <h3 class="font-bold">Jonas Gebäudereinigung</h3>
+            <p class="text-xs opacity-80">Wir sind für Sie da!</p>
+          </div>
+        </div>
+        <button id="close-chat" class="text-white hover:text-jonas-accent transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Chat Messages -->
+    <div id="chat-messages" class="p-4 h-80 overflow-y-auto bg-gray-50">
+      <div class="flex mb-4">
+        <div class="w-8 h-8 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xs mr-2 flex-shrink-0">
+          JG
+        </div>
+        <div class="bg-white p-3 rounded-lg shadow-sm max-w-[80%]">
+          <p class="text-jonas-gray text-sm">Hallo! Wie kann ich Ihnen heute helfen? Benötigen Sie Informationen zu unseren Reinigungsdienstleistungen oder möchten Sie ein Angebot anfordern?</p>
+          <span class="text-xs text-gray-400 mt-1 block">10:30</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Chat Input -->
+    <div class="p-4 border-t border-gray-200">
+      <div class="flex">
+        <input type="text" id="chat-input" placeholder="Ihre Nachricht..." class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-jonas-blue">
+        <button id="send-message" class="bg-jonas-blue text-white px-4 py-2 rounded-r-lg hover:bg-jonas-dark-blue transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const chatButton = document.getElementById('chat-button');
+    const chatWindow = document.getElementById('chat-window');
+    const closeChat = document.getElementById('close-chat');
+    const chatInput = document.getElementById('chat-input');
+    const sendMessage = document.getElementById('send-message');
+    const chatMessages = document.getElementById('chat-messages');
+    
+    // Open chat window
+    chatButton?.addEventListener('click', function() {
+      chatWindow?.classList.toggle('hidden');
+      chatButton.classList.toggle('rotate-45');
+    });
+    
+    // Close chat window
+    closeChat?.addEventListener('click', function() {
+      chatWindow?.classList.add('hidden');
+      chatButton?.classList.remove('rotate-45');
+    });
+    
+    // Send message
+    function sendUserMessage() {
+      const message = chatInput?.value.trim();
+      if (message) {
+        // Add user message
+        const now = new Date();
+        const time = now.getHours() + ':' + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
+        
+        const userMessageHTML = `
+          <div class="flex justify-end mb-4">
+            <div class="bg-jonas-blue text-white p-3 rounded-lg shadow-sm max-w-[80%]">
+              <p class="text-sm">${message}</p>
+              <span class="text-xs text-blue-200 mt-1 block">${time}</span>
+            </div>
+          </div>
+        `;
+        
+        chatMessages.innerHTML += userMessageHTML;
+        chatInput.value = '';
+        
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        // Simulate response after 1 second
+        setTimeout(function() {
+          const responses = [
+            "Vielen Dank für Ihre Nachricht! Ein Mitarbeiter wird sich in Kürze bei Ihnen melden. Alternativ können Sie uns auch telefonisch unter 0441-XXX XXX erreichen.",
+            "Danke für Ihr Interesse! Möchten Sie ein kostenloses Angebot für eine bestimmte Reinigungsdienstleistung erhalten?",
+            "Wir haben Ihre Anfrage erhalten und werden uns umgehend darum kümmern. Können Sie uns bitte Ihre Kontaktdaten mitteilen?",
+            "Vielen Dank! Für eine detaillierte Beratung empfehlen wir ein persönliches Gespräch. Wann passt es Ihnen am besten?"
+          ];
+          
+          const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+          const responseTime = new Date();
+          const responseTimeStr = responseTime.getHours() + ':' + (responseTime.getMinutes() < 10 ? '0' : '') + responseTime.getMinutes();
+          
+          const botMessageHTML = `
+            <div class="flex mb-4">
+              <div class="w-8 h-8 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xs mr-2 flex-shrink-0">
+                JG
+              </div>
+              <div class="bg-white p-3 rounded-lg shadow-sm max-w-[80%]">
+                <p class="text-jonas-gray text-sm">${randomResponse}</p>
+                <span class="text-xs text-gray-400 mt-1 block">${responseTimeStr}</span>
+              </div>
+            </div>
+          `;
+          
+          chatMessages.innerHTML += botMessageHTML;
+          
+          // Scroll to bottom
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1000);
+      }
+    }
+    
+    // Send message on button click
+    sendMessage?.addEventListener('click', sendUserMessage);
+    
+    // Send message on Enter key
+    chatInput?.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendUserMessage();
+      }
+    });
+  });
+</script>

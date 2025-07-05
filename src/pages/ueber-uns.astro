@@ -1,0 +1,420 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Über uns - Jonas Gebäudereinigung Oldenburg | Ihr Partner seit 15 Jahren"
+  description="Lernen Sie Jonas Gebäudereinigung kennen ✓ 15+ Jahre Erfahrung ✓ Familienunternehmen ✓ Zertifizierte Qualität ✓ Über 500 zufriedene Kunden in Oldenburg"
+  keywords="Jonas Gebäudereinigung Oldenburg, Über uns, Familienunternehmen, Erfahrung, Qualität, Team, Werte"
+>
+  <Header />
+  
+  <!-- Hero Section with Parallax -->
+  <section class="relative bg-gradient-to-br from-jonas-blue via-jonas-dark-blue to-black text-white py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <!-- Animated Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="grid grid-cols-8 gap-4 h-full animate-pulse">
+          <div class="bg-white"></div>
+          <div class="bg-yellow-400"></div>
+          <div class="bg-white"></div>
+          <div class="bg-yellow-400"></div>
+          <div class="bg-white"></div>
+          <div class="bg-yellow-400"></div>
+          <div class="bg-white"></div>
+          <div class="bg-yellow-400"></div>
+        </div>
+      </div>
+      <!-- Floating Elements -->
+      <div class="absolute top-20 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-bounce"></div>
+      <div class="absolute top-40 right-20 w-16 h-16 bg-white rounded-lg opacity-10 animate-spin"></div>
+      <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-yellow-400 rounded-full opacity-15 animate-ping"></div>
+    </div>
+    
+    <div class="relative container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="transform transition-all duration-1000 hover:scale-105">
+          <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+            Über <span class="text-yellow-400 animate-pulse">Jonas Gebäudereinigung</span>
+          </h1>
+        </div>
+        <p class="text-xl lg:text-2xl mb-8 opacity-90">
+          Ihr vertrauensvoller Partner für professionelle Gebäudereinigung in Oldenburg seit über 15 Jahren
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/kontakt" class="group bg-yellow-400 text-jonas-dark-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-pulse">Jetzt Kontakt aufnehmen</span>
+          </a>
+          <a href="/referenzen" class="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-jonas-blue transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-bounce">Unsere Referenzen</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Story with Timeline -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Unsere Geschichte</h2>
+          <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+            Von den bescheidenen Anfängen bis zum führenden Reinigungsunternehmen in Oldenburg - Eine Erfolgsgeschichte
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-jonas-blue to-yellow-400"></div>
+          
+          <!-- Timeline Items -->
+          <div class="space-y-16">
+            <!-- 2008 - Gründung -->
+            <div class="group relative flex items-center">
+              <div class="w-1/2 pr-8 text-right">
+                <div class="bg-jonas-light-gray rounded-xl p-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
+                  <h3 class="text-2xl font-bold text-jonas-dark-blue mb-2">2008 - Die Gründung</h3>
+                  <p class="text-jonas-gray">
+                    Jonas Gebäudereinigung wird als Familienunternehmen in Oldenburg gegründet. 
+                    Mit viel Engagement und dem Fokus auf Qualität starten wir mit den ersten Büroreinigungen.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-jonas-blue to-jonas-dark-blue rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300">
+                <span class="text-white font-bold">🏢</span>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+            </div>
+
+            <!-- 2012 - Expansion -->
+            <div class="group relative flex items-center">
+              <div class="w-1/2 pr-8"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300">
+                <span class="text-jonas-dark-blue font-bold">📈</span>
+              </div>
+              <div class="w-1/2 pl-8">
+                <div class="bg-jonas-light-gray rounded-xl p-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
+                  <h3 class="text-2xl font-bold text-jonas-dark-blue mb-2">2012 - Erste Expansion</h3>
+                  <p class="text-jonas-gray">
+                    Aufgrund der hohen Nachfrage erweitern wir unser Team und unsere Dienstleistungen. 
+                    Grundreinigung und Glasreinigung kommen zum Portfolio hinzu.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2016 - Spezialisierung -->
+            <div class="group relative flex items-center">
+              <div class="w-1/2 pr-8 text-right">
+                <div class="bg-jonas-light-gray rounded-xl p-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
+                  <h3 class="text-2xl font-bold text-jonas-dark-blue mb-2">2016 - Spezialisierung</h3>
+                  <p class="text-jonas-gray">
+                    Wir spezialisieren uns auf Industriereinigung und Sonderreinigungen. 
+                    Investitionen in moderne Technik und Schulungen unserer Mitarbeiter.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300">
+                <span class="text-white font-bold">🏭</span>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+            </div>
+
+            <!-- 2020 - Digitalisierung -->
+            <div class="group relative flex items-center">
+              <div class="w-1/2 pr-8"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300">
+                <span class="text-white font-bold">💻</span>
+              </div>
+              <div class="w-1/2 pl-8">
+                <div class="bg-jonas-light-gray rounded-xl p-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
+                  <h3 class="text-2xl font-bold text-jonas-dark-blue mb-2">2020 - Digitalisierung</h3>
+                  <p class="text-jonas-gray">
+                    Einführung digitaler Prozesse und moderner Kommunikationswege. 
+                    Trotz Pandemie bleiben wir für unsere Kunden da.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2024 - Heute -->
+            <div class="group relative flex items-center">
+              <div class="w-1/2 pr-8 text-right">
+                <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white rounded-xl p-6 shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2">
+                  <h3 class="text-2xl font-bold mb-2">2024 - Heute</h3>
+                  <p>
+                    Über 500 zufriedene Kunden, 15+ Jahre Erfahrung und ein starkes Team von 25 Mitarbeitern. 
+                    Wir sind stolz auf unseren Weg und blicken optimistisch in die Zukunft.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-125 transition-transform duration-300 animate-pulse">
+                <span class="text-jonas-dark-blue font-bold">⭐</span>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section with Interactive Cards -->
+  <section class="py-20 bg-gradient-to-br from-jonas-light-gray to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Unsere Werte</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Diese Grundsätze leiten uns täglich und machen uns zu einem vertrauenswürdigen Partner
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Qualität -->
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 cursor-pointer">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+            <svg class="h-8 w-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors">Qualität</h3>
+          <p class="text-jonas-gray group-hover:text-gray-600 transition-colors">
+            Höchste Qualitätsstandards in allen Bereichen - von der Ausführung bis zum Kundenservice. 
+            Wir arbeiten nur mit den besten Materialien und modernster Technik.
+          </p>
+        </div>
+
+        <!-- Zuverlässigkeit -->
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 cursor-pointer">
+          <div class="bg-gradient-to-br from-green-500 to-green-700 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+            <svg class="h-8 w-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-green-600 transition-colors">Zuverlässigkeit</h3>
+          <p class="text-jonas-gray group-hover:text-gray-600 transition-colors">
+            Pünktlichkeit und Verlässlichkeit sind unser Markenzeichen. 
+            Unsere Kunden können sich darauf verlassen, dass wir unsere Versprechen einhalten.
+          </p>
+        </div>
+
+        <!-- Nachhaltigkeit -->
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 cursor-pointer">
+          <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+            <svg class="h-8 w-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-blue-600 transition-colors">Nachhaltigkeit</h3>
+          <p class="text-jonas-gray group-hover:text-gray-600 transition-colors">
+            Umweltfreundliche Reinigungsmittel und nachhaltige Arbeitsweisen zum Schutz unserer Umwelt 
+            und der Gesundheit unserer Kunden.
+          </p>
+        </div>
+
+        <!-- Fairness -->
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 cursor-pointer">
+          <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+            <svg class="h-8 w-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-yellow-600 transition-colors">Faire Preise</h3>
+          <p class="text-jonas-gray group-hover:text-gray-600 transition-colors">
+            Transparente und faire Preisgestaltung ohne versteckte Kosten. 
+            Qualität muss nicht teuer sein - wir bieten das beste Preis-Leistungs-Verhältnis.
+          </p>
+        </div>
+
+        <!-- Innovation -->
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 cursor-pointer">
+          <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+            <svg class="h-8 w-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-purple-600 transition-colors">Innovation</h3>
+          <p class="text-jonas-gray group-hover:text-gray-600 transition-colors">
+            Wir investieren kontinuierlich in neue Technologien und Verfahren, 
+            um unseren Kunden immer die besten Lösungen anbieten zu können.
+          </p>
+        </div>
+
+        <!-- Teamgeist -->
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 cursor-pointer">
+          <div class="bg-gradient-to-br from-red-500 to-red-700 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300">
+            <svg class="h-8 w-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-red-600 transition-colors">Teamgeist</h3>
+          <p class="text-jonas-gray group-hover:text-gray-600 transition-colors">
+            Unser starkes Team ist unser größtes Kapital. 
+            Zusammenhalt, gegenseitiger Respekt und gemeinsame Ziele machen uns erfolgreich.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Unser Team</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          25 engagierte Mitarbeiter sorgen täglich für zufriedene Kunden in Oldenburg und Umgebung
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <!-- Geschäftsführung -->
+        <div class="group text-center transform transition-all duration-500 hover:scale-105">
+          <div class="relative mb-6">
+            <div class="w-32 h-32 bg-gradient-to-br from-jonas-blue to-jonas-dark-blue rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold group-hover:rotate-12 transition-transform duration-300 shadow-lg group-hover:shadow-2xl">
+              JM
+            </div>
+            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+              <span class="text-jonas-dark-blue font-bold text-sm">👑</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-2 group-hover:text-jonas-blue transition-colors">Jonas Müller</h3>
+          <p class="text-jonas-gray mb-4 group-hover:text-gray-600 transition-colors">Geschäftsführer & Gründer</p>
+          <p class="text-sm text-jonas-gray">
+            15+ Jahre Erfahrung in der Gebäudereinigung. 
+            Leidenschaft für Qualität und Kundenzufriedenheit.
+          </p>
+        </div>
+
+        <!-- Betriebsleitung -->
+        <div class="group text-center transform transition-all duration-500 hover:scale-105">
+          <div class="relative mb-6">
+            <div class="w-32 h-32 bg-gradient-to-br from-green-500 to-green-700 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold group-hover:rotate-12 transition-transform duration-300 shadow-lg group-hover:shadow-2xl">
+              SK
+            </div>
+            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+              <span class="text-jonas-dark-blue font-bold text-sm">⚙️</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-2 group-hover:text-green-600 transition-colors">Sandra Klein</h3>
+          <p class="text-jonas-gray mb-4 group-hover:text-gray-600 transition-colors">Betriebsleiterin</p>
+          <p class="text-sm text-jonas-gray">
+            Koordiniert alle Einsätze und sorgt für reibungslose Abläufe. 
+            10 Jahre Erfahrung im Facility Management.
+          </p>
+        </div>
+
+        <!-- Qualitätsmanagement -->
+        <div class="group text-center transform transition-all duration-500 hover:scale-105">
+          <div class="relative mb-6">
+            <div class="w-32 h-32 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full mx-auto flex items-center justify-center text-white text-4xl font-bold group-hover:rotate-12 transition-transform duration-300 shadow-lg group-hover:shadow-2xl">
+              MH
+            </div>
+            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+              <span class="text-jonas-dark-blue font-bold text-sm">✅</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-2 group-hover:text-purple-600 transition-colors">Michael Hoffmann</h3>
+          <p class="text-jonas-gray mb-4 group-hover:text-gray-600 transition-colors">Qualitätsmanager</p>
+          <p class="text-sm text-jonas-gray">
+            Überwacht alle Qualitätsstandards und Zertifizierungen. 
+            Spezialist für Industriereinigung und Sonderverfahren.
+          </p>
+        </div>
+      </div>
+
+      <!-- Team Stats -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div class="text-center group">
+          <div class="text-4xl font-bold text-jonas-blue mb-2 group-hover:scale-110 transition-transform">25</div>
+          <p class="text-jonas-gray">Mitarbeiter</p>
+        </div>
+        <div class="text-center group">
+          <div class="text-4xl font-bold text-jonas-blue mb-2 group-hover:scale-110 transition-transform">15+</div>
+          <p class="text-jonas-gray">Jahre Erfahrung</p>
+        </div>
+        <div class="text-center group">
+          <div class="text-4xl font-bold text-jonas-blue mb-2 group-hover:scale-110 transition-transform">500+</div>
+          <p class="text-jonas-gray">Zufriedene Kunden</p>
+        </div>
+        <div class="text-center group">
+          <div class="text-4xl font-bold text-jonas-blue mb-2 group-hover:scale-110 transition-transform">100%</div>
+          <p class="text-jonas-gray">Kundenzufriedenheit</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-20 bg-gradient-to-br from-jonas-light-gray to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Zertifizierungen & Qualifikationen</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Unsere Qualifikationen und Zertifizierungen garantieren höchste Standards
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-center">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
+            <span class="text-2xl">🏆</span>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">ISO 9001</h3>
+          <p class="text-sm text-jonas-gray">Qualitätsmanagement-System</p>
+        </div>
+
+        <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-center">
+          <div class="bg-gradient-to-br from-green-500 to-green-700 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
+            <span class="text-2xl">🌱</span>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">ISO 14001</h3>
+          <p class="text-sm text-jonas-gray">Umweltmanagement-System</p>
+        </div>
+
+        <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-center">
+          <div class="bg-gradient-to-br from-red-500 to-red-700 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
+            <span class="text-2xl">🛡️</span>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">Arbeitsschutz</h3>
+          <p class="text-sm text-jonas-gray">Zertifizierte Sicherheitsstandards</p>
+        </div>
+
+        <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 text-center">
+          <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300">
+            <span class="text-2xl">📋</span>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">Fachbetrieb</h3>
+          <p class="text-sm text-jonas-gray">Zertifizierter Reinigungsfachbetrieb</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-jonas-blue via-jonas-dark-blue to-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-10 animate-pulse"></div>
+    
+    <div class="relative container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Werden Sie Teil unserer Erfolgsgeschichte</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+        Lassen Sie uns gemeinsam für die Sauberkeit Ihrer Räume sorgen. 
+        Kontaktieren Sie uns für ein unverbindliches Angebot.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/kontakt" class="group bg-yellow-400 text-jonas-dark-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+          <span class="group-hover:animate-pulse">Jetzt Kontakt aufnehmen</span>
+        </a>
+        <a href="tel:+49441XXXXXXX" class="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-jonas-dark-blue transition-all duration-300 transform hover:scale-105">
+          <span class="group-hover:animate-bounce">📞 0441 - XXX XXX</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,132 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const { 
+  title, 
+  description = "Jonas Gebäudereinigung - Professionelle Reinigungsdienstleistungen in Oldenburg", 
+  keywords = "Gebäudereinigung Oldenburg, Büroreinigung, Grundreinigung, Glasreinigung, Unterhaltsreinigung", 
+  canonical,
+  ogImage = "https://jonas-gebaeudereinigung.de/og-image.jpg"
+} = Astro.props;
+
+import LiveChat from '../components/LiveChat.astro';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={Astro.url.href} />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Jonas Gebäudereinigung",
+      "description": "Professionelle Gebäudereinigung in Oldenburg und Umgebung",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alexanderstr. 101 B",
+        "addressLocality": "Oldenburg",
+        "addressRegion": "Niedersachsen",
+        "postalCode": "26121",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49-170-2451868",
+      "url": "https://jonas-gebaeudereinigung.de",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.1434501,
+          "longitude": 8.2145521
+        },
+        "geoRadius": "50000"
+      },
+      "priceRange": "€€",
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "sameAs": [
+        "https://www.facebook.com/jonasgebaeudereinigung",
+        "https://www.instagram.com/jonasgebaeudereinigung"
+      ]
+    }
+    </script>
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Jonas Gebäudereinigung",
+      "description": "Professionelle Gebäudereinigung in Oldenburg und Umgebung",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oldenburg",
+        "addressRegion": "Niedersachsen",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49-441-XXXXXXX",
+      "url": "https://jonas-gebaeudereinigung.de",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.1434501,
+          "longitude": 8.2145521
+        },
+        "geoRadius": "50000"
+      },
+      "priceRange": "€€",
+      "openingHours": "Mo-Fr 08:00-18:00",
+      "sameAs": [
+        "https://www.facebook.com/jonasgebaeudereinigung",
+        "https://www.instagram.com/jonasgebaeudereinigung"
+      ]
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/JONAS FACILITY MANAGEMENT-01.jpg" as="image" />
+    
+    <!-- Preload CSS -->
+    <link rel="preload" href="/styles.css" as="style" />
+  </head>
+  <body class="font-sans">
+    <slot />
+    <LiveChat />
+  </body>
+</html>

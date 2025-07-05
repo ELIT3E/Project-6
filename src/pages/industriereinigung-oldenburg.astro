@@ -1,0 +1,322 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+import PriceCalculator from '../components/PriceCalculator.astro';
+
+const faqData = [
+  {
+    question: "Was unterscheidet Industriereinigung von normaler Gebäudereinigung in Oldenburg?",
+    answer: "Industriereinigung in Oldenburg erfordert spezielle Kenntnisse über Produktionsprozesse, Sicherheitsvorschriften und den Umgang mit industriellen Verschmutzungen wie Ölen, Fetten und Chemikalien. Wir verwenden spezielle Ausrüstung und Verfahren, die auf die Anforderungen der Oldenburger Industriebetriebe zugeschnitten sind."
+  },
+  {
+    question: "Können Sie auch während der Produktion in Oldenburg reinigen?",
+    answer: "Ja, wir können auch während laufender Produktion in Oldenburger Betrieben reinigen, sofern die Sicherheitsbestimmungen eingehalten werden. Wir passen uns Ihren Produktionszeiten an und arbeiten in Abstimmung mit Ihrem Betriebsleiter."
+  },
+  {
+    question: "Welche Industriebetriebe in Oldenburg reinigen Sie?",
+    answer: "Wir reinigen alle Arten von Industriebetrieben in Oldenburg und Umgebung - von Produktionshallen, Maschinenbaubetrieben und Lebensmittelverarbeitern bis hin zu Logistikzentren und Werkstätten."
+  },
+  {
+    question: "Was kostet Industriereinigung in Oldenburg?",
+    answer: "Die Kosten variieren stark je nach Industriezweig, Verschmutzungsgrad und Sicherheitsanforderungen. Für Industriebetriebe in Oldenburg erstellen wir gerne nach einer Besichtigung ein individuelles Angebot."
+  },
+  {
+    question: "Wie schnell können Sie in Oldenburg einen Termin anbieten?",
+    answer: "Für Industriebetriebe in Oldenburg können wir in der Regel innerhalb von 3-7 Tagen einen Termin für die Besichtigung und Angebotserstellung anbieten. Bei Notfällen oder dringenden Anfragen sind wir auch kurzfristiger verfügbar."
+  }
+];
+---
+
+<Layout 
+  title="Industriereinigung Oldenburg - Professionelle Reinigung für Industrie & Produktion | Jonas"
+  description="Professionelle Industriereinigung in Oldenburg ✓ Produktionshallen ✓ Maschinenhallen ✓ Werkstätten ✓ Spezialreinigung ✓ Sicherheitsstandards ✓ Kostenlose Beratung"
+  keywords="Industriereinigung Oldenburg, Produktionshallen reinigen Oldenburg, Maschinenhallen Reinigung Oldenburg, Werkstatt Reinigung Oldenburg, Industrielle Reinigung Oldenburg"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-gray to-gray-900 text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Industriereinigung</span> in Oldenburg
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Spezialisierte Reinigung für Produktionsstätten, Werkshallen und industrielle Anlagen in Oldenburg - Höchste Sicherheits- und Qualitätsstandards
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Kostenlose Beratung für Ihre Industriereinigung in Oldenburg
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Industriereinigung in Oldenburg - Spezialisiert & Sicher</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Industrieanlagen und Produktionsstätten in Oldenburg stellen besondere Anforderungen an die Reinigung. 
+            Öle, Fette, Metallspäne und andere industrielle Verschmutzungen erfordern spezielle Reinigungsverfahren 
+            und -mittel. Unsere erfahrenen Teams sind speziell für diese Herausforderungen geschult und sorgen für 
+            saubere, sichere und effiziente Produktionsumgebungen in Oldenburg.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industrial Areas -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Industrielle Reinigungsbereiche in Oldenburg</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Spezialisierte Reinigungsdienstleistungen für alle Bereiche der industriellen Produktion in Oldenburg
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-gray text-white w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Produktionshallen in Oldenburg</h3>
+          <p class="text-jonas-gray mb-4">
+            Professionelle Reinigung von Produktionsanlagen in Oldenburg unter Berücksichtigung von Betriebsabläufen und Sicherheitsvorschriften.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Produktionslinien</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Fertigungsstraßen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Montagebereiche</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Qualitätskontrolle</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Maschinenhallen in Oldenburg</h3>
+          <p class="text-jonas-gray mb-4">
+            Spezielle Reinigung von Maschinenhallen in Oldenburg mit Fokus auf Öl-, Fett- und Metallspäne-Entfernung.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> CNC-Maschinen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Drehbänke & Fräsen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Pressen & Stanzen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Schweißbereiche</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-accent text-jonas-dark-blue w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Werkstätten in Oldenburg</h3>
+          <p class="text-jonas-gray mb-4">
+            Gründliche Reinigung von Werkstätten und Reparaturbereichen in Oldenburg mit speziellen Entfettungsverfahren.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> KFZ-Werkstätten</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Reparaturbereiche</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Wartungshallen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Prüfstände</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oldenburg Specific Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Industriereinigung in Oldenburg - Lokal & Zuverlässig</h2>
+          <p class="text-xl text-jonas-gray">
+            Als Oldenburger Unternehmen kennen wir die lokalen Gegebenheiten und Anforderungen
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Industriereinigung in Oldenburg" class="rounded-xl shadow-lg">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">Ihr lokaler Industriereinigungsexperte in Oldenburg</h3>
+            <p class="text-jonas-gray mb-6">
+              Als in Oldenburg ansässiges Unternehmen sind wir mit den spezifischen Anforderungen und Besonderheiten der lokalen Industriebetriebe bestens vertraut. Unsere Reinigungsteams sind schnell vor Ort und kennen sich in den Industriegebieten Oldenburgs aus.
+            </p>
+            
+            <h4 class="text-xl font-bold text-jonas-dark-blue mb-3">Wir reinigen in allen Industriegebieten Oldenburgs:</h4>
+            <div class="grid grid-cols-2 gap-2 mb-6">
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Industriegebiet Etzhorn</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Industriegebiet Tweelbäke</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Gewerbegebiet Wechloy</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Gewerbegebiet Dragonerstraße</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Fliegerhorst</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Weitere Standorte</p>
+              </div>
+            </div>
+            
+            <Button variant="secondary" size="lg" href="/kontakt">
+              Kostenlose Beratung vor Ort
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Calculator -->
+  <PriceCalculator title="Industriereinigung Oldenburg - Preisrechner" subtitle="Berechnen Sie die Kosten für Ihre Industriereinigung in Oldenburg" />
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Industriereinigung in Oldenburg" subtitle="Antworten auf die wichtigsten Fragen rund um professionelle Industriereinigung in Oldenburg" />
+
+  <!-- Related Blog Posts -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Ratgeber zur Industriereinigung</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Informative Artikel und Tipps rund um das Thema Industriereinigung
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <a href="/blog/fruehjahrsputz-unternehmen" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Frühjahrsputz im Unternehmen" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              Frühjahrsputz im Unternehmen - Checkliste für Gewerbetreibende
+            </h3>
+            <p class="text-jonas-gray mt-2">Der ultimative Guide für den professionellen Frühjahrsputz in Ihrem Unternehmen...</p>
+          </div>
+        </a>
+        
+        <a href="/blog/10-tipps-sauberes-buero" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Tipps für ein sauberes Büro" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              10 Tipps für ein sauberes Büro - Produktivität durch Ordnung
+            </h3>
+            <p class="text-jonas-gray mt-2">Erfahren Sie, wie ein sauberes und organisiertes Büro die Produktivität Ihrer Mitarbeiter steigern kann...</p>
+          </div>
+        </a>
+        
+        <a href="/blog" class="group bg-jonas-light-gray rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col justify-center items-center p-8 text-center">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+            Weitere Ratgeber entdecken
+          </h3>
+          <p class="text-jonas-gray mt-2">Besuchen Sie unseren Blog für mehr Tipps und Informationen rund um die Gebäudereinigung</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Bereit für professionelle Industriereinigung in Oldenburg?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Kontaktieren Sie uns für eine kostenlose Beratung und ein maßgeschneidertes Angebot für Ihre industriellen Reinigungsanforderungen in Oldenburg.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenlos anfragen
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jonas Gebäudereinigung",
+  "description": "Professionelle Industriereinigung in Oldenburg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 123",
+    "addressLocality": "Oldenburg",
+    "addressRegion": "Niedersachsen",
+    "postalCode": "26123",
+    "addressCountry": "DE"
+  },
+  "telephone": "+49-441-XXXXXXX",
+  "url": "https://jonas-gebaeudereinigung.de/industriereinigung-oldenburg",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.1434501,
+    "longitude": 8.2145521
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "service": {
+    "@type": "Service",
+    "name": "Industriereinigung Oldenburg",
+    "description": "Professionelle Industriereinigung für Produktionsstätten und Industrieanlagen in Oldenburg",
+    "areaServed": "Oldenburg",
+    "serviceType": "Industriereinigung"
+  }
+}
+</script>

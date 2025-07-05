@@ -1,0 +1,146 @@
+---
+interface Props {
+  serviceType: string;
+}
+
+const { serviceType } = Astro.props;
+---
+
+<section class="py-20 bg-jonas-light-gray">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Kostenrechner für {serviceType}</h2>
+        <p class="text-xl text-jonas-gray">Erhalten Sie eine erste Kostenschätzung für Ihre Reinigungsanforderungen</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-strong p-8">
+        <form id="cost-calculator" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="area" class="block text-sm font-medium text-jonas-dark-blue mb-2">Fläche in m²</label>
+              <input type="number" id="area" name="area" min="1" max="10000" value="100" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+            </div>
+            <div>
+              <label for="frequency" class="block text-sm font-medium text-jonas-dark-blue mb-2">Reinigungsintervall</label>
+              <select id="frequency" name="frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+                <option value="daily">Täglich</option>
+                <option value="weekly" selected>Wöchentlich</option>
+                <option value="biweekly">Alle 2 Wochen</option>
+                <option value="monthly">Monatlich</option>
+                <option value="quarterly">Quartalsweise</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-jonas-dark-blue mb-4">Zusätzliche Leistungen</label>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <label class="flex items-center">
+                <input type="checkbox" name="extras" value="windows" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <span class="text-jonas-gray">Fensterreinigung (+15%)</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="extras" value="carpet" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <span class="text-jonas-gray">Teppichreinigung (+25%)</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="extras" value="kitchen" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <span class="text-jonas-gray">Küche intensiv (+20%)</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="extras" value="sanitizer" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <span class="text-jonas-gray">Desinfektion (+10%)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-jonas-light-gray rounded-xl p-6">
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-jonas-dark-blue mb-2">Geschätzte Kosten</h3>
+              <div id="cost-result" class="text-4xl font-bold text-jonas-blue mb-2">€ 0</div>
+              <p class="text-jonas-gray" id="cost-period">pro Monat</p>
+              <p class="text-sm text-jonas-gray mt-4">
+                * Unverbindliche Schätzung. Genaue Preise nach kostenloser Besichtigung.
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <a href="/kontakt" class="bg-jonas-blue text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-jonas-dark-blue transition-all duration-300 transform hover:scale-105 shadow-medium">
+              Kostenloses Angebot anfordern
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('cost-calculator');
+    const areaInput = document.getElementById('area');
+    const frequencySelect = document.getElementById('frequency');
+    const extrasCheckboxes = document.querySelectorAll('input[name="extras"]');
+    const costResult = document.getElementById('cost-result');
+    const costPeriod = document.getElementById('cost-period');
+
+    const basePrices = {
+      daily: 2.5,
+      weekly: 3.5,
+      biweekly: 4.0,
+      monthly: 5.0,
+      quarterly: 6.5
+    };
+
+    const frequencyMultipliers = {
+      daily: 22, // Arbeitstage pro Monat
+      weekly: 4.33, // Wochen pro Monat
+      biweekly: 2.17, // Alle 2 Wochen
+      monthly: 1,
+      quarterly: 0.33
+    };
+
+    const extraMultipliers = {
+      windows: 0.15,
+      carpet: 0.25,
+      kitchen: 0.20,
+      sanitizer: 0.10
+    };
+
+    function calculateCost() {
+      const area = parseInt(areaInput.value) || 0;
+      const frequency = frequencySelect.value;
+      
+      let basePrice = basePrices[frequency] * area;
+      let extraMultiplier = 1;
+
+      extrasCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          extraMultiplier += extraMultipliers[checkbox.value];
+        }
+      });
+
+      const totalPrice = basePrice * extraMultiplier * frequencyMultipliers[frequency];
+      
+      costResult.textContent = `€ ${Math.round(totalPrice)}`;
+      
+      if (frequency === 'quarterly') {
+        costPeriod.textContent = 'pro Quartal';
+      } else {
+        costPeriod.textContent = 'pro Monat';
+      }
+    }
+
+    // Event listeners
+    areaInput.addEventListener('input', calculateCost);
+    frequencySelect.addEventListener('change', calculateCost);
+    extrasCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', calculateCost);
+    });
+
+    // Initial calculation
+    calculateCost();
+  });
+</script>

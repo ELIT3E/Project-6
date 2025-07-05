@@ -1,0 +1,54 @@
+---
+---
+
+<div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg transform translate-y-full transition-transform duration-500 z-50">
+  <div class="container mx-auto px-4 py-6">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+      <div class="mb-4 md:mb-0 md:mr-8">
+        <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">Wir verwenden Cookies</h3>
+        <p class="text-jonas-gray text-sm">
+          Diese Website verwendet Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. 
+          Durch die Nutzung unserer Website stimmen Sie unserer <a href="/datenschutz" class="text-jonas-blue hover:underline">Datenschutzerklärung</a> zu.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button id="cookie-accept-all" class="bg-jonas-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-jonas-dark-blue transition-colors">
+          Alle akzeptieren
+        </button>
+        <button id="cookie-accept-necessary" class="border border-jonas-blue text-jonas-blue px-6 py-2 rounded-lg font-semibold hover:bg-jonas-light-gray transition-colors">
+          Nur notwendige
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cookieConsent = document.getElementById('cookie-consent');
+    const acceptAllButton = document.getElementById('cookie-accept-all');
+    const acceptNecessaryButton = document.getElementById('cookie-accept-necessary');
+    
+    // Check if user has already made a choice
+    const cookieChoice = localStorage.getItem('cookie-consent');
+    
+    if (!cookieChoice) {
+      // Show cookie banner after a short delay
+      setTimeout(() => {
+        cookieConsent?.classList.remove('translate-y-full');
+      }, 1000);
+    }
+    
+    acceptAllButton?.addEventListener('click', function() {
+      localStorage.setItem('cookie-consent', 'all');
+      cookieConsent?.classList.add('translate-y-full');
+      // Here you would initialize all cookies/tracking
+    });
+    
+    acceptNecessaryButton?.addEventListener('click', function() {
+      localStorage.setItem('cookie-consent', 'necessary');
+      cookieConsent?.classList.add('translate-y-full');
+      // Here you would only initialize necessary cookies
+    });
+  });
+</script>

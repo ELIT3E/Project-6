@@ -1,0 +1,95 @@
+---
+interface Service {
+  name: string;
+  description: string;
+  frequency: string;
+  bestFor: string;
+  price: string;
+  link: string;
+}
+
+const services: Service[] = [
+  {
+    name: "Büroreinigung",
+    description: "Regelmäßige Reinigung von Büroräumen und Arbeitsplätzen",
+    frequency: "Täglich bis wöchentlich",
+    bestFor: "Bürogebäude, Verwaltungen, Coworking Spaces",
+    price: "Ab 1,50€/m²",
+    link: "/bueroreinigung"
+  },
+  {
+    name: "Grundreinigung",
+    description: "Intensive Tiefenreinigung für besondere Anlässe",
+    frequency: "Nach Bedarf, 1-4x jährlich",
+    bestFor: "Neubauten, nach Renovierungen, saisonale Reinigung",
+    price: "Ab 3,50€/m²",
+    link: "/grundreinigung"
+  },
+  {
+    name: "Glasreinigung",
+    description: "Streifenfreie Reinigung von Fenstern und Glasflächen",
+    frequency: "Monatlich bis quartalsweise",
+    bestFor: "Bürogebäude, Geschäfte, Glasfassaden",
+    price: "Ab 2,00€/m²",
+    link: "/glasreinigung"
+  },
+  {
+    name: "Unterhaltsreinigung",
+    description: "Regelmäßige Reinigung zur Werterhaltung",
+    frequency: "Wöchentlich bis monatlich",
+    bestFor: "Alle Immobilienarten, langfristige Pflege",
+    price: "Ab 1,80€/m²",
+    link: "/unterhaltsreinigung"
+  },
+  {
+    name: "Industriereinigung",
+    description: "Spezialisierte Reinigung für Produktionsstätten",
+    frequency: "Nach Bedarf, wöchentlich bis monatlich",
+    bestFor: "Produktionshallen, Maschinenhallen, Werkstätten",
+    price: "Ab 2,50€/m²",
+    link: "/industriereinigung"
+  },
+  {
+    name: "Sonderreinigung",
+    description: "Spezielle Reinigungsverfahren für besondere Anforderungen",
+    frequency: "Nach Bedarf",
+    bestFor: "Notfälle, Spezialfälle, besondere Materialien",
+    price: "Nach Aufwand",
+    link: "/sonderreinigung"
+  }
+];
+---
+
+<div class="overflow-x-auto">
+  <table class="min-w-full bg-white rounded-xl shadow-lg">
+    <thead>
+      <tr class="bg-jonas-blue text-white">
+        <th class="py-4 px-6 text-left rounded-tl-xl">Leistung</th>
+        <th class="py-4 px-6 text-left hidden md:table-cell">Beschreibung</th>
+        <th class="py-4 px-6 text-left hidden lg:table-cell">Häufigkeit</th>
+        <th class="py-4 px-6 text-left hidden lg:table-cell">Ideal für</th>
+        <th class="py-4 px-6 text-left">Preis</th>
+        <th class="py-4 px-6 text-center rounded-tr-xl">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {services.map((service, index) => (
+        <tr class={`border-b border-gray-200 hover:bg-jonas-light-gray transition-colors ${index === services.length - 1 ? 'border-b-0' : ''}`}>
+          <td class="py-4 px-6 font-semibold text-jonas-dark-blue">{service.name}</td>
+          <td class="py-4 px-6 text-jonas-gray hidden md:table-cell">{service.description}</td>
+          <td class="py-4 px-6 text-jonas-gray hidden lg:table-cell">{service.frequency}</td>
+          <td class="py-4 px-6 text-jonas-gray hidden lg:table-cell">{service.bestFor}</td>
+          <td class="py-4 px-6 text-jonas-gray">{service.price}</td>
+          <td class="py-4 px-6 text-center">
+            <a href={service.link} class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+              Details
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

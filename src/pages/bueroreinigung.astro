@@ -1,0 +1,283 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+
+const faqData = [
+  {
+    question: "Wie oft sollte eine Büroreinigung durchgeführt werden?",
+    answer: "Das hängt von der Bürogröße und Mitarbeiteranzahl ab. Für die meisten Büros empfehlen wir tägliche Grundreinigung mit wöchentlicher Intensivreinigung. Kleinere Büros können auch mit 2-3 Reinigungen pro Woche auskommen."
+  },
+  {
+    question: "Stören die Reinigungsarbeiten den Bürobetrieb?",
+    answer: "Nein, wir arbeiten bevorzugt außerhalb der Geschäftszeiten - früh morgens, abends oder am Wochenende. So wird Ihr Arbeitsablauf nicht gestört und Sie kommen in ein sauberes Büro."
+  },
+  {
+    question: "Bieten Sie auch die Reinigung von IT-Ausstattung an?",
+    answer: "Ja, wir reinigen professionell Monitore, Tastaturen, Telefone und andere IT-Geräte mit speziellen, antistatischen Reinigungsmitteln, die elektronische Geräte nicht beschädigen."
+  }
+];
+---
+
+<Layout 
+  title="Professionelle Büroreinigung Oldenburg - Für produktive Arbeitsplätze | Jonas Gebäudereinigung"
+  description="Professionelle Büroreinigung in Oldenburg ✓ Täglich, wöchentlich oder nach Bedarf ✓ Produktives Arbeitsumfeld ✓ Gesunde Mitarbeiter ✓ Kostenlose Beratung"
+  keywords="Büroreinigung Oldenburg, Büro reinigen lassen Oldenburg, Unterhaltsreinigung Büro, Arbeitsplatz Reinigung"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Büroreinigung</span> in Oldenburg: Für ein produktives und gesundes Arbeitsumfeld
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Schaffen Sie optimale Arbeitsbedingungen für Ihr Team. Saubere Büros steigern die Produktivität, reduzieren Krankheitstage und vermitteln Professionalität.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Bereit für makellose Sauberkeit in Ihrem Büro? Fordern Sie jetzt Ihr unverbindliches Angebot an!
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Warum professionelle Büroreinigung?</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Ein sauberes Büro ist mehr als nur Ästhetik - es ist die Grundlage für Produktivität, Gesundheit und ein professionelles Arbeitsumfeld. 
+            Studien zeigen, dass Mitarbeiter in sauberen Büros bis zu 15% produktiver sind und weniger Krankheitstage haben. 
+            Gleichzeitig vermitteln gepflegte Büroräume Professionalität gegenüber Kunden und Geschäftspartnern.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Service Description -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Unser Büroreinigungsservice im Detail</h2>
+          <p class="text-xl text-jonas-gray">
+            Von Arbeitsplätzen bis zu Konferenzräumen - wir sorgen für makellose Sauberkeit in allen Bürobereichen
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h2a2 2 0 002-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Arbeitsplätze & Schreibtische</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Schreibtische abwischen und desinfizieren</li>
+              <li>• Tastaturen und Mäuse reinigen</li>
+              <li>• Monitore staubfrei wischen</li>
+              <li>• Bürostühle absaugen und reinigen</li>
+              <li>• Papierkörbe leeren und reinigen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Konferenz- & Besprechungsräume</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Konferenztische polieren</li>
+              <li>• Stühle reinigen und ordnen</li>
+              <li>• Whiteboards säubern</li>
+              <li>• Präsentationstechnik entstauben</li>
+              <li>• Böden gründlich reinigen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Sanitäranlagen</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• WCs gründlich reinigen und desinfizieren</li>
+              <li>• Waschbecken und Armaturen polieren</li>
+              <li>• Spiegel streifenfrei putzen</li>
+              <li>• Verbrauchsmaterialien auffüllen</li>
+              <li>• Böden wischen und desinfizieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Küchen & Pausenräume</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Kühlschrank innen und außen reinigen</li>
+              <li>• Mikrowelle und Kaffeemaschine säubern</li>
+              <li>• Arbeitsflächen desinfizieren</li>
+              <li>• Tische und Stühle abwischen</li>
+              <li>• Spülbecken und Armaturen polieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Fenster & Glasflächen</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Fenster innen streifenfrei reinigen</li>
+              <li>• Glastrennwände säubern</li>
+              <li>• Fensterrahmen abwischen</li>
+              <li>• Jalousien entstauben</li>
+              <li>• Glastüren polieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Böden & Allgemeinbereiche</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Staubsaugen aller Teppichböden</li>
+              <li>• Wischen von Hartböden</li>
+              <li>• Fleckenentfernung bei Bedarf</li>
+              <li>• Fußleisten abstauben</li>
+              <li>• Eingangsbereiche intensiv reinigen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Audience Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Maßgeschneiderte Reinigung für Ihre Branche</h2>
+          <p class="text-xl text-jonas-gray">
+            Jede Branche hat spezielle Anforderungen - wir kennen sie alle und passen unsere Leistungen entsprechend an
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-jonas-light-gray rounded-xl p-8 text-center">
+            <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Arztpraxen & Kliniken</h3>
+            <p class="text-jonas-gray">
+              Höchste Hygieneanforderungen, Desinfektion nach medizinischen Standards und diskrete Arbeitsweise für Patientenwohl.
+            </p>
+          </div>
+
+          <div class="bg-jonas-light-gray rounded-xl p-8 text-center">
+            <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Rechtsanwaltskanzleien</h3>
+            <p class="text-jonas-gray">
+              Repräsentative Sauberkeit für Mandantengespräche, vertrauliche Arbeitsweise und flexible Reinigungszeiten.
+            </p>
+          </div>
+
+          <div class="bg-jonas-light-gray rounded-xl p-8 text-center">
+            <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Coworking Spaces</h3>
+            <p class="text-jonas-gray">
+              Moderne Arbeitsplätze für kreative Köpfe, flexible Reinigungskonzepte und Anpassung an wechselnde Nutzung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Büroreinigung" subtitle="Antworten auf die wichtigsten Fragen rund um professionelle Büroreinigung" />
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Bereit für makellose Sauberkeit in Ihrem Büro?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Fordern Sie jetzt Ihr unverbindliches Angebot an und schaffen Sie optimale Arbeitsbedingungen für Ihr Team.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Büroreinigung Oldenburg",
+  "description": "Professionelle Büroreinigung für produktive und gesunde Arbeitsplätze in Oldenburg",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jonas Gebäudereinigung",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oldenburg",
+      "addressRegion": "Niedersachsen",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49-441-XXXXXXX"
+  },
+  "areaServed": "Oldenburg",
+  "serviceType": "Büroreinigung"
+}
+</script>

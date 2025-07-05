@@ -1,0 +1,100 @@
+---
+interface Props {
+  beforeImage: string;
+  afterImage: string;
+  altText: string;
+}
+
+const { beforeImage, afterImage, altText } = Astro.props;
+---
+
+<div class="before-after-slider relative w-full h-80 rounded-xl overflow-hidden shadow-strong group cursor-grab active:cursor-grabbing">
+  <!-- Before Image -->
+  <div class="absolute inset-0">
+    <img src={beforeImage} alt={`Vorher - ${altText}`} class="w-full h-full object-cover">
+    <div class="absolute top-4 left-4 bg-jonas-accent text-jonas-dark-blue px-3 py-1 rounded-full text-sm font-semibold">
+      Vorher
+    </div>
+  </div>
+  
+  <!-- After Image -->
+  <div class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);" id="after-container">
+    <img src={afterImage} alt={`Nachher - ${altText}`} class="w-full h-full object-cover">
+    <div class="absolute top-4 right-4 bg-jonas-blue text-white px-3 py-1 rounded-full text-sm font-semibold">
+      Nachher
+    </div>
+  </div>
+  
+  <!-- Slider Handle -->
+  <div class="absolute top-0 bottom-0 w-1 bg-white shadow-lg cursor-ew-resize z-10 group-hover:w-1.5 transition-all duration-300" style="left: 50%;" id="slider-handle">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-4 h-4 text-jonas-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path>
+      </svg>
+    </div>
+  </div>
+  
+  <!-- Instructions -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    Ziehen Sie den Slider
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sliders = document.querySelectorAll('.before-after-slider');
+    
+    sliders.forEach(slider => {
+      const handle = slider.querySelector('#slider-handle');
+      const afterContainer = slider.querySelector('#after-container');
+      let isDragging = false;
+      
+      function updateSlider(x) {
+        const rect = slider.getBoundingClientRect();
+        const percentage = Math.max(0, Math.min(100, ((x - rect.left) / rect.width) * 100));
+        
+        handle.style.left = percentage + '%';
+        afterContainer.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+      }
+      
+      // Mouse events
+      handle.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        e.preventDefault();
+      });
+      
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          updateSlider(e.clientX);
+        }
+      });
+      
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+      
+      // Touch events
+      handle.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        e.preventDefault();
+      });
+      
+      document.addEventListener('touchmove', (e) => {
+        if (isDragging) {
+          updateSlider(e.touches[0].clientX);
+        }
+      });
+      
+      document.addEventListener('touchend', () => {
+        isDragging = false;
+      });
+      
+      // Click to position
+      slider.addEventListener('click', (e) => {
+        if (e.target !== handle && !handle.contains(e.target)) {
+          updateSlider(e.clientX);
+        }
+      });
+    });
+  });
+</script>

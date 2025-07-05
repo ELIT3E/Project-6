@@ -1,0 +1,381 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+import PriceCalculator from '../components/PriceCalculator.astro';
+
+const faqData = [
+  {
+    question: "Was ist der Unterschied zwischen Grund- und Unterhaltsreinigung in Oldenburg?",
+    answer: "Die Grundreinigung ist eine intensive, einmalige Tiefenreinigung, während die Unterhaltsreinigung regelmäßig durchgeführt wird. Die Grundreinigung bereitet Räume in Oldenburg für den Erstbezug vor oder beseitigt starke Verschmutzungen nach Bauarbeiten oder Renovierungen."
+  },
+  {
+    question: "Wie lange dauert eine Grundreinigung in Oldenburg?",
+    answer: "Die Dauer hängt von der Objektgröße und dem Verschmutzungsgrad ab. Eine normale Büroetage (200m²) in Oldenburg benötigt etwa 1-2 Tage, während eine Baustellenreinigung 3-5 Tage dauern kann."
+  },
+  {
+    question: "Was kostet eine Grundreinigung in Oldenburg?",
+    answer: "Die Kosten variieren je nach Objektgröße, Verschmutzungsgrad und Aufwand. Grundsätzlich rechnen Sie in Oldenburg mit 8-15€ pro m². Gerne erstellen wir Ihnen ein kostenloses, individuelles Angebot für Ihre Immobilie in Oldenburg."
+  },
+  {
+    question: "Welche Objekte in Oldenburg reinigen Sie?",
+    answer: "Wir führen Grundreinigungen in allen Arten von Immobilien in Oldenburg durch - von Bürogebäuden, Geschäften und Praxen bis hin zu Neubauten, Industrieanlagen und Privathäusern."
+  },
+  {
+    question: "Wie schnell können Sie in Oldenburg mit einer Grundreinigung beginnen?",
+    answer: "Nach einer kostenlosen Besichtigung und Angebotserstellung können wir in der Regel innerhalb von 3-7 Tagen mit der Grundreinigung in Oldenburg beginnen. Bei Notfällen oder dringenden Anfragen sind wir auch kurzfristiger verfügbar."
+  }
+];
+---
+
+<Layout 
+  title="Grundreinigung Oldenburg - Professionelle Tiefenreinigung | Jonas"
+  description="Professionelle Grundreinigung in Oldenburg ✓ Baustellenreinigung ✓ Renovierungsreinigung ✓ Erstbezugsreinigung ✓ Tiefenreinigung ✓ Kostenlose Beratung"
+  keywords="Grundreinigung Oldenburg, Baustellenreinigung Oldenburg, Renovierungsreinigung Oldenburg, Erstbezugsreinigung Oldenburg, Tiefenreinigung Oldenburg"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Grundreinigung</span> in Oldenburg: Intensive Tiefenreinigung für makellose Ergebnisse
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Intensive Tiefenreinigung für Neubauten, nach Renovierungen und für besondere Anlässe in Oldenburg. Wir schaffen die perfekte Basis für Ihren Neustart.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Perfekte Sauberkeit in Oldenburg garantiert: Jetzt Angebot anfordern!
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Was ist eine Grundreinigung in Oldenburg?</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Eine Grundreinigung ist eine intensive, tiefgreifende Reinigung, die weit über die normale Unterhaltsreinigung hinausgeht. 
+            Sie wird typischerweise nach Bauarbeiten, Renovierungen, bei Erstbezug oder in regelmäßigen Abständen durchgeführt, 
+            um Gebäude und Räume in Oldenburg in einen makellosen Zustand zu versetzen. Dabei werden alle Oberflächen, schwer zugängliche Bereiche 
+            und hartnäckige Verschmutzungen gründlich behandelt.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Service Description -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Unser Grundreinigungsservice in Oldenburg im Detail</h2>
+          <p class="text-xl text-jonas-gray">
+            Von der Baustellenreinigung bis zur Erstbezugsreinigung - wir schaffen perfekte Ausgangsbedingungen in Oldenburg
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Baustellenreinigung in Oldenburg</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Entfernung von Baustaub und Zementresten</li>
+              <li>• Reinigung von Farb- und Kleberückständen</li>
+              <li>• Fenster- und Rahmenreinigung</li>
+              <li>• Bodenbehandlung und -versiegelung</li>
+              <li>• Sanitäranlagen-Ersteinrichtung</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Renovierungsreinigung in Oldenburg</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Beseitigung von Renovierungsrückständen</li>
+              <li>• Tiefenreinigung aller Oberflächen</li>
+              <li>• Entfernung von Schutzfolien</li>
+              <li>• Möbel- und Einrichtungsreinigung</li>
+              <li>• Luftreinigung und Geruchsneutralisation</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Erstbezugsreinigung in Oldenburg</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Komplette Wohnungs-/Büroreinigung</li>
+              <li>• Schrank- und Schrankinnenflächen</li>
+              <li>• Küchen- und Badausstattung</li>
+              <li>• Balkon- und Terrassenreinigung</li>
+              <li>• Übergabefertige Sauberkeit</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-6 text-center">Wann ist eine Grundreinigung in Oldenburg notwendig?</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Ideale Zeitpunkte für Grundreinigung in Oldenburg</h4>
+              <ul class="space-y-3 text-jonas-gray">
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Nach Bauarbeiten in Oldenburg:</strong> Entfernung von Baustaub, Zement- und Farbresten
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Bei Erstbezug in Oldenburg:</strong> Komplette Reinigung vor dem Einzug neuer Mieter
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Nach Renovierungen in Oldenburg:</strong> Beseitigung aller renovierungsbedingten Verschmutzungen
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Besondere Situationen in Oldenburg</h4>
+              <ul class="space-y-3 text-jonas-gray">
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Wasserschäden in Oldenburg:</strong> Professionelle Trocknung und Sanierung
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Betriebsübergabe in Oldenburg:</strong> Perfekte Sauberkeit für neue Geschäftsinhaber
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Saisonale Intensivreinigung in Oldenburg:</strong> Frühjahrsputz oder Jahresabschluss
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oldenburg Specific Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Grundreinigung in Oldenburg - Lokal & Zuverlässig</h2>
+          <p class="text-xl text-jonas-gray">
+            Als Oldenburger Unternehmen kennen wir die lokalen Gegebenheiten und Anforderungen
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Grundreinigung in Oldenburg" class="rounded-xl shadow-lg">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">Ihr lokaler Grundreinigungsexperte in Oldenburg</h3>
+            <p class="text-jonas-gray mb-6">
+              Als in Oldenburg ansässiges Unternehmen sind wir mit den spezifischen Anforderungen und Besonderheiten der lokalen Immobilien bestens vertraut. Unsere Reinigungsteams sind schnell vor Ort und kennen sich in der Stadt aus.
+            </p>
+            
+            <h4 class="text-xl font-bold text-jonas-dark-blue mb-3">Wir führen Grundreinigungen in ganz Oldenburg durch:</h4>
+            <div class="grid grid-cols-2 gap-2 mb-6">
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Neubauprojekte</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Renovierte Gebäude</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Bürokomplexe</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Einzelhandel</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Wohngebäude</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Industrieanlagen</p>
+              </div>
+            </div>
+            
+            <Button variant="secondary" size="lg" href="/kontakt">
+              Kostenlose Beratung vor Ort
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Calculator -->
+  <PriceCalculator title="Grundreinigung Oldenburg - Preisrechner" subtitle="Berechnen Sie die Kosten für Ihre Grundreinigung in Oldenburg" />
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Grundreinigung in Oldenburg" subtitle="Antworten auf die wichtigsten Fragen rund um professionelle Grundreinigung in Oldenburg" />
+
+  <!-- Related Blog Posts -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Ratgeber zur Grundreinigung</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Informative Artikel und Tipps rund um das Thema Grundreinigung
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <a href="/blog/fruehjahrsputz-unternehmen" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Frühjahrsputz im Unternehmen" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              Frühjahrsputz im Unternehmen - Checkliste für Gewerbetreibende
+            </h3>
+            <p class="text-jonas-gray mt-2">Der ultimative Guide für den professionellen Frühjahrsputz in Ihrem Unternehmen...</p>
+          </div>
+        </a>
+        
+        <a href="/blog/10-tipps-sauberes-buero" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Tipps für ein sauberes Büro" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              10 Tipps für ein sauberes Büro - Produktivität durch Ordnung
+            </h3>
+            <p class="text-jonas-gray mt-2">Erfahren Sie, wie ein sauberes und organisiertes Büro die Produktivität Ihrer Mitarbeiter steigern kann...</p>
+          </div>
+        </a>
+        
+        <a href="/blog" class="group bg-jonas-light-gray rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col justify-center items-center p-8 text-center">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+            Weitere Ratgeber entdecken
+          </h3>
+          <p class="text-jonas-gray mt-2">Besuchen Sie unseren Blog für mehr Tipps und Informationen rund um die Gebäudereinigung</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Perfekte Sauberkeit in Oldenburg garantiert!</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Jetzt Angebot für Grundreinigung in Oldenburg anfordern und von makelloser Sauberkeit profitieren. Wir schaffen die perfekte Basis für Ihren Neustart.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jonas Gebäudereinigung",
+  "description": "Professionelle Grundreinigung in Oldenburg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 123",
+    "addressLocality": "Oldenburg",
+    "addressRegion": "Niedersachsen",
+    "postalCode": "26123",
+    "addressCountry": "DE"
+  },
+  "telephone": "+49-441-XXXXXXX",
+  "url": "https://jonas-gebaeudereinigung.de/grundreinigung-oldenburg",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.1434501,
+    "longitude": 8.2145521
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "service": {
+    "@type": "Service",
+    "name": "Grundreinigung Oldenburg",
+    "description": "Professionelle Grundreinigung und Baustellenreinigung in Oldenburg",
+    "areaServed": "Oldenburg",
+    "serviceType": "Grundreinigung"
+  }
+}
+</script>

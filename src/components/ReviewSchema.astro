@@ -1,0 +1,29 @@
+---
+interface Props {
+  rating?: number;
+  reviewCount?: number;
+  businessName?: string;
+  businessType?: string;
+}
+
+const { 
+  rating = 4.9, 
+  reviewCount = 87, 
+  businessName = "Jonas Gebäudereinigung",
+  businessType = "ProfessionalService"
+} = Astro.props;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": businessType,
+  "name": businessName,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": rating,
+    "reviewCount": reviewCount,
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+})}>
+</script>

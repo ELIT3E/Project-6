@@ -1,0 +1,349 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+import PriceCalculator from '../components/PriceCalculator.astro';
+
+const faqData = [
+  {
+    question: "In welchen Intervallen sollte eine Glasreinigung in Oldenburg erfolgen?",
+    answer: "Das hängt von der Lage und Nutzung ab. Schaufenster in der Oldenburger Innenstadt sollten wöchentlich, Bürofenster monatlich und Privatfenster 2-4 mal jährlich gereinigt werden. Wir beraten Sie gerne individuell."
+  },
+  {
+    question: "Reinigen Sie auch schwer zugängliche Fenster in Oldenburg?",
+    answer: "Ja, wir verfügen über Teleskopstangen, Leitern und bei Bedarf auch über Hubarbeitsbühnen für schwer zugängliche Fenster und Glasfassaden in Oldenburg. Sicherheit hat dabei oberste Priorität."
+  },
+  {
+    question: "Was kostet die professionelle Glasreinigung in Oldenburg?",
+    answer: "Die Kosten variieren je nach Umfang, Zugänglichkeit und Verschmutzungsgrad. Für ein Bürogebäude in Oldenburg mit Standardfenstern beginnen die Preise bei etwa 3-5€ pro Fenster. Gerne erstellen wir Ihnen ein individuelles Angebot."
+  },
+  {
+    question: "Welche Gebäude in Oldenburg reinigen Sie?",
+    answer: "Wir reinigen Glasflächen aller Art in Oldenburg - von Bürogebäuden, Geschäften und Praxen bis hin zu Privathäusern, Schulen und öffentlichen Einrichtungen."
+  },
+  {
+    question: "Wie schnell können Sie in Oldenburg einen Termin anbieten?",
+    answer: "In der Regel können wir innerhalb von 3-5 Werktagen einen Termin für die Glasreinigung in Oldenburg anbieten. Bei Notfällen oder dringenden Anfragen sind wir auch kurzfristiger verfügbar."
+  }
+];
+---
+
+<Layout 
+  title="Glasreinigung Oldenburg - Streifenfreie Fenster & Glasflächen | Jonas"
+  description="Professionelle Glasreinigung in Oldenburg ✓ Fensterreinigung ✓ Glasfassaden ✓ Schaufenster ✓ Streifenfrei ✓ Moderne Technik ✓ Kostenlose Beratung"
+  keywords="Glasreinigung Oldenburg, Fensterputzer Oldenburg, Fensterreinigung Oldenburg, Glasfassadenreinigung Oldenburg, Schaufensterreinigung Oldenburg"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Glasreinigung</span> in Oldenburg: Streifenfreier Glanz für Fenster und Fassaden
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Kristallklare Fenster und Glasflächen für den perfekten Durchblick in Oldenburg. Mit modernster Reinigungstechnik und entmineralisiertem Wasser für streifenfreie Ergebnisse.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Für den perfekten Durchblick in Oldenburg: Jetzt Angebot anfordern!
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Warum professionelle Glasreinigung in Oldenburg?</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Saubere Fenster und Glasflächen sind mehr als nur Ästhetik - sie beeinflussen das Wohlbefinden, die Arbeitsatmosphäre 
+            und den professionellen Eindruck Ihres Unternehmens in Oldenburg. Verschmutzte Fenster reduzieren den Lichteinfall um bis zu 30% 
+            und können die Stimmung und Produktivität Ihrer Mitarbeiter negativ beeinflussen. Unsere professionelle Glasreinigung 
+            sorgt für kristallklare Ergebnisse und optimale Lichtverhältnisse in Ihren Räumlichkeiten in Oldenburg.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Service Description -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Unser Glasreinigungsservice in Oldenburg im Detail</h2>
+          <p class="text-xl text-jonas-gray">
+            Von einzelnen Fenstern bis zu kompletten Glasfassaden - wir sorgen für streifenfreie Sauberkeit in ganz Oldenburg
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Fensterreinigung in Oldenburg</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Innen- und Außenreinigung</li>
+              <li>• Fensterrahmen säubern</li>
+              <li>• Fensterbänke abwischen</li>
+              <li>• Dichtungen pflegen</li>
+              <li>• Streifenfreie Ergebnisse garantiert</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Glasfassaden in Oldenburg</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Großflächige Glasfronten</li>
+              <li>• Hochhaus-Glasfassaden</li>
+              <li>• Vorhangfassaden</li>
+              <li>• Strukturglas-Reinigung</li>
+              <li>• Spezialausrüstung für große Höhen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Schaufenster in Oldenburg</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Einzelhandelsgeschäfte</li>
+              <li>• Restaurants und Cafés</li>
+              <li>• Showrooms und Ausstellungen</li>
+              <li>• Regelmäßige Pflege</li>
+              <li>• Perfekte Präsentation Ihrer Waren</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-6 text-center">Unsere Reinigungstechnik für perfekte Ergebnisse in Oldenburg</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Entmineralisiertes Wasser-System</h4>
+              <p class="text-jonas-gray mb-4">
+                Wir verwenden modernste Reinigungstechnik mit entmineralisiertem Wasser. Dieses spezielle Verfahren 
+                garantiert streifenfreie Ergebnisse ohne chemische Zusätze und ist besonders umweltschonend - ideal für die 
+                anspruchsvollen Glasflächen in Oldenburg.
+              </p>
+              <ul class="space-y-2 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> 100% streifenfrei</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Umweltfreundlich</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Längere Sauberkeit</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Professionelle Ausrüstung für Oldenburg</h4>
+              <p class="text-jonas-gray mb-4">
+                Hochwertige Abzieher, Mikrofasertücher und Teleskopstangen ermöglichen uns die Reinigung auch 
+                schwer zugänglicher Fenster und Glasflächen in großer Höhe - perfekt für die vielfältigen 
+                Gebäudetypen in Oldenburg.
+              </p>
+              <ul class="space-y-2 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Bis 15 Meter Höhe</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Sicherheitsausrüstung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Spezialwerkzeuge</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oldenburg Specific Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Glasreinigung in Oldenburg - Lokal & Zuverlässig</h2>
+          <p class="text-xl text-jonas-gray">
+            Als Oldenburger Unternehmen kennen wir die lokalen Gegebenheiten und Anforderungen
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">Ihr lokaler Glasreinigungsexperte in Oldenburg</h3>
+            <p class="text-jonas-gray mb-6">
+              Als in Oldenburg ansässiges Unternehmen sind wir mit den spezifischen Anforderungen und Besonderheiten der lokalen Gebäude bestens vertraut. Unsere Reinigungsteams sind schnell vor Ort und kennen sich in der Stadt aus.
+            </p>
+            
+            <h4 class="text-xl font-bold text-jonas-dark-blue mb-3">Wir reinigen Glasflächen in ganz Oldenburg:</h4>
+            <div class="grid grid-cols-2 gap-2 mb-6">
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Innenstadt & Fußgängerzone</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Gewerbegebiete</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Bürokomplexe</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Einkaufszentren</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Öffentliche Gebäude</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Wohngebäude</p>
+              </div>
+            </div>
+            
+            <Button variant="secondary" size="lg" href="/kontakt">
+              Kostenlose Beratung vor Ort
+            </Button>
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Glasreinigung in Oldenburg" class="rounded-xl shadow-lg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Calculator -->
+  <PriceCalculator title="Glasreinigung Oldenburg - Preisrechner" subtitle="Berechnen Sie die Kosten für Ihre Glasreinigung in Oldenburg" />
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Glasreinigung in Oldenburg" subtitle="Antworten auf die wichtigsten Fragen rund um professionelle Glasreinigung in Oldenburg" />
+
+  <!-- Related Blog Posts -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Ratgeber zur Glasreinigung</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Informative Artikel und Tipps rund um das Thema Glasreinigung
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <a href="/blog/10-tipps-sauberes-buero" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Tipps für ein sauberes Büro" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              10 Tipps für ein sauberes Büro - Produktivität durch Ordnung
+            </h3>
+            <p class="text-jonas-gray mt-2">Erfahren Sie, wie ein sauberes und organisiertes Büro die Produktivität Ihrer Mitarbeiter steigern kann...</p>
+          </div>
+        </a>
+        
+        <a href="/blog/fruehjahrsputz-unternehmen" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Frühjahrsputz im Unternehmen" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              Frühjahrsputz im Unternehmen - Checkliste für Gewerbetreibende
+            </h3>
+            <p class="text-jonas-gray mt-2">Der ultimative Guide für den professionellen Frühjahrsputz in Ihrem Unternehmen...</p>
+          </div>
+        </a>
+        
+        <a href="/blog" class="group bg-jonas-light-gray rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col justify-center items-center p-8 text-center">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+            Weitere Ratgeber entdecken
+          </h3>
+          <p class="text-jonas-gray mt-2">Besuchen Sie unseren Blog für mehr Tipps und Informationen rund um die Gebäudereinigung</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Für den perfekten Durchblick in Oldenburg!</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Jetzt Angebot für Glasreinigung in Oldenburg anfordern und von kristallklaren Fenstern und Glasflächen profitieren.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jonas Gebäudereinigung",
+  "description": "Professionelle Glasreinigung in Oldenburg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 123",
+    "addressLocality": "Oldenburg",
+    "addressRegion": "Niedersachsen",
+    "postalCode": "26123",
+    "addressCountry": "DE"
+  },
+  "telephone": "+49-441-XXXXXXX",
+  "url": "https://jonas-gebaeudereinigung.de/glasreinigung-oldenburg",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.1434501,
+    "longitude": 8.2145521
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "service": {
+    "@type": "Service",
+    "name": "Glasreinigung Oldenburg",
+    "description": "Professionelle Glasreinigung für streifenfreie Fenster und Glasflächen in Oldenburg",
+    "areaServed": "Oldenburg",
+    "serviceType": "Glasreinigung"
+  }
+}
+</script>

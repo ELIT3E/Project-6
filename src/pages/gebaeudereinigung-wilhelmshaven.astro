@@ -1,0 +1,587 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+import PriceCalculator from '../components/PriceCalculator.astro';
+
+const faqData = [
+  {
+    question: "Welche Reinigungsdienstleistungen bieten Sie in Wilhelmshaven an?",
+    answer: "Wir bieten in Wilhelmshaven das komplette Spektrum an Reinigungsdienstleistungen an: Büroreinigung, Grundreinigung, Glasreinigung, Unterhaltsreinigung, Industriereinigung und Sonderreinigung. Alle Leistungen werden von unseren geschulten Fachkräften nach höchsten Qualitätsstandards durchgeführt."
+  },
+  {
+    question: "Wie schnell können Sie in Wilhelmshaven mit der Reinigung beginnen?",
+    answer: "Nach einer kostenlosen Besichtigung und Angebotserstellung können wir in der Regel innerhalb von 3-7 Werktagen mit der Reinigung in Wilhelmshaven beginnen. Bei Notfällen oder dringenden Anfragen sind wir auch kurzfristiger verfügbar."
+  },
+  {
+    question: "Bieten Sie spezielle Reinigungslösungen für Gebäude in Küstennähe in Wilhelmshaven an?",
+    answer: "Ja, wir haben spezielle Reinigungsmethoden und -mittel für Gebäude in Küstennähe wie in Wilhelmshaven. Die salzhaltige Luft kann zu besonderen Verschmutzungen und Korrosion führen, die wir mit unseren angepassten Verfahren effektiv bekämpfen können."
+  },
+  {
+    question: "Welche Kosten fallen für Reinigungsdienstleistungen in Wilhelmshaven an?",
+    answer: "Die Kosten variieren je nach Art der Reinigung, Objektgröße und Reinigungsintervall. Für Objekte in Wilhelmshaven erstellen wir gerne ein individuelles Angebot nach einer kostenlosen Besichtigung. Wir bieten ein ausgezeichnetes Preis-Leistungs-Verhältnis und transparente Preisgestaltung."
+  },
+  {
+    question: "Bieten Sie auch Sonderreinigungen oder Notfallreinigungen in Wilhelmshaven an?",
+    answer: "Ja, wir bieten sowohl Sonderreinigungen als auch einen 24/7-Notfallservice in Wilhelmshaven an. Ob Wasserschäden, Baustellenreinigung oder andere spezielle Anforderungen – unser Team steht Ihnen jederzeit zur Verfügung."
+  }
+];
+---
+
+<Layout 
+  title="Professionelle Gebäudereinigung in Wilhelmshaven | Jonas Gebäudereinigung"
+  description="Professionelle Gebäudereinigung in Wilhelmshaven ✓ Büros ✓ Gewerbe ✓ Wohnkomplexe ✓ Zuverlässig ✓ Umweltfreundlich ✓ Kostenlose Beratung ✓ Lokaler Anbieter"
+  keywords="Gebäudereinigung Wilhelmshaven, Reinigungsfirma Wilhelmshaven, Büroreinigung Wilhelmshaven, Glasreinigung Wilhelmshaven, Grundreinigung Wilhelmshaven, Unterhaltsreinigung Wilhelmshaven"
+  canonical="https://jonas-gebaeudereinigung.de/gebaeudereinigung-wilhelmshaven"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Gebäudereinigung</span> in Wilhelmshaven
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Ihr zuverlässiger Partner für makellose Sauberkeit und Werterhalt Ihrer Immobilien in der Küstenstadt Wilhelmshaven
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Kostenlose Beratung für Ihre Reinigung in Wilhelmshaven
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Gebäudereinigung in Wilhelmshaven - Professionell & Zuverlässig</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Als erfahrenes Reinigungsunternehmen bieten wir Ihnen in Wilhelmshaven und Umgebung ein umfassendes Spektrum an professionellen Reinigungsdienstleistungen. Die besondere Lage Wilhelmshavens an der Nordsee stellt spezielle Anforderungen an die Gebäudereinigung. Die salzhaltige Luft und das maritime Klima können zu verstärkten Verschmutzungen und Korrosion führen. Mit unserer Erfahrung und speziellen Reinigungsmethoden sorgen wir für langfristigen Werterhalt und makellose Sauberkeit Ihrer Immobilien in Wilhelmshaven.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Unsere Reinigungsdienstleistungen in Wilhelmshaven</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Maßgeschneiderte Reinigungslösungen für alle Anforderungen in der Küstenstadt
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Glasreinigung -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Glasreinigung Wilhelmshaven</h3>
+          <p class="text-jonas-gray mb-4">
+            Streifenfreie Reinigung von Fenstern, Glasfassaden und Schaufenstern in Wilhelmshaven - besonders wichtig in der salzhaltigen Meeresluft.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Fensterreinigung innen & außen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Glasfassaden</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Schaufenster</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Spezielle Salzrückstandsentfernung</li>
+          </ul>
+          <a href="/glasreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Büroreinigung -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Büroreinigung Wilhelmshaven</h3>
+          <p class="text-jonas-gray mb-4">
+            Professionelle Reinigung von Büroräumen, Konferenzräumen und Arbeitsplätzen in Wilhelmshaven. Täglich, wöchentlich oder nach Bedarf.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Schreibtische und Arbeitsplätze</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Sanitäranlagen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Küchen und Pausenräume</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Empfangsbereiche</li>
+          </ul>
+          <a href="/bueroreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Grundreinigung -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Grundreinigung Wilhelmshaven</h3>
+          <p class="text-jonas-gray mb-4">
+            Intensive Tiefenreinigung für Neubauten, nach Renovierungen oder als regelmäßige Intensivreinigung in Wilhelmshaven.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Baustellenreinigung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Renovierungsreinigung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Tiefenreinigung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Erstbezugsreinigung</li>
+          </ul>
+          <a href="/grundreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Unterhaltsreinigung -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Unterhaltsreinigung Wilhelmshaven</h3>
+          <p class="text-jonas-gray mb-4">
+            Regelmäßige Reinigung zur Werterhaltung Ihrer Immobilie in Wilhelmshaven - besonders wichtig in der salzhaltigen Meeresluft.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Regelmäßige Pflege</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Flexible Termine</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Werterhalt</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Anpassbare Leistungspakete</li>
+          </ul>
+          <a href="/unterhaltsreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Industriereinigung -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Industriereinigung Wilhelmshaven</h3>
+          <p class="text-jonas-gray mb-4">
+            Spezialisierte Reinigung für Hafenanlagen, Werften und industrielle Anlagen in Wilhelmshaven mit besonderen Anforderungen.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Hafenanlagen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Werften</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Produktionshallen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Lagerhallen</li>
+          </ul>
+          <a href="/industriereinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Sonderreinigung -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Sonderreinigung Wilhelmshaven</h3>
+          <p class="text-jonas-gray mb-4">
+            Spezielle Reinigungsdienstleistungen für besondere Anforderungen und außergewöhnliche Situationen in Wilhelmshaven.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Salzwasserschäden</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Korrosionsschutzreinigung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Notfallreinigung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Graffiti-Entfernung</li>
+          </ul>
+          <a href="/sonderreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wilhelmshaven Specific Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Gebäudereinigung in Wilhelmshaven - Lokal & Zuverlässig</h2>
+          <p class="text-xl text-jonas-gray">
+            Als erfahrenes Reinigungsunternehmen kennen wir die besonderen Anforderungen in der Küstenstadt Wilhelmshaven
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">Ihr Reinigungspartner in Wilhelmshaven</h3>
+            <p class="text-jonas-gray mb-6">
+              Als Reinigungsunternehmen mit langjähriger Erfahrung sind wir mit den spezifischen Anforderungen und Besonderheiten der Küstenstadt Wilhelmshaven bestens vertraut. Die salzhaltige Luft und das maritime Klima stellen besondere Herausforderungen an die Gebäudereinigung dar. Salzablagerungen und erhöhte Korrosionsgefahr erfordern spezielle Reinigungsmethoden und -mittel, die wir gezielt einsetzen, um Ihre Immobilien in Wilhelmshaven optimal zu pflegen und zu schützen.
+            </p>
+            
+            <h4 class="text-xl font-bold text-jonas-dark-blue mb-3">Wir reinigen in ganz Wilhelmshaven:</h4>
+            <div class="grid grid-cols-2 gap-2 mb-6">
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Innenstadt</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Bant</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Neuende</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Heppens</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Siebethsburg</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Altengroden</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Fedderwardergroden</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Weitere Stadtteile</p>
+              </div>
+            </div>
+            
+            <h4 class="text-xl font-bold text-jonas-dark-blue mb-3">Wir reinigen alle Objekttypen in Wilhelmshaven:</h4>
+            <div class="grid grid-cols-2 gap-2 mb-6">
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Bürogebäude</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Einzelhandel</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Praxen & Kliniken</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Hafenanlagen</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Wohnanlagen</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Öffentliche Gebäude</p>
+              </div>
+            </div>
+            
+            <Button variant="secondary" size="lg" href="/kontakt">
+              Kostenlose Beratung vor Ort
+            </Button>
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Gebäudereinigung in Wilhelmshaven" class="rounded-xl shadow-lg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Ihre Vorteile mit Jonas Gebäudereinigung in Wilhelmshaven</h2>
+          <p class="text-xl text-jonas-gray">
+            Professionelle Gebäudereinigung ist eine Investition in Ihr Unternehmen und Ihre Immobilie
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-medium">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Repräsentatives Erscheinungsbild</h3>
+            <p class="text-jonas-gray">
+              Saubere Gebäude in Wilhelmshaven vermitteln Professionalität und schaffen Vertrauen bei Kunden und Geschäftspartnern.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-green-500 to-green-700 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-medium">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Gesundheit & Hygiene am Arbeitsplatz</h3>
+            <p class="text-jonas-gray">
+              Reduzierte Krankheitstage durch hygienische Arbeitsplätze und gesunde Raumluft für Ihre Mitarbeiter in Wilhelmshaven.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-medium">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Werterhalt Ihrer Immobilie</h3>
+            <p class="text-jonas-gray">
+              Regelmäßige professionelle Reinigung schützt vor vorzeitigem Verschleiß durch Salzluft und erhält den Immobilienwert in Wilhelmshaven.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-medium">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Individuelle Reinigungspläne</h3>
+            <p class="text-jonas-gray">
+              Maßgeschneiderte Lösungen nach Ihren Bedürfnissen in Wilhelmshaven - von täglich bis quartalsweise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Coastal Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Spezielle Reinigungslösungen für die Küstenstadt Wilhelmshaven</h2>
+          <p class="text-xl text-jonas-gray">
+            Maßgeschneiderte Reinigungsmethoden für die besonderen Herausforderungen an der Nordseeküste
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Spezielle Reinigungslösungen für Wilhelmshaven" class="rounded-xl shadow-lg">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">Besondere Herausforderungen an der Küste</h3>
+            <p class="text-jonas-gray mb-6">
+              Die Lage Wilhelmshavens direkt an der Nordsee bringt spezielle Herausforderungen für die Gebäudereinigung mit sich. Die salzhaltige Luft, Sandverwehungen und das feuchte Klima erfordern besondere Aufmerksamkeit und spezielle Reinigungsmethoden.
+            </p>
+            
+            <h4 class="text-xl font-bold text-jonas-dark-blue mb-3">Unsere speziellen Lösungen für Wilhelmshaven:</h4>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <strong>Salzrückstandsentfernung:</strong> Spezielle Verfahren zur Entfernung von Salzablagerungen auf Glas- und Metalloberflächen
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <strong>Korrosionsschutz:</strong> Präventive Reinigung und Pflege zum Schutz vor Korrosion durch Salzluft
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <strong>Häufigere Reinigungsintervalle:</strong> Angepasste Reinigungsfrequenz für besonders exponierte Gebäudeteile
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <strong>Spezielle Reinigungsmittel:</strong> Einsatz von Produkten, die speziell für den Einsatz in Küstenregionen entwickelt wurden
+                </div>
+              </li>
+            </ul>
+            
+            <Button variant="secondary" size="lg" href="/kontakt">
+              Kostenlose Beratung vor Ort
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Calculator -->
+  <PriceCalculator title="Gebäudereinigung Wilhelmshaven - Preisrechner" subtitle="Berechnen Sie die Kosten für Ihre Gebäudereinigung in Wilhelmshaven" />
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Gebäudereinigung in Wilhelmshaven" subtitle="Antworten auf die wichtigsten Fragen rund um professionelle Gebäudereinigung in Wilhelmshaven" />
+
+  <!-- Related Blog Posts -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Ratgeber zur Gebäudereinigung</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Informative Artikel und Tipps rund um das Thema Gebäudereinigung
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <a href="/blog/10-tipps-sauberes-buero" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Tipps für ein sauberes Büro" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              10 Tipps für ein sauberes Büro - Produktivität durch Ordnung
+            </h3>
+            <p class="text-jonas-gray mt-2">Erfahren Sie, wie ein sauberes und organisiertes Büro die Produktivität Ihrer Mitarbeiter steigern kann...</p>
+          </div>
+        </a>
+        
+        <a href="/blog/fruehjahrsputz-unternehmen" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Frühjahrsputz im Unternehmen" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              Frühjahrsputz im Unternehmen - Checkliste für Gewerbetreibende
+            </h3>
+            <p class="text-jonas-gray mt-2">Der ultimative Guide für den professionellen Frühjahrsputz in Ihrem Unternehmen...</p>
+          </div>
+        </a>
+        
+        <a href="/blog" class="group bg-jonas-light-gray rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col justify-center items-center p-8 text-center">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+            Weitere Ratgeber entdecken
+          </h3>
+          <p class="text-jonas-gray mt-2">Besuchen Sie unseren Blog für mehr Tipps und Informationen rund um die Gebäudereinigung</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Bereit für makellose Sauberkeit in Wilhelmshaven?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Fordern Sie jetzt Ihr unverbindliches Angebot an und profitieren Sie von unserer Erfahrung und Zuverlässigkeit in Wilhelmshaven.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Service Area -->
+  <section class="py-8 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-center">
+        <a href="/einzugsgebiet" class="inline-flex items-center text-jonas-blue hover:text-jonas-dark-blue transition-colors">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"></path>
+          </svg>
+          Zurück zur Übersicht unseres Einzugsgebiets
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jonas Gebäudereinigung",
+  "description": "Professionelle Gebäudereinigung in Wilhelmshaven",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 123",
+    "addressLocality": "Wilhelmshaven",
+    "addressRegion": "Niedersachsen",
+    "postalCode": "26382",
+    "addressCountry": "DE"
+  },
+  "telephone": "+49-441-XXXXXXX",
+  "url": "https://jonas-gebaeudereinigung.de/gebaeudereinigung-wilhelmshaven",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.5323,
+    "longitude": 8.1068
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "service": {
+    "@type": "Service",
+    "name": "Gebäudereinigung Wilhelmshaven",
+    "description": "Professionelle Gebäudereinigung für Büros, Gewerbe und Wohnkomplexe in Wilhelmshaven",
+    "areaServed": "Wilhelmshaven",
+    "serviceType": "Gebäudereinigung"
+  }
+}
+</script>

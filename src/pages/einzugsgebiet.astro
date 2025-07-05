@@ -1,0 +1,293 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+
+const serviceAreas = [
+  {
+    name: "Oldenburg",
+    description: "Unser Hauptsitz und Kerngebiet - wir sind in allen Stadtteilen Oldenburgs für Sie da.",
+    link: "/gebaeudereinigung-oldenburg",
+    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Bremen",
+    description: "Professionelle Gebäudereinigung in der Hansestadt Bremen und allen Stadtteilen.",
+    link: "/gebaeudereinigung-bremen",
+    image: "https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Delmenhorst",
+    description: "Zuverlässige Reinigungsdienstleistungen in Delmenhorst und Umgebung.",
+    link: "/gebaeudereinigung-delmenhorst",
+    image: "https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Wilhelmshaven",
+    description: "Kompetente Gebäudereinigung für Unternehmen und Privatkunden in Wilhelmshaven.",
+    link: "/gebaeudereinigung-wilhelmshaven",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Bad Zwischenahn",
+    description: "Professionelle Reinigungsdienstleistungen für Hotels, Kureinrichtungen und Gastronomiebetriebe in Bad Zwischenahn.",
+    link: "/gebaeudereinigung-bad-zwischenahn",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Rastede",
+    description: "Zuverlässige Gebäudereinigung für exklusive Privathaushalte und Gewerbebetriebe in Rastede.",
+    link: "/gebaeudereinigung-rastede",
+    image: "https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Wardenburg",
+    description: "Flexible Reinigungslösungen für die vielfältigen Unternehmen im Gewerbegebiet und die Wohngebiete in Wardenburg.",
+    link: "/gebaeudereinigung-wardenburg",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Westerstede",
+    description: "Professionelle Gebäudereinigung für die Rhododendron-Stadt mit Fokus auf perfekt saubere Fenster und Fassaden.",
+    link: "/gebaeudereinigung-westerstede",
+    image: "https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Friesoythe",
+    description: "Zuverlässige und gründliche Gebäudereinigung für mittelständische Unternehmen und Handwerksbetriebe in Friesoythe.",
+    link: "/gebaeudereinigung-friesoythe",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Varel",
+    description: "Vielseitige Gebäudereinigung für die Branchenvielfalt von Tourismus bis Industrie in Varel - für jede Anforderung die passende Lösung.",
+    link: "/gebaeudereinigung-varel",
+    image: "https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  },
+  {
+    name: "Ganderkesee",
+    description: "Professionelle Gebäudereinigung für luftfahrtnahe Betriebe am Flugplatz und repräsentative Firmengebäude in Ganderkesee.",
+    link: "/gebaeudereinigung-ganderkesee",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+  }
+];
+---
+
+<Layout 
+  title="Unser Einzugsgebiet - Gebäudereinigung in Oldenburg, Bremen und Umgebung | Jonas"
+  description="Professionelle Gebäudereinigung in Oldenburg, Bremen, Delmenhorst und Umgebung ✓ Lokal ✓ Schnell vor Ort ✓ Zuverlässig ✓ Kostenlose Beratung"
+  keywords="Gebäudereinigung Oldenburg, Gebäudereinigung Bremen, Reinigungsfirma Delmenhorst, Einzugsgebiet, Reinigungsservice Norddeutschland"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Unser <span class="text-jonas-accent">Einzugsgebiet</span>
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Professionelle Gebäudereinigung in Oldenburg, Bremen, Delmenhorst und Umgebung - Immer in Ihrer Nähe
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Kostenlose Beratung vor Ort
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Unsere Standorte und Einsatzgebiete</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Als regionales Reinigungsunternehmen sind wir in Oldenburg, Bremen und Umgebung für Sie im Einsatz
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {serviceAreas.map(area => (
+          <a href={area.link} class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+            <div class="relative h-48">
+              <img src={area.image} alt={`Gebäudereinigung in ${area.name}`} class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <h3 class="text-2xl font-bold text-white">{area.name}</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-jonas-gray mb-6">{area.description}</p>
+              <div class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+                Mehr erfahren
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Unser Einsatzradius</h2>
+          <p class="text-xl text-jonas-gray">
+            Wir sind in einem Umkreis von ca. 50 km um Oldenburg für Sie im Einsatz
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <div class="aspect-w-16 aspect-h-9 h-96 bg-jonas-light-gray rounded-lg flex items-center justify-center">
+            <div class="text-center">
+              <svg class="h-16 w-16 text-jonas-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <p class="text-jonas-gray">
+                Interaktive Karte<br>
+                <span class="text-sm">Unser Einsatzgebiet umfasst Oldenburg, Bremen, Delmenhorst und Umgebung</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Weitere Orte in unserem Einzugsgebiet:</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Oldenburg</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Bremen</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Delmenhorst</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Wilhelmshaven</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Rastede</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Wardenburg</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Bad Zwischenahn</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Wiefelstede</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Westerstede</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Friesoythe</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Varel</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Ganderkesee</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg text-center">
+                <p class="text-jonas-gray font-medium">Hatten</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits of Local Service -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Vorteile eines lokalen Reinigungspartners</h2>
+          <p class="text-xl text-jonas-gray">
+            Warum die Zusammenarbeit mit einem regionalen Anbieter viele Vorteile bietet
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center group">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Schnelle Reaktionszeiten</h3>
+            <p class="text-jonas-gray">
+              Durch unsere lokale Präsenz sind wir schnell vor Ort – besonders wichtig bei Notfällen oder kurzfristigen Anfragen.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Lokale Expertise</h3>
+            <p class="text-jonas-gray">
+              Wir kennen die regionalen Besonderheiten und Anforderungen in Oldenburg, Bremen und Umgebung aus erster Hand.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Persönlicher Service</h3>
+            <p class="text-jonas-gray">
+              Direkter Kontakt zu Ihrem persönlichen Ansprechpartner und kurze Kommunikationswege für optimale Betreuung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Ihr lokaler Reinigungspartner in Norddeutschland</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Kontaktieren Sie uns für eine kostenlose Beratung und ein maßgeschneidertes Angebot für Ihre Reinigungsanforderungen in Oldenburg, Bremen und Umgebung.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

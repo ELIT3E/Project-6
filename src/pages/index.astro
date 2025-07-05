@@ -1,0 +1,538 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
+import PriceCalculator from '../components/PriceCalculator.astro';
+import TestimonialCarousel from '../components/TestimonialCarousel.astro';
+import ServiceComparisonTable from '../components/ServiceComparisonTable.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import ReviewSchema from '../components/ReviewSchema.astro';
+---
+
+<Layout 
+  title="Jonas Gebäudereinigung Oldenburg - Professionelle Reinigungsdienstleistungen"
+  description="Jonas Gebäudereinigung in Oldenburg bietet professionelle Büroreinigung, Grundreinigung, Glasreinigung und Unterhaltsreinigung. Zuverlässig, qualitativ hochwertig und zu fairen Preisen."
+  keywords="Gebäudereinigung Oldenburg, Büroreinigung Oldenburg, Reinigungsfirma Oldenburg, Glasreinigung, Grundreinigung, Unterhaltsreinigung"
+  ogImage="https://jonas-gebaeudereinigung.de/og-image.jpg"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-screen bg-gradient-to-br from-jonas-blue via-jonas-dark-blue to-gray-900 text-white overflow-hidden flex items-center">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-jonas-blue/30 to-transparent"></div>
+      <div class="absolute top-20 left-20 w-32 h-32 bg-jonas-accent/20 rounded-full animate-float"></div>
+      <div class="absolute top-40 right-32 w-24 h-24 bg-white/10 rounded-full animate-float" style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-32 left-1/4 w-40 h-40 bg-jonas-accent/10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="relative container mx-auto px-4 py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+          <div class="space-y-6">
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+              Professionelle <span class="text-jonas-accent">Gebäudereinigung</span> in Oldenburg
+            </h1>
+            <p class="text-xl lg:text-2xl text-blue-100 leading-relaxed">
+              Ihr zuverlässiger Partner für makellose Sauberkeit in Büros, Praxen und Gewerbeobjekten
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+              <div class="text-3xl font-bold text-jonas-accent mb-2">15+</div>
+              <div class="text-sm font-medium">Jahre Erfahrung</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+              <div class="text-3xl font-bold text-jonas-accent mb-2">500+</div>
+              <div class="text-sm font-medium">Zufriedene Kunden</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center transform hover:scale-105 transition-all duration-300">
+              <div class="text-3xl font-bold text-jonas-accent mb-2">24/7</div>
+              <div class="text-sm font-medium">Notdienst</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/kontakt" class="bg-jonas-blue text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-jonas-dark-blue transition-all duration-300 text-center shadow-medium transform hover:scale-105">
+              Kostenlos anfragen
+            </a>
+            <a href="tel:+49441XXXXXXX" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-jonas-blue transition-all duration-300 text-center transform hover:scale-105">
+              <span class="flex items-center justify-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                0441 - XXX XXX
+              </span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative">
+            <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Professionelle Gebäudereinigung" class="rounded-2xl shadow-strong w-full h-auto" loading="eager">
+            <div class="absolute -bottom-6 -left-6 bg-jonas-accent text-jonas-dark-blue p-6 rounded-xl shadow-strong animate-float">
+              <div class="text-2xl font-bold">100%</div>
+              <div class="text-sm font-medium">Kundenzufriedenheit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Section -->
+  <section class="py-20 bg-gradient-to-br from-white to-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold text-jonas-dark-blue mb-6">Sehen Sie den Unterschied</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto leading-relaxed">
+          Überzeugen Sie sich selbst von der Qualität unserer Arbeit - Vorher-Nachher-Vergleiche unserer Reinigungsprojekte
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div>
+          <BeforeAfterSlider 
+            beforeImage="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+            afterImage="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+            altText="Büroreinigung"
+          />
+          <h3 class="text-xl font-bold text-jonas-dark-blue mt-4 text-center">Büroreinigung</h3>
+        </div>
+        
+        <div>
+          <BeforeAfterSlider 
+            beforeImage="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+            afterImage="https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+            altText="Glasreinigung"
+          />
+          <h3 class="text-xl font-bold text-jonas-dark-blue mt-4 text-center">Glasreinigung</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold text-jonas-dark-blue mb-6">Unsere Reinigungsdienstleistungen</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto leading-relaxed">
+          Von der täglichen Büroreinigung bis zur intensiven Grundreinigung - wir bieten maßgeschneiderte Lösungen für jeden Bedarf in Oldenburg und Umgebung.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Büroreinigung -->
+        <div class="group bg-gradient-to-br from-white to-jonas-light-gray rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-medium">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Büroreinigung</h3>
+          <p class="text-jonas-gray mb-6 leading-relaxed">
+            Professionelle Reinigung von Büroräumen, Konferenzräumen und Arbeitsplätzen. Täglich, wöchentlich oder nach Bedarf.
+          </p>
+          <ul class="space-y-3 text-jonas-gray mb-6">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Schreibtische und Arbeitsplätze
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Sanitäranlagen
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Küchen und Pausenräume
+            </li>
+          </ul>
+          <a href="/bueroreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Grundreinigung -->
+        <div class="group bg-gradient-to-br from-white to-jonas-light-gray rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-medium">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Grundreinigung</h3>
+          <p class="text-jonas-gray mb-6 leading-relaxed">
+            Intensive Tiefenreinigung für Neubauten, nach Renovierungen oder als regelmäßige Intensivreinigung.
+          </p>
+          <ul class="space-y-3 text-jonas-gray mb-6">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Baustellenreinigung
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Renovierungsreinigung
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Tiefenreinigung
+            </li>
+          </ul>
+          <a href="/grundreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Glasreinigung -->
+        <div class="group bg-gradient-to-br from-white to-jonas-light-gray rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-medium">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Glasreinigung</h3>
+          <p class="text-jonas-gray mb-6 leading-relaxed">
+            Streifenfreie Reinigung von Fenstern, Glasfassaden und Schaufenstern für kristallklare Durchsicht.
+          </p>
+          <ul class="space-y-3 text-jonas-gray mb-6">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Fensterreinigung innen & außen
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Glasfassaden
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Schaufenster
+            </li>
+          </ul>
+          <a href="/glasreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Unterhaltsreinigung -->
+        <div class="group bg-gradient-to-br from-white to-jonas-light-gray rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-medium">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Unterhaltsreinigung</h3>
+          <p class="text-jonas-gray mb-6 leading-relaxed">
+            Regelmäßige Reinigung zur Werterhaltung Ihrer Immobilie mit flexiblen Intervallen nach Ihren Bedürfnissen.
+          </p>
+          <ul class="space-y-3 text-jonas-gray mb-6">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Regelmäßige Pflege
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Flexible Termine
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Werterhaltung
+            </li>
+          </ul>
+          <a href="/unterhaltsreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Sonderreinigung -->
+        <div class="group bg-gradient-to-br from-white to-jonas-light-gray rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-medium">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Sonderreinigung</h3>
+          <p class="text-jonas-gray mb-6 leading-relaxed">
+            Spezielle Reinigungsdienstleistungen für besondere Anforderungen und außergewöhnliche Situationen.
+          </p>
+          <ul class="space-y-3 text-jonas-gray mb-6">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Teppichreinigung
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Polsterreinigung
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Notfallreinigung
+            </li>
+          </ul>
+          <a href="/sonderreinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Industriereinigung -->
+        <div class="group bg-gradient-to-br from-white to-jonas-light-gray rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-medium">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Industriereinigung</h3>
+          <p class="text-jonas-gray mb-6 leading-relaxed">
+            Spezialisierte Reinigung für Produktionsstätten, Werkshallen und industrielle Anlagen mit besonderen Anforderungen.
+          </p>
+          <ul class="space-y-3 text-jonas-gray mb-6">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Produktionshallen
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Werkstätten
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-jonas-blue rounded-full mr-3"></span>
+              Spezialreinigung
+            </li>
+          </ul>
+          <a href="/industriereinigung" class="inline-flex items-center text-jonas-blue font-semibold hover:text-jonas-dark-blue transition-colors duration-300">
+            Mehr erfahren
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/case-studies" class="inline-flex items-center bg-jonas-blue text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-jonas-dark-blue transition-all duration-300 shadow-medium transform hover:scale-105">
+          Unsere Fallstudien entdecken
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Comparison -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold text-jonas-dark-blue mb-6">Unsere Leistungen im Vergleich</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto leading-relaxed">
+          Finden Sie die passende Reinigungsdienstleistung für Ihre Anforderungen
+        </p>
+      </div>
+
+      <ServiceComparisonTable />
+    </div>
+  </section>
+
+  <!-- Price Calculator -->
+  <PriceCalculator />
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold text-jonas-dark-blue mb-6">Das sagen unsere Kunden</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Über 500 zufriedene Kunden vertrauen auf unsere Dienstleistungen
+        </p>
+      </div>
+
+      <TestimonialCarousel />
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-gradient-to-br from-jonas-light-gray to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold text-jonas-dark-blue mb-6">Warum Jonas Gebäudereinigung?</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Über 15 Jahre Erfahrung in der professionellen Gebäudereinigung in Oldenburg machen uns zu Ihrem vertrauenswürdigen Partner.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-medium group-hover:shadow-strong transition-all duration-300 transform group-hover:scale-110">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Zertifizierte Qualität</h3>
+          <p class="text-jonas-gray leading-relaxed">
+            Alle unsere Mitarbeiter sind geschult und zertifiziert. Wir arbeiten nach höchsten Qualitätsstandards.
+          </p>
+        </div>
+
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-medium group-hover:shadow-strong transition-all duration-300 transform group-hover:scale-110">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Pünktlich & Zuverlässig</h3>
+          <p class="text-jonas-gray leading-relaxed">
+            Termintreue ist unser Markenzeichen. Wir sind immer pünktlich und arbeiten zuverlässig nach Plan.
+          </p>
+        </div>
+
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-medium group-hover:shadow-strong transition-all duration-300 transform group-hover:scale-110">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Umweltfreundlich</h3>
+          <p class="text-jonas-gray leading-relaxed">
+            Wir verwenden ausschließlich umweltfreundliche Reinigungsmittel zum Schutz von Mensch und Natur.
+          </p>
+        </div>
+
+        <div class="text-center group">
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-medium group-hover:shadow-strong transition-all duration-300 transform group-hover:scale-110">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors duration-300">Faire Preise</h3>
+          <p class="text-jonas-gray leading-relaxed">
+            Transparente Preisgestaltung ohne versteckte Kosten. Qualität muss nicht teuer sein.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/downloads" class="inline-flex items-center bg-jonas-accent text-jonas-dark-blue px-8 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 shadow-medium transform hover:scale-105">
+          Kostenlose Checklisten & Ratgeber
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold text-jonas-dark-blue mb-6">Unser Einzugsgebiet</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto leading-relaxed">
+          Wir sind in Oldenburg und Umgebung für Sie da
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+        <a href="/gebaeudereinigung-oldenburg" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Oldenburg</p>
+        </a>
+        <a href="/gebaeudereinigung-bremen" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Bremen</p>
+        </a>
+        <a href="/gebaeudereinigung-delmenhorst" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Delmenhorst</p>
+        </a>
+        <a href="/gebaeudereinigung-wilhelmshaven" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Wilhelmshaven</p>
+        </a>
+        <a href="/gebaeudereinigung-bad-zwischenahn" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Bad Zwischenahn</p>
+        </a>
+        <a href="/gebaeudereinigung-rastede" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Rastede</p>
+        </a>
+        <a href="/gebaeudereinigung-wardenburg" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Wardenburg</p>
+        </a>
+        <a href="/gebaeudereinigung-westerstede" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Westerstede</p>
+        </a>
+        <a href="/gebaeudereinigung-friesoythe" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Friesoythe</p>
+        </a>
+        <a href="/gebaeudereinigung-varel" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Varel</p>
+        </a>
+        <a href="/gebaeudereinigung-ganderkesee" class="bg-jonas-light-gray rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Ganderkesee</p>
+        </a>
+        <a href="/einzugsgebiet" class="bg-jonas-accent text-jonas-dark-blue rounded-lg p-4 text-center hover:bg-jonas-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-medium">
+          <p class="font-semibold">Alle Standorte</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-jonas-blue via-jonas-dark-blue to-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-10 animate-pulse"></div>
+    
+    <div class="relative container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Bereit für makellose Sauberkeit?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+        Kontaktieren Sie uns noch heute für ein kostenloses und unverbindliches Angebot. 
+        Wir beraten Sie gerne zu allen Fragen rund um die professionelle Gebäudereinigung.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/kontakt" class="group bg-yellow-400 text-jonas-dark-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+          <span class="group-hover:animate-pulse">Kostenlos anfragen</span>
+        </a>
+        <a href="tel:+49441XXXXXXX" class="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-jonas-dark-blue transition-all duration-300 transform hover:scale-105">
+          <span class="group-hover:animate-bounce">📞 0441 - XXX XXX</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <CookieConsent />
+  <ReviewSchema />
+</Layout>
+
+<style>
+  /* Optimized image loading */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Performance optimizations */
+  * {
+    will-change: auto;
+  }
+  
+  .animate-float {
+    will-change: transform;
+  }
+</style>

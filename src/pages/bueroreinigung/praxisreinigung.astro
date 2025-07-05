@@ -1,0 +1,348 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FAQ from '../../components/FAQ.astro';
+import Button from '../../components/Button.astro';
+
+const faqData = [
+  {
+    question: "Erfüllen Sie spezielle Hygienevorschriften für Arztpraxen?",
+    answer: "Ja, wir befolgen alle relevanten Hygieneverordnungen für medizinische Einrichtungen. Unsere Mitarbeiter sind in Hygieneschulung geschult und verwenden spezielle Desinfektionsmittel, die für Praxen zugelassen sind."
+  },
+  {
+    question: "Wie stellen Sie die Diskretion Ihres Personals sicher?",
+    answer: "Alle unsere Mitarbeiter sind zur Verschwiegenheit verpflichtet und geschult im diskreten Umgang mit sensiblen Bereichen. Wir respektieren die Privatsphäre von Patienten und arbeiten außerhalb der Sprechzeiten."
+  },
+  {
+    question: "Verwenden Sie für Praxen spezielle Desinfektionsmittel?",
+    answer: "Ja, wir verwenden medizinisch zugelassene Desinfektionsmittel, die gegen Viren, Bakterien und Pilze wirksam sind. Diese entsprechen den RKI-Richtlinien und sind für den Einsatz in medizinischen Bereichen zertifiziert."
+  }
+];
+---
+
+<Layout 
+  title="Spezialisierte Praxisreinigung Oldenburg - Hygiene und Vertrauen für Ihre Patienten | Jonas Gebäudereinigung"
+  description="Professionelle Praxisreinigung in Oldenburg ✓ Arztpraxen ✓ Zahnarztpraxen ✓ Tierarztpraxen ✓ Hygienische Standards ✓ Diskrete Arbeitsweise ✓ Kostenlose Beratung"
+  keywords="Praxisreinigung Oldenburg, Reinigung Arztpraxis, Hygienereinigung Praxis, Zahnarztpraxis Reinigung, Tierarztpraxis Hygiene"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Spezialisierte <span class="text-jonas-accent">Praxisreinigung</span> in Oldenburg: Hygiene und Vertrauen für Ihre Patienten
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Schaffen Sie eine hygienische und vertrauensvolle Atmosphäre in Ihrer Praxis. Professionelle Reinigung nach medizinischen Standards für das Wohlbefinden Ihrer Patienten und die Einhaltung aller Hygienevorschriften.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Sorgen Sie für ein hygienisch einwandfreies Umfeld. Jetzt Spezialangebot für Praxisreinigung anfordern!
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Warum spezialisierte Praxisreinigung?</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Medizinische Einrichtungen unterliegen besonderen Hygieneanforderungen und Vorschriften. Patienten vertrauen darauf, 
+            dass sie in einer sauberen und hygienischen Umgebung behandelt werden. Unsere spezialisierte Praxisreinigung erfüllt 
+            alle medizinischen Standards, schützt vor Infektionen und schafft eine vertrauensvolle Atmosphäre für Ihre Patienten. 
+            Gleichzeitig unterstützen wir Sie bei der Einhaltung aller gesetzlichen Hygienevorschriften.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Service Description -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Unser Praxisreinigungsservice im Detail</h2>
+          <p class="text-xl text-jonas-gray">
+            Von Wartezimmern bis zu Behandlungsräumen - wir sorgen für hygienische Sauberkeit nach medizinischen Standards
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Wartezimmer & Empfang</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Sitzmöbel desinfizieren und reinigen</li>
+              <li>• Zeitschriften und Infomaterial ordnen</li>
+              <li>• Empfangstresen gründlich säubern</li>
+              <li>• Böden desinfizierend wischen</li>
+              <li>• Türgriffe und Kontaktflächen desinfizieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Behandlungsräume</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Behandlungsliegen desinfizieren</li>
+              <li>• Medizinische Geräte oberflächlich reinigen</li>
+              <li>• Arbeitsflächen nach RKI-Standards</li>
+              <li>• Böden mit Flächendesinfektion</li>
+              <li>• Lichtschalter und Griffe desinfizieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Sanitäranlagen</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Intensive Desinfektion aller Oberflächen</li>
+              <li>• WCs nach Hygieneverordnung reinigen</li>
+              <li>• Waschbecken und Armaturen polieren</li>
+              <li>• Desinfektionsmittelspender auffüllen</li>
+              <li>• Handtücher und Verbrauchsmaterial</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Labor & Spezialräume</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Labortische nach Hygieneplan</li>
+              <li>• Spezialgeräte oberflächlich säubern</li>
+              <li>• Probenlagerung-Bereiche reinigen</li>
+              <li>• Entsorgung medizinischer Abfälle</li>
+              <li>• Sterilisationsräume hygienisch</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Büro- & Personalräume</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Schreibtische und Computer reinigen</li>
+              <li>• Aktenordnung und Datenschutz</li>
+              <li>• Personalküche hygienisch säubern</li>
+              <li>• Umkleidebereiche desinfizieren</li>
+              <li>• Pausenräume gründlich reinigen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Spezialreinigung</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Desinfektion nach Infektionsfällen</li>
+              <li>• Ozonbehandlung bei Gerüchen</li>
+              <li>• UV-Desinfektion von Oberflächen</li>
+              <li>• Schädlingsbekämpfung</li>
+              <li>• Notfallreinigung bei Kontamination</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-6 text-center">Compliance & Hygienestandards</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Einhaltung gesetzlicher Vorschriften</h4>
+              <ul class="space-y-3 text-jonas-gray">
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>RKI-Richtlinien:</strong> Befolgen aller Empfehlungen des Robert Koch-Instituts
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Hygieneverordnung:</strong> Einhaltung aller landesspezifischen Hygienevorschriften
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Infektionsschutzgesetz:</strong> Schutz vor übertragbaren Krankheiten
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Unsere Qualitätsgarantien</h4>
+              <ul class="space-y-3 text-jonas-gray">
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Geschultes Personal:</strong> Alle Mitarbeiter sind in Hygieneschulung zertifiziert
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Dokumentation:</strong> Lückenlose Reinigungsprotokolle für Kontrollen
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="h-6 w-6 text-jonas-accent mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <div>
+                    <strong>Diskretion:</strong> Absolute Verschwiegenheit und Patientenschutz
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Audience Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Spezialisiert auf alle medizinischen Fachrichtungen</h2>
+          <p class="text-xl text-jonas-gray">
+            Jede medizinische Fachrichtung hat spezielle Hygieneanforderungen - wir kennen sie alle
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-jonas-light-gray rounded-xl p-8 text-center">
+            <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Hausarztpraxen</h3>
+            <p class="text-jonas-gray">
+              Umfassende Hygienemaßnahmen für Allgemeinmediziner mit Fokus auf Infektionsprävention und Patientensicherheit.
+            </p>
+          </div>
+
+          <div class="bg-jonas-light-gray rounded-xl p-8 text-center">
+            <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-10 5.172a10 10 0 1114.142-14.142A10 10 0 012 19.172z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Zahnarztpraxen</h3>
+            <p class="text-jonas-gray">
+              Spezielle Reinigung für Zahnarztpraxen mit besonderen Anforderungen an Sterilität und Behandlungsraum-Hygiene.
+            </p>
+          </div>
+
+          <div class="bg-jonas-light-gray rounded-xl p-8 text-center">
+            <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Tierarztpraxen</h3>
+            <p class="text-jonas-gray">
+              Professionelle Reinigung von Tierarztpraxen mit speziellen Desinfektionsverfahren gegen Zoonosen und Tierkrankheiten.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Praxisreinigung" subtitle="Antworten auf die wichtigsten Fragen rund um spezialisierte Praxisreinigung" />
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Sorgen Sie für ein hygienisch einwandfreies Umfeld!</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Jetzt Spezialangebot für Praxisreinigung anfordern und höchste Hygienestandards für Ihre Patienten gewährleisten.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Praxisreinigung Oldenburg",
+  "description": "Spezialisierte Praxisreinigung für Arztpraxen, Zahnarztpraxen und Tierarztpraxen in Oldenburg",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jonas Gebäudereinigung",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oldenburg",
+      "addressRegion": "Niedersachsen",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49-441-XXXXXXX"
+  },
+  "areaServed": "Oldenburg",
+  "serviceType": "Praxisreinigung"
+}
+</script>

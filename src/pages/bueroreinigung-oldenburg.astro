@@ -1,0 +1,364 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+import PriceCalculator from '../components/PriceCalculator.astro';
+
+const faqData = [
+  {
+    question: "Wie oft sollte eine Büroreinigung in Oldenburg durchgeführt werden?",
+    answer: "Das hängt von der Bürogröße und Mitarbeiteranzahl ab. Für die meisten Büros in Oldenburg empfehlen wir tägliche Grundreinigung mit wöchentlicher Intensivreinigung. Kleinere Büros können auch mit 2-3 Reinigungen pro Woche auskommen."
+  },
+  {
+    question: "Stören die Reinigungsarbeiten den Bürobetrieb in Oldenburg?",
+    answer: "Nein, wir arbeiten bevorzugt außerhalb der Geschäftszeiten - früh morgens, abends oder am Wochenende. So wird Ihr Arbeitsablauf in Oldenburg nicht gestört und Sie kommen in ein sauberes Büro."
+  },
+  {
+    question: "Bieten Sie auch die Reinigung von IT-Ausstattung in Oldenburg an?",
+    answer: "Ja, wir reinigen professionell Monitore, Tastaturen, Telefone und andere IT-Geräte mit speziellen, antistatischen Reinigungsmitteln, die elektronische Geräte nicht beschädigen."
+  },
+  {
+    question: "Welche Bürogebäude in Oldenburg reinigen Sie?",
+    answer: "Wir reinigen alle Arten von Bürogebäuden in Oldenburg - von kleinen Einzelbüros bis zu großen Bürokomplexen, Coworking Spaces, Behörden und Verwaltungsgebäuden."
+  },
+  {
+    question: "Wie schnell können Sie mit der Büroreinigung in Oldenburg beginnen?",
+    answer: "Nach einer kostenlosen Besichtigung und Angebotserstellung können wir in der Regel innerhalb von 3-5 Werktagen mit der regelmäßigen Büroreinigung in Oldenburg beginnen."
+  }
+];
+---
+
+<Layout 
+  title="Büroreinigung Oldenburg - Professionelle Reinigung für Ihr Büro | Jonas"
+  description="Professionelle Büroreinigung in Oldenburg ✓ Täglich, wöchentlich oder nach Bedarf ✓ Produktives Arbeitsumfeld ✓ Gesunde Mitarbeiter ✓ Kostenlose Beratung"
+  keywords="Büroreinigung Oldenburg, Büro reinigen lassen Oldenburg, Unterhaltsreinigung Büro Oldenburg, Arbeitsplatz Reinigung Oldenburg"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Büroreinigung</span> in Oldenburg: Für ein produktives und gesundes Arbeitsumfeld
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Schaffen Sie optimale Arbeitsbedingungen für Ihr Team in Oldenburg. Saubere Büros steigern die Produktivität, reduzieren Krankheitstage und vermitteln Professionalität.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Kostenlose Beratung für Ihre Büroreinigung in Oldenburg
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Warum professionelle Büroreinigung in Oldenburg?</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Ein sauberes Büro ist mehr als nur Ästhetik - es ist die Grundlage für Produktivität, Gesundheit und ein professionelles Arbeitsumfeld in Oldenburg. 
+            Studien zeigen, dass Mitarbeiter in sauberen Büros bis zu 15% produktiver sind und weniger Krankheitstage haben. 
+            Gleichzeitig vermitteln gepflegte Büroräume Professionalität gegenüber Kunden und Geschäftspartnern in Oldenburg und Umgebung.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Service Description -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Unser Büroreinigungsservice in Oldenburg im Detail</h2>
+          <p class="text-xl text-jonas-gray">
+            Von Arbeitsplätzen bis zu Konferenzräumen - wir sorgen für makellose Sauberkeit in allen Bürobereichen in Oldenburg
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h2a2 2 0 002-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Arbeitsplätze & Schreibtische</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Schreibtische abwischen und desinfizieren</li>
+              <li>• Tastaturen und Mäuse reinigen</li>
+              <li>• Monitore staubfrei wischen</li>
+              <li>• Bürostühle absaugen und reinigen</li>
+              <li>• Papierkörbe leeren und reinigen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Konferenz- & Besprechungsräume</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Konferenztische polieren</li>
+              <li>• Stühle reinigen und ordnen</li>
+              <li>• Whiteboards säubern</li>
+              <li>• Präsentationstechnik entstauben</li>
+              <li>• Böden gründlich reinigen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Sanitäranlagen</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• WCs gründlich reinigen und desinfizieren</li>
+              <li>• Waschbecken und Armaturen polieren</li>
+              <li>• Spiegel streifenfrei putzen</li>
+              <li>• Verbrauchsmaterialien auffüllen</li>
+              <li>• Böden wischen und desinfizieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Küchen & Pausenräume</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Kühlschrank innen und außen reinigen</li>
+              <li>• Mikrowelle und Kaffeemaschine säubern</li>
+              <li>• Arbeitsflächen desinfizieren</li>
+              <li>• Tische und Stühle abwischen</li>
+              <li>• Spülbecken und Armaturen polieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Fenster & Glasflächen</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Fenster innen streifenfrei reinigen</li>
+              <li>• Glastrennwände säubern</li>
+              <li>• Fensterrahmen abwischen</li>
+              <li>• Jalousien entstauben</li>
+              <li>• Glastüren polieren</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Böden & Allgemeinbereiche</h3>
+            <ul class="space-y-2 text-jonas-gray">
+              <li>• Staubsaugen aller Teppichböden</li>
+              <li>• Wischen von Hartböden</li>
+              <li>• Fleckenentfernung bei Bedarf</li>
+              <li>• Fußleisten abstauben</li>
+              <li>• Eingangsbereiche intensiv reinigen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oldenburg Specific Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Büroreinigung in Oldenburg - Lokal & Zuverlässig</h2>
+          <p class="text-xl text-jonas-gray">
+            Als Oldenburger Unternehmen kennen wir die lokalen Gegebenheiten und Anforderungen
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Büroreinigung in Oldenburg" class="rounded-xl shadow-lg">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">Ihr lokaler Partner in Oldenburg</h3>
+            <p class="text-jonas-gray mb-6">
+              Als in Oldenburg ansässiges Unternehmen sind wir mit den spezifischen Anforderungen und Besonderheiten der lokalen Geschäftswelt bestens vertraut. Unsere Reinigungsteams sind schnell vor Ort und kennen sich in der Stadt aus.
+            </p>
+            
+            <h4 class="text-xl font-bold text-jonas-dark-blue mb-3">Wir reinigen in ganz Oldenburg:</h4>
+            <div class="grid grid-cols-2 gap-2 mb-6">
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Innenstadt</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Eversten</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Nadorst</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Kreyenbrück</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Wechloy</p>
+              </div>
+              <div class="bg-jonas-light-gray p-3 rounded-lg">
+                <p class="text-jonas-gray">• Gewerbegebiete</p>
+              </div>
+            </div>
+            
+            <Button variant="secondary" size="lg" href="/kontakt">
+              Kostenlose Beratung vor Ort
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Calculator -->
+  <PriceCalculator title="Büroreinigung Oldenburg - Preisrechner" subtitle="Berechnen Sie die Kosten für Ihre Büroreinigung in Oldenburg" />
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Büroreinigung in Oldenburg" subtitle="Antworten auf die wichtigsten Fragen rund um professionelle Büroreinigung in Oldenburg" />
+
+  <!-- Related Blog Posts -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Ratgeber zur Büroreinigung</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Informative Artikel und Tipps rund um das Thema Büroreinigung
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <a href="/blog/10-tipps-sauberes-buero" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Tipps für ein sauberes Büro" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              10 Tipps für ein sauberes Büro - Produktivität durch Ordnung
+            </h3>
+            <p class="text-jonas-gray mt-2">Erfahren Sie, wie ein sauberes und organisiertes Büro die Produktivität Ihrer Mitarbeiter steigern kann...</p>
+          </div>
+        </a>
+        
+        <a href="/blog/fruehjahrsputz-unternehmen" class="group bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+          <img src="https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Frühjahrsputz im Unternehmen" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+              Frühjahrsputz im Unternehmen - Checkliste für Gewerbetreibende
+            </h3>
+            <p class="text-jonas-gray mt-2">Der ultimative Guide für den professionellen Frühjahrsputz in Ihrem Unternehmen...</p>
+          </div>
+        </a>
+        
+        <a href="/blog" class="group bg-jonas-light-gray rounded-xl shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 overflow-hidden flex flex-col justify-center items-center p-8 text-center">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue group-hover:text-jonas-blue transition-colors">
+            Weitere Ratgeber entdecken
+          </h3>
+          <p class="text-jonas-gray mt-2">Besuchen Sie unseren Blog für mehr Tipps und Informationen rund um die Gebäudereinigung</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Bereit für makellose Sauberkeit in Ihrem Büro in Oldenburg?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Fordern Sie jetzt Ihr unverbindliches Angebot an und schaffen Sie optimale Arbeitsbedingungen für Ihr Team in Oldenburg.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jonas Gebäudereinigung",
+  "description": "Professionelle Büroreinigung in Oldenburg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Musterstraße 123",
+    "addressLocality": "Oldenburg",
+    "addressRegion": "Niedersachsen",
+    "postalCode": "26123",
+    "addressCountry": "DE"
+  },
+  "telephone": "+49-441-XXXXXXX",
+  "url": "https://jonas-gebaeudereinigung.de/bueroreinigung-oldenburg",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.1434501,
+    "longitude": 8.2145521
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "service": {
+    "@type": "Service",
+    "name": "Büroreinigung Oldenburg",
+    "description": "Professionelle Büroreinigung für produktive und gesunde Arbeitsplätze in Oldenburg",
+    "areaServed": "Oldenburg",
+    "serviceType": "Büroreinigung"
+  }
+}
+</script>

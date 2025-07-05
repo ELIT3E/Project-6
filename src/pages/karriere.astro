@@ -1,0 +1,587 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout 
+  title="Karriere - Jobs & Ausbildung | Jonas Gebäudereinigung Oldenburg"
+  description="Karrieremöglichkeiten bei Jonas Gebäudereinigung ✓ Offene Stellen ✓ Ausbildung ✓ Weiterbildung ✓ Benefits ✓ Teamgeist ✓ Bewerbung"
+  keywords="Jobs Gebäudereinigung Oldenburg, Karriere Reinigungsbranche, Ausbildung Gebäudereiniger, Stellenangebote, Bewerbung"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue via-jonas-dark-blue to-black text-white py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-20 h-20 bg-jonas-accent rounded-full opacity-20 animate-bounce"></div>
+      <div class="absolute top-40 right-20 w-16 h-16 bg-white rounded-lg opacity-10 animate-spin"></div>
+      <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-jonas-accent rounded-full opacity-15 animate-ping"></div>
+    </div>
+    
+    <div class="relative container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          <span class="text-jonas-accent animate-pulse">Karriere</span> bei Jonas Gebäudereinigung
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8 opacity-90">
+          Werden Sie Teil unseres Teams und gestalten Sie mit uns die Zukunft der professionellen Gebäudereinigung
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#offene-stellen" class="group bg-jonas-accent text-jonas-dark-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-pulse">🔍 Offene Stellen</span>
+          </a>
+          <a href="#bewerbung" class="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-jonas-blue transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-bounce">📝 Jetzt bewerben</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Work With Us -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Warum Jonas Gebäudereinigung?</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Entdecken Sie die Vorteile einer Karriere in unserem Unternehmen
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="group text-center bg-jonas-light-gray rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors">Faire Vergütung</h3>
+          <p class="text-jonas-gray">
+            Übertarifliche Bezahlung, pünktliche Gehaltszahlungen und attraktive Zusatzleistungen
+          </p>
+        </div>
+
+        <div class="group text-center bg-jonas-light-gray rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-green-600 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-green-600 transition-colors">Weiterbildung</h3>
+          <p class="text-jonas-gray">
+            Regelmäßige Schulungen, Fortbildungen und Aufstiegsmöglichkeiten für Ihre berufliche Entwicklung
+          </p>
+        </div>
+
+        <div class="group text-center bg-jonas-light-gray rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-purple-600 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-purple-600 transition-colors">Starkes Team</h3>
+          <p class="text-jonas-gray">
+            Wertschätzende Arbeitsatmosphäre, kollegiales Miteinander und regelmäßige Teamevents
+          </p>
+        </div>
+
+        <div class="group text-center bg-jonas-light-gray rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-red-600 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-red-600 transition-colors">Flexible Arbeitszeiten</h3>
+          <p class="text-jonas-gray">
+            Verschiedene Arbeitszeitmodelle, Work-Life-Balance und Rücksicht auf persönliche Bedürfnisse
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Positions -->
+  <section id="offene-stellen" class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Aktuelle Stellenangebote</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Entdecken Sie unsere offenen Positionen und finden Sie Ihren nächsten Karriereschritt
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Job 1 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex justify-between items-start mb-6">
+            <h3 class="text-xl font-bold text-jonas-dark-blue">Gebäudereiniger (m/w/d)</h3>
+            <div class="bg-jonas-blue text-white px-3 py-1 rounded-full text-sm">
+              Vollzeit
+            </div>
+          </div>
+          <div class="space-y-4 mb-6">
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Aufgaben:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Professionelle Reinigung von Büro- und Geschäftsräumen</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Unterhalts-, Grund- und Sonderreinigung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Qualitätskontrolle und Dokumentation</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Anforderungen:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Berufserfahrung in der Gebäudereinigung wünschenswert</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Zuverlässigkeit und Sorgfalt</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Führerschein Klasse B von Vorteil</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Wir bieten:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Übertarifliche Vergütung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Unbefristeter Arbeitsvertrag</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Regelmäßige Schulungen</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <Button variant="secondary" size="md" href="#bewerbung">
+              Jetzt bewerben
+            </Button>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex justify-between items-start mb-6">
+            <h3 class="text-xl font-bold text-jonas-dark-blue">Teamleiter Gebäudereinigung (m/w/d)</h3>
+            <div class="bg-jonas-blue text-white px-3 py-1 rounded-full text-sm">
+              Vollzeit
+            </div>
+          </div>
+          <div class="space-y-4 mb-6">
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Aufgaben:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Führung und Koordination eines Reinigungsteams</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Qualitätskontrolle und Kundenkommunikation</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Einsatzplanung und Materialbeschaffung</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Anforderungen:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Mehrjährige Berufserfahrung in der Gebäudereinigung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Führungserfahrung und Organisationstalent</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Führerschein Klasse B erforderlich</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Wir bieten:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Attraktives Gehalt mit Leistungszulagen</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Firmenwagen auch zur privaten Nutzung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Weiterbildungsmöglichkeiten</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <Button variant="secondary" size="md" href="#bewerbung">
+              Jetzt bewerben
+            </Button>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex justify-between items-start mb-6">
+            <h3 class="text-xl font-bold text-jonas-dark-blue">Auszubildender Gebäudereiniger (m/w/d)</h3>
+            <div class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">
+              Ausbildung
+            </div>
+          </div>
+          <div class="space-y-4 mb-6">
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Ausbildungsinhalte:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Alle Reinigungsverfahren und -techniken</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Umgang mit Maschinen und Reinigungsmitteln</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Kundenservice und Qualitätsmanagement</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Anforderungen:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Mindestens Hauptschulabschluss</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Interesse an praktischer Arbeit</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Zuverlässigkeit und Teamfähigkeit</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Wir bieten:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Fundierte 3-jährige Ausbildung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Attraktive Ausbildungsvergütung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Sehr gute Übernahmechancen</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <Button variant="secondary" size="md" href="#bewerbung">
+              Jetzt bewerben
+            </Button>
+          </div>
+        </div>
+
+        <!-- Job 4 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex justify-between items-start mb-6">
+            <h3 class="text-xl font-bold text-jonas-dark-blue">Reinigungskraft (m/w/d)</h3>
+            <div class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
+              Teilzeit
+            </div>
+          </div>
+          <div class="space-y-4 mb-6">
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Aufgaben:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Reinigung von Büro- und Geschäftsräumen</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Sanitärreinigung und Bodenpflege</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Allgemeine Reinigungsarbeiten</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Anforderungen:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Erste Erfahrungen in der Reinigung wünschenswert</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Zuverlässigkeit und Sorgfalt</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Flexibilität bei den Arbeitszeiten</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-jonas-dark-blue mb-2">Wir bieten:</h4>
+              <ul class="space-y-1 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Flexible Arbeitszeiten (10-25 Stunden/Woche)</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Faire Vergütung über Mindestlohn</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">•</span> Einarbeitung und regelmäßige Schulungen</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <Button variant="secondary" size="md" href="#bewerbung">
+              Jetzt bewerben
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process -->
+  <section id="bewerbung" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Bewerbungsprozess</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          So einfach ist der Weg zu Ihrem neuen Job bei Jonas Gebäudereinigung
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="relative">
+          <!-- Timeline Line -->
+          <div class="absolute left-8 top-0 bottom-0 w-1 bg-jonas-blue"></div>
+          
+          <!-- Timeline Items -->
+          <div class="space-y-12">
+            <!-- Step 1 -->
+            <div class="relative flex">
+              <div class="absolute left-8 transform -translate-x-1/2 w-14 h-14 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xl border-4 border-white">
+                1
+              </div>
+              <div class="ml-16 pt-2">
+                <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Bewerbung einreichen</h3>
+                <p class="text-jonas-gray mb-4">
+                  Senden Sie uns Ihre vollständigen Bewerbungsunterlagen per E-Mail oder über das Bewerbungsformular.
+                </p>
+                <div class="bg-jonas-light-gray p-4 rounded-lg">
+                  <h4 class="font-bold text-jonas-dark-blue mb-2">Benötigte Unterlagen:</h4>
+                  <ul class="space-y-1 text-jonas-gray">
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Anschreiben</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Lebenslauf</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Zeugnisse und Qualifikationen</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative flex">
+              <div class="absolute left-8 transform -translate-x-1/2 w-14 h-14 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xl border-4 border-white">
+                2
+              </div>
+              <div class="ml-16 pt-2">
+                <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Erstes Gespräch</h3>
+                <p class="text-jonas-gray mb-4">
+                  Bei gegenseitigem Interesse laden wir Sie zu einem ersten Kennenlerngespräch ein, 
+                  entweder persönlich in unserem Büro oder per Videocall.
+                </p>
+                <div class="bg-jonas-light-gray p-4 rounded-lg">
+                  <h4 class="font-bold text-jonas-dark-blue mb-2">Gesprächsinhalte:</h4>
+                  <ul class="space-y-1 text-jonas-gray">
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Gegenseitiges Kennenlernen</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Vorstellung des Unternehmens</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Besprechung der Stelle und Anforderungen</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative flex">
+              <div class="absolute left-8 transform -translate-x-1/2 w-14 h-14 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xl border-4 border-white">
+                3
+              </div>
+              <div class="ml-16 pt-2">
+                <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Probearbeitstag</h3>
+                <p class="text-jonas-gray mb-4">
+                  Ein optionaler Probearbeitstag gibt Ihnen die Möglichkeit, den Arbeitsalltag 
+                  kennenzulernen und sich mit dem Team vertraut zu machen.
+                </p>
+                <div class="bg-jonas-light-gray p-4 rounded-lg">
+                  <h4 class="font-bold text-jonas-dark-blue mb-2">Vorteile:</h4>
+                  <ul class="space-y-1 text-jonas-gray">
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Einblick in den Arbeitsalltag</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Kennenlernen des Teams</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Praktische Erfahrung mit unseren Abläufen</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative flex">
+              <div class="absolute left-8 transform -translate-x-1/2 w-14 h-14 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xl border-4 border-white">
+                4
+              </div>
+              <div class="ml-16 pt-2">
+                <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Vertragsangebot</h3>
+                <p class="text-jonas-gray mb-4">
+                  Bei gegenseitigem Interesse unterbreiten wir Ihnen ein attraktives Vertragsangebot 
+                  und besprechen die Details Ihrer zukünftigen Tätigkeit.
+                </p>
+                <div class="bg-jonas-light-gray p-4 rounded-lg">
+                  <h4 class="font-bold text-jonas-dark-blue mb-2">Vertragsdetails:</h4>
+                  <ul class="space-y-1 text-jonas-gray">
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Vergütung und Benefits</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Arbeitszeiten und Einsatzorte</li>
+                    <li class="flex items-center"><span class="text-jonas-blue mr-2">•</span> Starttermin und Einarbeitung</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Jetzt bewerben</h2>
+          <p class="text-xl text-jonas-gray">
+            Füllen Sie das Formular aus oder senden Sie Ihre Bewerbung direkt an <a href="mailto:karriere@jonas-gebaeudereinigung.de" class="text-jonas-blue hover:underline">karriere@jonas-gebaeudereinigung.de</a>
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="vorname" class="block text-sm font-medium text-jonas-dark-blue mb-2">Vorname *</label>
+                <input type="text" id="vorname" name="vorname" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent transition-all duration-300">
+              </div>
+              <div>
+                <label for="nachname" class="block text-sm font-medium text-jonas-dark-blue mb-2">Nachname *</label>
+                <input type="text" id="nachname" name="nachname" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent transition-all duration-300">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="email" class="block text-sm font-medium text-jonas-dark-blue mb-2">E-Mail *</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent transition-all duration-300">
+              </div>
+              <div>
+                <label for="telefon" class="block text-sm font-medium text-jonas-dark-blue mb-2">Telefon *</label>
+                <input type="tel" id="telefon" name="telefon" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent transition-all duration-300">
+              </div>
+            </div>
+
+            <div>
+              <label for="position" class="block text-sm font-medium text-jonas-dark-blue mb-2">Gewünschte Position *</label>
+              <select id="position" name="position" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent transition-all duration-300">
+                <option value="">Bitte wählen</option>
+                <option value="gebäudereiniger">Gebäudereiniger (m/w/d) - Vollzeit</option>
+                <option value="teamleiter">Teamleiter Gebäudereinigung (m/w/d) - Vollzeit</option>
+                <option value="auszubildender">Auszubildender Gebäudereiniger (m/w/d)</option>
+                <option value="reinigungskraft">Reinigungskraft (m/w/d) - Teilzeit</option>
+                <option value="initiativ">Initiativbewerbung</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="nachricht" class="block text-sm font-medium text-jonas-dark-blue mb-2">Ihre Nachricht</label>
+              <textarea id="nachricht" name="nachricht" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent transition-all duration-300" placeholder="Warum möchten Sie bei uns arbeiten? Welche Erfahrungen bringen Sie mit?"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-jonas-dark-blue mb-2">Bewerbungsunterlagen *</label>
+              <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-jonas-blue transition-colors">
+                <input type="file" id="bewerbung" name="bewerbung" multiple class="hidden" accept=".pdf,.doc,.docx">
+                <label for="bewerbung" class="cursor-pointer">
+                  <svg class="h-12 w-12 text-jonas-gray mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                  </svg>
+                  <span class="text-jonas-gray">Dateien hierher ziehen oder <span class="text-jonas-blue">durchsuchen</span></span>
+                  <p class="text-xs text-jonas-gray mt-2">Akzeptierte Formate: PDF, DOC, DOCX (max. 10MB)</p>
+                </label>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <input type="checkbox" id="datenschutz" name="datenschutz" required class="mt-1 mr-3">
+              <label for="datenschutz" class="text-sm text-jonas-gray">
+                Ich habe die <a href="/datenschutz" class="text-jonas-blue hover:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu Bewerbungszwecken zu. *
+              </label>
+            </div>
+
+            <div class="text-center">
+              <Button variant="secondary" size="lg" type="submit">
+                Bewerbung absenden
+              </Button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Employee Testimonials -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Das sagen unsere Mitarbeiter</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Erfahren Sie aus erster Hand, wie es ist, bei Jonas Gebäudereinigung zu arbeiten
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-jonas-light-gray rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+              MK
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-jonas-dark-blue">Maria Krüger</h3>
+              <p class="text-jonas-gray">Gebäudereinigerin seit 2018</p>
+            </div>
+          </div>
+          <p class="text-jonas-gray italic mb-4">
+            "Seit 6 Jahren arbeite ich bei Jonas Gebäudereinigung und schätze besonders das familiäre Arbeitsklima. 
+            Die Arbeitszeiten sind flexibel, was mir als Mutter sehr entgegenkommt. Die regelmäßigen Schulungen 
+            helfen mir, mich weiterzuentwickeln."
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-jonas-light-gray rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+              TS
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-jonas-dark-blue">Thomas Schmidt</h3>
+              <p class="text-jonas-gray">Teamleiter seit 2016</p>
+            </div>
+          </div>
+          <p class="text-jonas-gray italic mb-4">
+            "Als Teamleiter schätze ich die Verantwortung und das Vertrauen, das mir entgegengebracht wird. 
+            Die Aufstiegsmöglichkeiten sind real - ich habe als Reinigungskraft begonnen und wurde durch 
+            kontinuierliche Weiterbildung zum Teamleiter befördert."
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-jonas-light-gray rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+              LM
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-jonas-dark-blue">Lisa Müller</h3>
+              <p class="text-jonas-gray">Auszubildende im 2. Lehrjahr</p>
+            </div>
+          </div>
+          <p class="text-jonas-gray italic mb-4">
+            "Meine Ausbildung bei Jonas Gebäudereinigung ist abwechslungsreich und lehrreich. 
+            Ich werde in alle Bereiche eingearbeitet und bekomme viel Unterstützung vom Team. 
+            Die Kombination aus Praxis und Berufsschule ist perfekt ausbalanciert."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    const fileInput = document.getElementById('bewerbung');
+    const fileLabel = document.querySelector('label[for="bewerbung"]');
+    
+    fileInput?.addEventListener('change', function() {
+      if (fileInput.files && fileInput.files.length > 0) {
+        const fileCount = fileInput.files.length;
+        const fileNames = Array.from(fileInput.files).map(file => file.name).join(', ');
+        
+        fileLabel.innerHTML = `
+          <svg class="h-12 w-12 text-jonas-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          <span class="text-jonas-dark-blue font-medium">${fileCount} Datei(en) ausgewählt</span>
+          <p class="text-xs text-jonas-gray mt-2">${fileNames}</p>
+        `;
+      }
+    });
+    
+    form?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulate form submission
+      alert('Vielen Dank für Ihre Bewerbung! Wir werden uns in Kürze bei Ihnen melden.');
+      
+      // Reset form
+      form.reset();
+      
+      // Reset file input label
+      fileLabel.innerHTML = `
+        <svg class="h-12 w-12 text-jonas-gray mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+        </svg>
+        <span class="text-jonas-gray">Dateien hierher ziehen oder <span class="text-jonas-blue">durchsuchen</span></span>
+        <p class="text-xs text-jonas-gray mt-2">Akzeptierte Formate: PDF, DOC, DOCX (max. 10MB)</p>
+      `;
+    });
+  });
+</script>

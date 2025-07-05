@@ -1,0 +1,222 @@
+---
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Online Terminbuchung</h2>
+        <p class="text-xl text-jonas-gray">Buchen Sie Ihren Reinigungstermin schnell und einfach online</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-strong p-8 border border-gray-100">
+        <form id="booking-form" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="service-type" class="block text-sm font-medium text-jonas-dark-blue mb-2">Reinigungsart</label>
+              <select id="service-type" name="service-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+                <option value="">Bitte wählen</option>
+                <option value="bueroreinigung">Büroreinigung</option>
+                <option value="grundreinigung">Grundreinigung</option>
+                <option value="glasreinigung">Glasreinigung</option>
+                <option value="unterhaltsreinigung">Unterhaltsreinigung</option>
+                <option value="sonderreinigung">Sonderreinigung</option>
+                <option value="industriereinigung">Industriereinigung</option>
+              </select>
+            </div>
+            <div>
+              <label for="urgency" class="block text-sm font-medium text-jonas-dark-blue mb-2">Dringlichkeit</label>
+              <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+                <option value="normal">Normal (3-5 Werktage)</option>
+                <option value="urgent">Dringend (1-2 Werktage)</option>
+                <option value="emergency">Notfall (Sofort)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="preferred-date" class="block text-sm font-medium text-jonas-dark-blue mb-2">Wunschtermin</label>
+              <input type="date" id="preferred-date" name="preferred-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+            </div>
+            <div>
+              <label for="preferred-time" class="block text-sm font-medium text-jonas-dark-blue mb-2">Wunschzeit</label>
+              <select id="preferred-time" name="preferred-time" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+                <option value="morning">Morgens (08:00-12:00)</option>
+                <option value="afternoon">Nachmittags (12:00-17:00)</option>
+                <option value="evening">Abends (17:00-20:00)</option>
+                <option value="flexible">Flexibel</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="contact-name" class="block text-sm font-medium text-jonas-dark-blue mb-2">Name *</label>
+              <input type="text" id="contact-name" name="contact-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+            </div>
+            <div>
+              <label for="contact-phone" class="block text-sm font-medium text-jonas-dark-blue mb-2">Telefon *</label>
+              <input type="tel" id="contact-phone" name="contact-phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+            </div>
+          </div>
+
+          <div>
+            <label for="contact-email" class="block text-sm font-medium text-jonas-dark-blue mb-2">E-Mail *</label>
+            <input type="email" id="contact-email" name="contact-email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+          </div>
+
+          <div>
+            <label for="address" class="block text-sm font-medium text-jonas-dark-blue mb-2">Adresse</label>
+            <textarea id="address" name="address" rows="3" placeholder="Straße, Hausnummer, PLZ, Ort" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent"></textarea>
+          </div>
+
+          <div>
+            <label for="special-requirements" class="block text-sm font-medium text-jonas-dark-blue mb-2">Besondere Anforderungen</label>
+            <textarea id="special-requirements" name="special-requirements" rows="4" placeholder="Beschreiben Sie besondere Wünsche oder Anforderungen..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent"></textarea>
+          </div>
+
+          <div class="bg-jonas-light-gray rounded-xl p-6">
+            <h3 class="text-lg font-bold text-jonas-dark-blue mb-4">Verfügbare Termine</h3>
+            <div id="available-slots" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <input type="checkbox" id="privacy-consent" name="privacy-consent" required class="mt-1 mr-3">
+            <label for="privacy-consent" class="text-sm text-jonas-gray">
+              Ich habe die <a href="/datenschutz" class="text-jonas-blue hover:underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *
+            </label>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="bg-jonas-blue text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-jonas-dark-blue transition-all duration-300 transform hover:scale-105 shadow-medium">
+              Termin buchen
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('booking-form');
+    const serviceTypeSelect = document.getElementById('service-type');
+    const urgencySelect = document.getElementById('urgency');
+    const dateInput = document.getElementById('preferred-date');
+    const availableSlotsContainer = document.getElementById('available-slots');
+
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+    dateInput.value = today;
+
+    function generateAvailableSlots() {
+      const urgency = urgencySelect.value;
+      const selectedDate = new Date(dateInput.value);
+      const slots = [];
+
+      // Generate slots based on urgency
+      let daysToShow = urgency === 'emergency' ? 1 : urgency === 'urgent' ? 3 : 7;
+      
+      for (let i = 0; i < daysToShow; i++) {
+        const date = new Date(selectedDate);
+        date.setDate(date.getDate() + i);
+        
+        const daySlots = [
+          { time: '08:00', label: 'Früh' },
+          { time: '10:00', label: 'Vormittag' },
+          { time: '14:00', label: 'Nachmittag' },
+          { time: '16:00', label: 'Spätnachmittag' }
+        ];
+
+        daySlots.forEach(slot => {
+          const isAvailable = Math.random() > 0.3; // Simulate availability
+          slots.push({
+            date: date.toLocaleDateString('de-DE'),
+            time: slot.time,
+            label: slot.label,
+            available: isAvailable,
+            datetime: `${date.toISOString().split('T')[0]}T${slot.time}`
+          });
+        });
+      }
+
+      return slots;
+    }
+
+    function renderAvailableSlots() {
+      const slots = generateAvailableSlots();
+      availableSlotsContainer.innerHTML = '';
+
+      slots.forEach(slot => {
+        const slotElement = document.createElement('div');
+        slotElement.className = `p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 ${
+          slot.available 
+            ? 'border-jonas-blue bg-white hover:bg-jonas-blue hover:text-white' 
+            : 'border-gray-300 bg-gray-100 text-gray-400 cursor-not-allowed'
+        }`;
+        
+        if (slot.available) {
+          slotElement.addEventListener('click', function() {
+            // Remove selection from other slots
+            document.querySelectorAll('.slot-selected').forEach(el => {
+              el.classList.remove('slot-selected', 'bg-jonas-blue', 'text-white');
+            });
+            
+            // Select this slot
+            this.classList.add('slot-selected', 'bg-jonas-blue', 'text-white');
+            
+            // Store selected datetime
+            form.dataset.selectedSlot = slot.datetime;
+          });
+        }
+
+        slotElement.innerHTML = `
+          <div class="text-center">
+            <div class="font-semibold">${slot.date}</div>
+            <div class="text-sm">${slot.time} - ${slot.label}</div>
+            ${!slot.available ? '<div class="text-xs mt-1">Nicht verfügbar</div>' : ''}
+          </div>
+        `;
+
+        availableSlotsContainer.appendChild(slotElement);
+      });
+    }
+
+    // Event listeners
+    urgencySelect.addEventListener('change', renderAvailableSlots);
+    dateInput.addEventListener('change', renderAvailableSlots);
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const selectedSlot = form.dataset.selectedSlot;
+      if (!selectedSlot) {
+        alert('Bitte wählen Sie einen verfügbaren Termin aus.');
+        return;
+      }
+
+      // Simulate booking submission
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      
+      submitButton.textContent = 'Wird gebucht...';
+      submitButton.disabled = true;
+
+      setTimeout(() => {
+        alert('Vielen Dank! Ihre Terminanfrage wurde erfolgreich übermittelt. Wir melden uns innerhalb von 2 Stunden bei Ihnen zur Bestätigung.');
+        form.reset();
+        renderAvailableSlots();
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      }, 2000);
+    });
+
+    // Initial render
+    renderAvailableSlots();
+  });
+</script>

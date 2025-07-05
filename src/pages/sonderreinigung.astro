@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+
+const faqData = [
+  {
+    question: "Was versteht man unter Sonderreinigung?",
+    answer: "Sonderreinigung umfasst alle Reinigungsdienstleistungen, die über die normale Unterhaltsreinigung hinausgehen. Dazu gehören Teppichreinigung, Polsterreinigung, Notfallreinigung und spezielle Reinigungsverfahren für besondere Materialien."
+  },
+  {
+    question: "Bieten Sie 24/7 Notfallreinigung an?",
+    answer: "Ja, wir bieten rund um die Uhr Notfallreinigung an. Bei Wasserschäden, Unfällen oder anderen Notfällen sind wir schnell vor Ort und helfen bei der Schadensbegrenzung und -beseitigung."
+  },
+  {
+    question: "Wie funktioniert professionelle Teppichreinigung?",
+    answer: "Wir verwenden verschiedene Verfahren je nach Teppichart: Heißwasser-Extraktion, Trockenreinigung oder Sprühextraktion. Vor der Reinigung analysieren wir den Teppich und wählen das optimale Verfahren."
+  },
+  {
+    question: "Können Sie auch Polstermöbel reinigen?",
+    answer: "Ja, wir reinigen professionell alle Arten von Polstermöbeln: Bürostühle, Sofas, Sessel und Matratzen. Wir verwenden materialspezifische Reinigungsverfahren für optimale Ergebnisse."
+  },
+  {
+    question: "Was kostet eine Sonderreinigung?",
+    answer: "Die Kosten variieren je nach Art der Sonderreinigung und Aufwand. Teppichreinigung kostet ab 15€/m², Polsterreinigung ab 25€ pro Sitzplatz. Gerne erstellen wir ein individuelles Angebot."
+  },
+  {
+    question: "Wie schnell können Sie bei Notfällen vor Ort sein?",
+    answer: "Bei Notfällen sind wir in der Regel innerhalb von 1-2 Stunden vor Ort. Unser Notdienst ist 24/7 erreichbar und kann sofort Schadensbegrenzungsmaßnahmen einleiten."
+  },
+  {
+    question: "Welche Reinigungsmittel verwenden Sie für Sonderreinigungen?",
+    answer: "Wir verwenden spezielle, professionelle Reinigungsmittel je nach Material und Verschmutzung. Alle Mittel sind umweltfreundlich und gesundheitlich unbedenklich."
+  },
+  {
+    question: "Können Sie auch Graffiti entfernen?",
+    answer: "Ja, wir bieten professionelle Graffiti-Entfernung an. Je nach Untergrund verwenden wir verschiedene Verfahren: chemische Entfernung, Hochdruckreinigung oder Sandstrahlen."
+  },
+  {
+    question: "Bieten Sie auch Desinfektion an?",
+    answer: "Ja, wir führen professionelle Desinfektionsreinigung nach medizinischen Standards durch. Dies ist besonders wichtig nach Krankheitsfällen oder in hygienesensiblen Bereichen."
+  },
+  {
+    question: "Wie lange dauert eine Teppichreinigung?",
+    answer: "Das hängt von der Teppichgröße und dem Verschmutzungsgrad ab. Ein Standard-Büroteppich (50m²) benötigt etwa 2-3 Stunden inklusive Trocknungszeit."
+  }
+];
+---
+
+<Layout 
+  title="Sonderreinigung Oldenburg - Spezialreinigung & Notfallreinigung | Jonas Gebäudereinigung"
+  description="Professionelle Sonderreinigung in Oldenburg ✓ Teppichreinigung ✓ Polsterreinigung ✓ Notfallreinigung ✓ Spezialverfahren ✓ 24/7 Service ✓ Kostenlose Beratung"
+  keywords="Sonderreinigung Oldenburg, Teppichreinigung Oldenburg, Polsterreinigung, Notfallreinigung, Spezialreinigung, 24h Reinigungsservice"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Sonderreinigung</span> in Oldenburg
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Spezialreinigung für außergewöhnliche Anforderungen - Von Notfällen bis zu besonderen Reinigungsverfahren
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Kostenlos anfragen
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Services -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Unsere Sonderreinigungsleistungen</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Spezialisierte Reinigungsdienstleistungen für besondere Anforderungen und außergewöhnliche Situationen
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Teppichreinigung</h3>
+          <p class="text-jonas-gray mb-4">
+            Professionelle Tiefenreinigung von Teppichen mit modernsten Verfahren für optimale Hygiene und Langlebigkeit.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Heißwasser-Extraktion</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Fleckenentfernung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Geruchsneutralisation</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Schnelltrocknung</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Polsterreinigung</h3>
+          <p class="text-jonas-gray mb-4">
+            Schonende Reinigung von Bürostühlen, Sofas und Polstermöbeln mit materialspezifischen Verfahren.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Stoffspezifische Behandlung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Leder- und Kunstlederpflege</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Imprägnierung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Allergiker-geeignet</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2 border-2 border-jonas-accent">
+          <div class="bg-jonas-accent text-jonas-dark-blue w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-accent mb-4">24/7 Notfallreinigung</h3>
+          <p class="text-jonas-gray mb-4">
+            Sofortige Hilfe bei Wasserschäden, Unfällen oder anderen Notfällen - rund um die Uhr verfügbar.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">⚡</span> Soforteinsatz möglich</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">⚡</span> Wasserschadensanierung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">⚡</span> Brandschadensreinigung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">⚡</span> 24/7 Hotline</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Sonderreinigung" subtitle="Antworten auf die wichtigsten Fragen rund um die professionelle Sonderreinigung" />
+
+  <!-- Emergency Contact Banner -->
+  <section class="py-16 bg-jonas-accent text-jonas-dark-blue">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          🚨 NOTFALL? WIR SIND DA! 🚨
+        </h2>
+        <p class="text-xl mb-8">
+          24/7 Notfallreinigung für Wasserschäden, Unfälle und dringende Reinigungsfälle
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            NOTFALL-HOTLINE: 0441 - XXX XXX
+          </Button>
+          <Button variant="outline" size="lg" href="/kontakt">
+            Sofort-Kontakt
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

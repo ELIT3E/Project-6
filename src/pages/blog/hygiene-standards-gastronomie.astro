@@ -1,0 +1,403 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Button from '../../components/Button.astro';
+---
+
+<Layout 
+  title="Hygiene-Standards in der Gastronomie - Was Sie wissen müssen | Jonas Gebäudereinigung"
+  description="Alles über die aktuellen Hygiene-Vorschriften in der Gastronomie und wie professionelle Reinigung dabei hilft, diese einzuhalten."
+  keywords="Hygiene Gastronomie, HACCP, Reinigung Restaurant, Küchenhygiene, Gastronomie Vorschriften"
+>
+  <Header />
+  
+  <!-- Article Header -->
+  <section class="py-20 bg-gradient-to-br from-red-500 to-red-700 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center text-red-200 mb-4">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          5. Januar 2024 • 6 min Lesezeit • Hygiene
+        </div>
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Hygiene-Standards in der Gastronomie - Was Sie wissen müssen
+        </h1>
+        <p class="text-xl lg:text-2xl opacity-90 leading-relaxed">
+          Alles über die aktuellen Hygiene-Vorschriften in der Gastronomie und wie professionelle Reinigung dabei hilft, diese einzuhalten.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none">
+          <img src="https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="Hygiene Standards Gastronomie" class="w-full h-64 object-cover rounded-xl mb-8">
+
+          <p class="text-xl text-jonas-gray leading-relaxed mb-8">
+            Die Einhaltung von Hygiene-Standards in der Gastronomie ist nicht nur gesetzlich vorgeschrieben, sondern auch entscheidend für den Erfolg Ihres Betriebs. Verstöße können zu Bußgeldern, Betriebsschließungen und Imageschäden führen. In diesem umfassenden Guide erfahren Sie alles über aktuelle Vorschriften und wie Sie diese erfolgreich umsetzen.
+          </p>
+
+          <h2 class="text-3xl font-bold text-jonas-dark-blue mb-6">Rechtliche Grundlagen der Gastronomie-Hygiene</h2>
+          
+          <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+            <h3 class="text-xl font-bold text-red-800 mb-4">Wichtige Gesetze und Verordnungen:</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-3 mt-1">📋</span>
+                <div>
+                  <strong>Lebensmittelhygiene-Verordnung (LMHV):</strong> Grundlegende Hygieneanforderungen für Lebensmittelbetriebe
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-3 mt-1">📋</span>
+                <div>
+                  <strong>EU-Hygieneverordnung 852/2004:</strong> Europäische Standards für Lebensmittelhygiene
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-3 mt-1">📋</span>
+                <div>
+                  <strong>Infektionsschutzgesetz (IfSG):</strong> Schutz vor übertragbaren Krankheiten
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-3 mt-1">📋</span>
+                <div>
+                  <strong>HACCP-Konzept:</strong> Hazard Analysis and Critical Control Points
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="text-3xl font-bold text-jonas-dark-blue mb-6">Das HACCP-Konzept verstehen und umsetzen</h2>
+          
+          <p class="mb-6">
+            Das HACCP-Konzept ist das Herzstück der Lebensmittelsicherheit in der Gastronomie. Es basiert auf sieben Grundprinzipien, die systematisch umgesetzt werden müssen.
+          </p>
+
+          <div class="space-y-6 mb-8">
+            <div class="bg-jonas-light-gray rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">Die 7 HACCP-Grundsätze</h3>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <span class="bg-jonas-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">1</span>
+                    <div>
+                      <h4 class="font-bold">Gefahrenanalyse</h4>
+                      <p class="text-sm text-jonas-gray">Identifikation aller möglichen Gefahren</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <span class="bg-jonas-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">2</span>
+                    <div>
+                      <h4 class="font-bold">Kritische Kontrollpunkte</h4>
+                      <p class="text-sm text-jonas-gray">Bestimmung der CCPs (Critical Control Points)</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <span class="bg-jonas-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">3</span>
+                    <div>
+                      <h4 class="font-bold">Grenzwerte festlegen</h4>
+                      <p class="text-sm text-jonas-gray">Definition kritischer Grenzwerte</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <span class="bg-jonas-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">4</span>
+                    <div>
+                      <h4 class="font-bold">Überwachungsverfahren</h4>
+                      <p class="text-sm text-jonas-gray">Kontinuierliche Kontrolle der CCPs</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <span class="bg-jonas-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">5</span>
+                    <div>
+                      <h4 class="font-bold">Korrekturmaßnahmen</h4>
+                      <p class="text-sm text-jonas-gray">Sofortige Reaktion bei Abweichungen</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <span class="bg-jonas-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">6</span>
+                    <div>
+                      <h4 class="font-bold">Verifizierung</h4>
+                      <p class="text-sm text-jonas-gray">Überprüfung der Wirksamkeit</p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <span class="bg-jonas-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 mt-1">7</span>
+                    <div>
+                      <h4 class="font-bold">Dokumentation</h4>
+                      <p class="text-sm text-jonas-gray">Lückenlose Aufzeichnung aller Maßnahmen</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-jonas-dark-blue mb-6">Hygienebereiche in der Gastronomie</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-yellow-800 mb-4">🍳 Küchenhygiene</h3>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-center"><span class="text-yellow-600 mr-2">✓</span> Arbeitsflächen nach jedem Arbeitsgang reinigen</li>
+                <li class="flex items-center"><span class="text-yellow-600 mr-2">✓</span> Separate Schneidebretter für verschiedene Lebensmittel</li>
+                <li class="flex items-center"><span class="text-yellow-600 mr-2">✓</span> Regelmäßige Desinfektion aller Oberflächen</li>
+                <li class="flex items-center"><span class="text-yellow-600 mr-2">✓</span> Temperaturkontrolle bei Kühl- und Gefriergeräten</li>
+                <li class="flex items-center"><span class="text-yellow-600 mr-2">✓</span> Professionelle Dunstabzugsreinigung</li>
+              </ul>
+            </div>
+            
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-4">🍽️ Servicebereich</h3>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> Tische nach jedem Gast desinfizieren</li>
+                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> Geschirr bei mindestens 60°C spülen</li>
+                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> Besteck und Gläser polieren</li>
+                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> Regelmäßige Bodenreinigung</li>
+                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> Saubere Arbeitskleidung</li>
+              </ul>
+            </div>
+            
+            <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-green-800 mb-4">🚿 Sanitärbereiche</h3>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Mehrmals täglich gründlich reinigen</li>
+                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Desinfektionsmittel bereitstellen</li>
+                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Handtücher regelmäßig wechseln</li>
+                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Abflüsse sauber halten</li>
+                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Lüftung überprüfen</li>
+              </ul>
+            </div>
+            
+            <div class="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-purple-800 mb-4">📦 Lagerräume</h3>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✓</span> Temperatur- und Feuchtigkeitskontrolle</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✓</span> Schädlingsbekämpfung</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✓</span> FIFO-Prinzip (First In, First Out)</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✓</span> Regelmäßige Bestandskontrollen</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✓</span> Saubere Lagerbehälter</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-jonas-dark-blue mb-6">Reinigungsplan für Gastronomiebetriebe</h2>
+          
+          <div class="bg-jonas-light-gray rounded-xl p-8 mb-8">
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-6">Tägliche Reinigungsaufgaben</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-white p-4 rounded-lg">
+                <h4 class="font-bold text-jonas-blue mb-3">Morgens (vor Betrieb)</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Arbeitsflächen desinfizieren</li>
+                  <li>• Temperaturen kontrollieren</li>
+                  <li>• Frische Handtücher bereitstellen</li>
+                  <li>• Böden wischen</li>
+                  <li>• Müll entsorgen</li>
+                </ul>
+              </div>
+              
+              <div class="bg-white p-4 rounded-lg">
+                <h4 class="font-bold text-jonas-blue mb-3">Während des Betriebs</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Kontinuierliche Oberflächenreinigung</li>
+                  <li>• Geschirr sofort spülen</li>
+                  <li>• Verschüttetes sofort beseitigen</li>
+                  <li>• Hände regelmäßig waschen</li>
+                  <li>• Arbeitskleidung sauber halten</li>
+                </ul>
+              </div>
+              
+              <div class="bg-white p-4 rounded-lg">
+                <h4 class="font-bold text-jonas-blue mb-3">Abends (nach Betrieb)</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Gründliche Küchenreinigung</li>
+                  <li>• Geräte reinigen und desinfizieren</li>
+                  <li>• Böden intensiv reinigen</li>
+                  <li>• Müll entsorgen</li>
+                  <li>• Dokumentation vervollständigen</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-jonas-dark-blue mb-6">Häufige Hygieneverstöße und wie Sie sie vermeiden</h2>
+          
+          <div class="space-y-6 mb-8">
+            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+              <h3 class="text-xl font-bold text-red-800 mb-4">❌ Die 10 häufigsten Hygieneverstöße</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">1.</span>
+                    <div>
+                      <strong>Unzureichende Händehygiene</strong>
+                      <p class="text-sm text-red-700">Lösung: Regelmäßige Schulungen und Erinnerungen</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">2.</span>
+                    <div>
+                      <strong>Kreuzkontamination</strong>
+                      <p class="text-sm text-red-700">Lösung: Separate Arbeitsplätze und Utensilien</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">3.</span>
+                    <div>
+                      <strong>Falsche Lagertemperaturen</strong>
+                      <p class="text-sm text-red-700">Lösung: Kontinuierliche Temperaturüberwachung</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">4.</span>
+                    <div>
+                      <strong>Unzureichende Reinigung</strong>
+                      <p class="text-sm text-red-700">Lösung: Detaillierte Reinigungspläne</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">5.</span>
+                    <div>
+                      <strong>Fehlende Dokumentation</strong>
+                      <p class="text-sm text-red-700">Lösung: Digitale Checklisten verwenden</p>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">6.</span>
+                    <div>
+                      <strong>Schmutzige Arbeitskleidung</strong>
+                      <p class="text-sm text-red-700">Lösung: Täglicher Wechsel der Arbeitskleidung</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">7.</span>
+                    <div>
+                      <strong>Unsaubere Spültücher</strong>
+                      <p class="text-sm text-red-700">Lösung: Einweg-Reinigungstücher verwenden</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">8.</span>
+                    <div>
+                      <strong>Schädlingsbefall</strong>
+                      <p class="text-sm text-red-700">Lösung: Präventive Schädlingsbekämpfung</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">9.</span>
+                    <div>
+                      <strong>Abgelaufene Lebensmittel</strong>
+                      <p class="text-sm text-red-700">Lösung: Regelmäßige Bestandskontrollen</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-3 mt-1">10.</span>
+                    <div>
+                      <strong>Ungeschultes Personal</strong>
+                      <p class="text-sm text-red-700">Lösung: Regelmäßige Hygieneschulungen</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-jonas-dark-blue mb-6">Professionelle Reinigung in der Gastronomie</h2>
+          
+          <div class="bg-jonas-blue text-white rounded-xl p-8 mb-8">
+            <h3 class="text-2xl font-bold mb-4">Warum professionelle Reinigung unverzichtbar ist</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="text-xl font-bold mb-3">Vorteile für Ihren Betrieb:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Einhaltung aller Hygienevorschriften</li>
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Professionelle Ausrüstung und Reinigungsmittel</li>
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Geschultes Fachpersonal</li>
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Zeitersparnis für Ihr Team</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold mb-3">Spezialreinigungen:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Dunstabzugshauben-Reinigung</li>
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Fettabscheider-Wartung</li>
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Kühlraum-Desinfektion</li>
+                  <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Schädlingsbekämpfung</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
+            <h3 class="text-xl font-bold text-green-800 mb-4">💡 Profi-Tipp: Checklisten verwenden</h3>
+            <p class="text-green-700 mb-4">
+              Erstellen Sie detaillierte Checklisten für alle Reinigungsaufgaben und lassen Sie diese täglich von Ihren Mitarbeitern abzeichnen. Dies hilft nicht nur bei der Qualitätssicherung, sondern auch bei Behördenkontrollen.
+            </p>
+            <Button variant="primary" size="md" href="/downloads/hygiene-checkliste-gastronomie.pdf">
+              📥 Kostenlose Hygiene-Checkliste herunterladen
+            </Button>
+          </div>
+
+          <div class="bg-jonas-blue text-white rounded-xl p-8 mt-12">
+            <h3 class="text-2xl font-bold mb-4">Fazit: Hygiene als Erfolgsfaktor</h3>
+            <p class="text-lg leading-relaxed">
+              Hygiene in der Gastronomie ist kein lästiges Übel, sondern ein entscheidender Erfolgsfaktor. Mit den richtigen Maßnahmen, professioneller Unterstützung und konsequenter Umsetzung schaffen Sie nicht nur rechtssichere Verhältnisse, sondern auch das Vertrauen Ihrer Gäste und den langfristigen Erfolg Ihres Betriebs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Author & CTA -->
+        <div class="mt-16 border-t border-gray-200 pt-8">
+          <div class="flex items-center mb-8">
+            <div class="w-16 h-16 bg-jonas-blue rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+              JG
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue">Jonas Gebäudereinigung Team</h4>
+              <p class="text-jonas-gray">Experten für professionelle Gastronomie-Reinigung in Oldenburg</p>
+            </div>
+          </div>
+          
+          <div class="bg-jonas-light-gray rounded-xl p-8 text-center">
+            <h3 class="text-2xl font-bold text-jonas-dark-blue mb-4">
+              Benötigen Sie professionelle Gastronomie-Reinigung?
+            </h3>
+            <p class="text-jonas-gray mb-6">
+              Lassen Sie uns Ihnen dabei helfen, alle Hygiene-Standards einzuhalten.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="secondary" size="lg" href="/kontakt">
+                Kostenlose Beratung
+              </Button>
+              <Button variant="outline" size="lg" href="/branchen/gastronomiereinigung">
+                Mehr über Gastronomie-Reinigung
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,279 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const { 
+  title = "Interaktiver Preisrechner", 
+  subtitle = "Berechnen Sie die Kosten für Ihre Reinigungsdienstleistung" 
+} = Astro.props;
+---
+
+<section class="py-20 bg-gradient-to-br from-jonas-light-gray to-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">{title}</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">{subtitle}</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-strong p-8">
+        <form id="price-calculator-form" class="space-y-8">
+          <!-- Service Selection -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="service-type" class="block text-sm font-medium text-jonas-dark-blue mb-2">Reinigungsart *</label>
+              <select id="service-type" name="service-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+                <option value="">Bitte wählen</option>
+                <option value="bueroreinigung" data-base-price="3.5">Büroreinigung</option>
+                <option value="grundreinigung" data-base-price="8.0">Grundreinigung</option>
+                <option value="glasreinigung" data-base-price="2.5">Glasreinigung</option>
+                <option value="unterhaltsreinigung" data-base-price="4.0">Unterhaltsreinigung</option>
+                <option value="sonderreinigung" data-base-price="6.0">Sonderreinigung</option>
+                <option value="industriereinigung" data-base-price="5.5">Industriereinigung</option>
+              </select>
+            </div>
+            <div>
+              <label for="area-size" class="block text-sm font-medium text-jonas-dark-blue mb-2">Fläche in m² *</label>
+              <input type="number" id="area-size" name="area-size" min="10" max="10000" value="100" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+            </div>
+          </div>
+
+          <!-- Frequency Selection -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="frequency" class="block text-sm font-medium text-jonas-dark-blue mb-2">Reinigungsintervall</label>
+              <select id="frequency" name="frequency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+                <option value="daily" data-multiplier="1.0">Täglich</option>
+                <option value="weekly" data-multiplier="1.2" selected>Wöchentlich</option>
+                <option value="biweekly" data-multiplier="1.4">Alle 2 Wochen</option>
+                <option value="monthly" data-multiplier="1.6">Monatlich</option>
+                <option value="quarterly" data-multiplier="2.0">Quartalsweise</option>
+                <option value="onetime" data-multiplier="2.5">Einmalig</option>
+              </select>
+            </div>
+            <div>
+              <label for="urgency" class="block text-sm font-medium text-jonas-dark-blue mb-2">Dringlichkeit</label>
+              <select id="urgency" name="urgency" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+                <option value="normal" data-surcharge="0">Normal (3-5 Werktage)</option>
+                <option value="urgent" data-surcharge="0.15">Dringend (1-2 Werktage) +15%</option>
+                <option value="emergency" data-surcharge="0.35">Notfall (Sofort) +35%</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Additional Services -->
+          <div>
+            <label class="block text-sm font-medium text-jonas-dark-blue mb-4">Zusätzliche Leistungen</label>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-jonas-light-gray transition-colors cursor-pointer">
+                <input type="checkbox" name="extras" value="windows" data-price="0.15" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <div>
+                  <span class="font-medium">Fensterreinigung</span>
+                  <p class="text-sm text-jonas-gray">+15% der Grundkosten</p>
+                </div>
+              </label>
+              <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-jonas-light-gray transition-colors cursor-pointer">
+                <input type="checkbox" name="extras" value="carpet" data-price="0.25" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <div>
+                  <span class="font-medium">Teppichreinigung</span>
+                  <p class="text-sm text-jonas-gray">+25% der Grundkosten</p>
+                </div>
+              </label>
+              <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-jonas-light-gray transition-colors cursor-pointer">
+                <input type="checkbox" name="extras" value="kitchen" data-price="0.20" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <div>
+                  <span class="font-medium">Küche intensiv</span>
+                  <p class="text-sm text-jonas-gray">+20% der Grundkosten</p>
+                </div>
+              </label>
+              <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-jonas-light-gray transition-colors cursor-pointer">
+                <input type="checkbox" name="extras" value="sanitizer" data-price="0.10" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <div>
+                  <span class="font-medium">Desinfektion</span>
+                  <p class="text-sm text-jonas-gray">+10% der Grundkosten</p>
+                </div>
+              </label>
+              <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-jonas-light-gray transition-colors cursor-pointer">
+                <input type="checkbox" name="extras" value="outdoor" data-price="0.30" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <div>
+                  <span class="font-medium">Außenreinigung</span>
+                  <p class="text-sm text-jonas-gray">+30% der Grundkosten</p>
+                </div>
+              </label>
+              <label class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-jonas-light-gray transition-colors cursor-pointer">
+                <input type="checkbox" name="extras" value="special" data-price="0.40" class="mr-3 rounded text-jonas-blue focus:ring-jonas-blue">
+                <div>
+                  <span class="font-medium">Spezialreinigung</span>
+                  <p class="text-sm text-jonas-gray">+40% der Grundkosten</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price Display -->
+          <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white rounded-xl p-8">
+            <div class="text-center">
+              <h3 class="text-2xl font-bold mb-4">Geschätzte Kosten</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <div id="price-onetime" class="text-3xl font-bold mb-2">€ 0</div>
+                  <p class="text-sm opacity-90">Einmalig</p>
+                </div>
+                <div>
+                  <div id="price-monthly" class="text-4xl font-bold mb-2 text-jonas-accent">€ 0</div>
+                  <p class="text-sm opacity-90">Pro Monat</p>
+                </div>
+                <div>
+                  <div id="price-yearly" class="text-3xl font-bold mb-2">€ 0</div>
+                  <p class="text-sm opacity-90">Pro Jahr</p>
+                </div>
+              </div>
+              <p class="text-sm mt-4 opacity-75">
+                * Unverbindliche Schätzung. Genaue Preise nach kostenloser Besichtigung.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="contact-name" class="block text-sm font-medium text-jonas-dark-blue mb-2">Name</label>
+              <input type="text" id="contact-name" name="contact-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+            </div>
+            <div>
+              <label for="contact-email" class="block text-sm font-medium text-jonas-dark-blue mb-2">E-Mail</label>
+              <input type="email" id="contact-email" name="contact-email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-jonas-blue focus:border-transparent">
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button type="button" id="export-pdf" class="bg-jonas-accent text-jonas-dark-blue px-8 py-4 rounded-xl font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+              📄 Als PDF exportieren
+            </button>
+            <button type="submit" class="bg-jonas-blue text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-jonas-dark-blue transition-all duration-300 transform hover:scale-105">
+              📞 Angebot anfordern
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('price-calculator-form');
+    const serviceTypeSelect = document.getElementById('service-type');
+    const areaSizeInput = document.getElementById('area-size');
+    const frequencySelect = document.getElementById('frequency');
+    const urgencySelect = document.getElementById('urgency');
+    const extrasCheckboxes = document.querySelectorAll('input[name="extras"]');
+    
+    const priceOnetimeElement = document.getElementById('price-onetime');
+    const priceMonthlyElement = document.getElementById('price-monthly');
+    const priceYearlyElement = document.getElementById('price-yearly');
+
+    function calculatePrice() {
+      const serviceType = serviceTypeSelect.value;
+      const areaSize = parseInt(areaSizeInput.value) || 0;
+      const frequency = frequencySelect.value;
+      const urgency = urgencySelect.value;
+
+      if (!serviceType || areaSize === 0) {
+        priceOnetimeElement.textContent = '€ 0';
+        priceMonthlyElement.textContent = '€ 0';
+        priceYearlyElement.textContent = '€ 0';
+        return;
+      }
+
+      // Base price per m²
+      const basePrice = parseFloat(serviceTypeSelect.querySelector(`option[value="${serviceType}"]`).dataset.basePrice);
+      
+      // Frequency multiplier
+      const frequencyMultiplier = parseFloat(frequencySelect.querySelector(`option[value="${frequency}"]`).dataset.multiplier);
+      
+      // Urgency surcharge
+      const urgencySurcharge = parseFloat(urgencySelect.querySelector(`option[value="${urgency}"]`).dataset.surcharge);
+      
+      // Calculate base cost
+      let baseCost = basePrice * areaSize * frequencyMultiplier;
+      
+      // Add urgency surcharge
+      baseCost = baseCost * (1 + urgencySurcharge);
+      
+      // Add extras
+      let extraMultiplier = 1;
+      extrasCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          extraMultiplier += parseFloat(checkbox.dataset.price);
+        }
+      });
+      
+      const finalCost = baseCost * extraMultiplier;
+      
+      // Calculate different time periods
+      const frequencyFactors = {
+        daily: 22, // Working days per month
+        weekly: 4.33, // Weeks per month
+        biweekly: 2.17, // Every 2 weeks
+        monthly: 1,
+        quarterly: 0.33,
+        onetime: 0
+      };
+      
+      const monthlyFactor = frequencyFactors[frequency];
+      const monthlyCost = frequency === 'onetime' ? 0 : finalCost * monthlyFactor;
+      const yearlyCost = monthlyCost * 12;
+      const onetimeCost = frequency === 'onetime' ? finalCost : finalCost;
+      
+      // Update display
+      priceOnetimeElement.textContent = `€ ${Math.round(onetimeCost)}`;
+      priceMonthlyElement.textContent = `€ ${Math.round(monthlyCost)}`;
+      priceYearlyElement.textContent = `€ ${Math.round(yearlyCost)}`;
+    }
+
+    // Event listeners
+    serviceTypeSelect.addEventListener('change', calculatePrice);
+    areaSizeInput.addEventListener('input', calculatePrice);
+    frequencySelect.addEventListener('change', calculatePrice);
+    urgencySelect.addEventListener('change', calculatePrice);
+    extrasCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', calculatePrice);
+    });
+
+    // PDF Export
+    document.getElementById('export-pdf').addEventListener('click', function() {
+      const calculationData = {
+        serviceType: serviceTypeSelect.options[serviceTypeSelect.selectedIndex].text,
+        areaSize: areaSizeInput.value,
+        frequency: frequencySelect.options[frequencySelect.selectedIndex].text,
+        urgency: urgencySelect.options[urgencySelect.selectedIndex].text,
+        extras: Array.from(extrasCheckboxes).filter(cb => cb.checked).map(cb => cb.parentElement.querySelector('span').textContent),
+        priceOnetime: priceOnetimeElement.textContent,
+        priceMonthly: priceMonthlyElement.textContent,
+        priceYearly: priceYearlyElement.textContent
+      };
+      
+      // Simulate PDF generation
+      alert('PDF wird generiert... (In der echten Anwendung würde hier ein PDF erstellt werden)');
+      console.log('PDF Data:', calculationData);
+    });
+
+    // Form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      alert('Vielen Dank für Ihre Anfrage! Wir melden uns innerhalb von 24 Stunden bei Ihnen.');
+      console.log('Form Data:', data);
+    });
+
+    // Initial calculation
+    calculatePrice();
+  });
+</script>

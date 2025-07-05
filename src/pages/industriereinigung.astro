@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+
+const faqData = [
+  {
+    question: "Was unterscheidet Industriereinigung von normaler Gebäudereinigung?",
+    answer: "Industriereinigung erfordert spezielle Kenntnisse über Produktionsprozesse, Sicherheitsvorschriften und den Umgang mit industriellen Verschmutzungen wie Ölen, Fetten und Chemikalien. Wir verwenden spezielle Ausrüstung und Verfahren."
+  },
+  {
+    question: "Können Sie auch während der Produktion reinigen?",
+    answer: "Ja, wir können auch während laufender Produktion reinigen, sofern die Sicherheitsbestimmungen eingehalten werden. Wir passen uns Ihren Produktionszeiten an und arbeiten in Abstimmung mit Ihrem Betriebsleiter."
+  },
+  {
+    question: "Welche Sicherheitsstandards befolgen Sie?",
+    answer: "Wir befolgen alle relevanten Sicherheitsstandards wie DGUV, Arbeitsschutzgesetze und branchenspezifische Vorschriften. Unsere Mitarbeiter sind entsprechend geschult und zertifiziert."
+  },
+  {
+    question: "Können Sie auch Reinräume reinigen?",
+    answer: "Ja, wir sind spezialisiert auf die Reinigung von Reinräumen nach ISO-Standards. Wir verfügen über die notwendige Ausrüstung und geschultes Personal für verschiedene Reinraumklassen."
+  },
+  {
+    question: "Was kostet Industriereinigung?",
+    answer: "Die Kosten variieren stark je nach Industriezweig, Verschmutzungsgrad und Sicherheitsanforderungen. Gerne erstellen wir nach einer Besichtigung ein individuelles Angebot."
+  },
+  {
+    question: "Welche Branchen bedienen Sie?",
+    answer: "Wir reinigen für alle Industriezweige: Maschinenbau, Automobilindustrie, Chemie, Pharma, Lebensmittel, Elektronik und viele mehr. Jede Branche hat spezielle Anforderungen, die wir erfüllen."
+  },
+  {
+    question: "Können Sie auch Maschinen und Anlagen reinigen?",
+    answer: "Ja, wir reinigen professionell Maschinen und Anlagen. Dabei beachten wir alle Sicherheitsvorschriften und arbeiten eng mit Ihren Technikern zusammen."
+  },
+  {
+    question: "Bieten Sie auch Hochdruckreinigung an?",
+    answer: "Ja, wir verfügen über professionelle Hochdruckreinigungsgeräte für hartnäckige industrielle Verschmutzungen und große Flächen wie Produktionshallen und Außenbereiche."
+  },
+  {
+    question: "Wie gehen Sie mit Gefahrstoffen um?",
+    answer: "Unsere Mitarbeiter sind im Umgang mit Gefahrstoffen geschult. Wir befolgen alle Vorschriften der Gefahrstoffverordnung und sorgen für fachgerechte Entsorgung."
+  },
+  {
+    question: "Können Sie auch nachts oder am Wochenende reinigen?",
+    answer: "Ja, wir bieten flexible Arbeitszeiten an. Industriereinigung erfolgt oft außerhalb der Produktionszeiten, um den Betriebsablauf nicht zu stören."
+  }
+];
+---
+
+<Layout 
+  title="Industriereinigung Oldenburg - Professionelle Reinigung für Industrie & Produktion | Jonas Gebäudereinigung"
+  description="Professionelle Industriereinigung in Oldenburg ✓ Produktionshallen ✓ Maschinenhallen ✓ Werkstätten ✓ Spezialreinigung ✓ Sicherheitsstandards ✓ Kostenlose Beratung"
+  keywords="Industriereinigung Oldenburg, Produktionshallen reinigen, Maschinenhallen Reinigung, Werkstatt Reinigung, Industrielle Reinigung Oldenburg"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-gray to-gray-900 text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Industriereinigung</span> in Oldenburg
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Spezialisierte Reinigung für Produktionsstätten, Werkshallen und industrielle Anlagen - Höchste Sicherheits- und Qualitätsstandards
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Kostenlos anfragen
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industrial Areas -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Industrielle Reinigungsbereiche</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Spezialisierte Reinigungsdienstleistungen für alle Bereiche der industriellen Produktion
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-gray text-white w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Produktionshallen</h3>
+          <p class="text-jonas-gray mb-4">
+            Professionelle Reinigung von Produktionsanlagen unter Berücksichtigung von Betriebsabläufen und Sicherheitsvorschriften.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Produktionslinien</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Fertigungsstraßen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Montagebereiche</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Qualitätskontrolle</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Maschinenhallen</h3>
+          <p class="text-jonas-gray mb-4">
+            Spezielle Reinigung von Maschinenhallen mit Fokus auf Öl-, Fett- und Metallspäne-Entfernung.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> CNC-Maschinen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Drehbänke & Fräsen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Pressen & Stanzen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Schweißbereiche</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-accent text-jonas-dark-blue w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Werkstätten</h3>
+          <p class="text-jonas-gray mb-4">
+            Gründliche Reinigung von Werkstätten und Reparaturbereichen mit speziellen Entfettungsverfahren.
+          </p>
+          <ul class="space-y-2 text-jonas-gray">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> KFZ-Werkstätten</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Reparaturbereiche</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Wartungshallen</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Prüfstände</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Industriereinigung" subtitle="Antworten auf die wichtigsten Fragen rund um die professionelle Industriereinigung" />
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Bereit für professionelle Industriereinigung?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Kontaktieren Sie uns für eine kostenlose Beratung und ein maßgeschneidertes Angebot für Ihre industriellen Reinigungsanforderungen in Oldenburg.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenlos anfragen
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

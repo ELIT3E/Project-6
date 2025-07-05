@@ -1,0 +1,232 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import CaseStudy from '../components/CaseStudy.astro';
+---
+
+<Layout 
+  title="Fallstudien - Erfolgreiche Reinigungsprojekte | Jonas Gebäudereinigung Oldenburg"
+  description="Entdecken Sie unsere Erfolgsgeschichten ✓ Herausforderungen ✓ Lösungen ✓ Ergebnisse ✓ Kundenstimmen ✓ Vorher-Nachher-Vergleiche"
+  keywords="Fallstudien Gebäudereinigung, Erfolgsgeschichten, Reinigungsprojekte, Vorher-Nachher, Kundenstimmen"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue via-jonas-dark-blue to-black text-white py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-20 h-20 bg-jonas-accent rounded-full opacity-20 animate-bounce"></div>
+      <div class="absolute top-40 right-20 w-16 h-16 bg-white rounded-lg opacity-10 animate-spin"></div>
+      <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-jonas-accent rounded-full opacity-15 animate-ping"></div>
+    </div>
+    
+    <div class="relative container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Unsere <span class="text-jonas-accent animate-pulse">Fallstudien</span>
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8 opacity-90">
+          Entdecken Sie, wie wir komplexe Reinigungsherausforderungen gemeistert haben
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Ähnliche Ergebnisse für Ihr Projekt
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Filter -->
+  <section class="py-12 bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button class="case-filter active px-6 py-3 rounded-full border-2 border-jonas-blue bg-jonas-blue text-white font-semibold transition-all duration-300" data-category="all">
+          Alle Projekte
+        </button>
+        <button class="case-filter px-6 py-3 rounded-full border-2 border-jonas-blue text-jonas-blue hover:bg-jonas-blue hover:text-white font-semibold transition-all duration-300" data-category="office">
+          Büroreinigung
+        </button>
+        <button class="case-filter px-6 py-3 rounded-full border-2 border-jonas-blue text-jonas-blue hover:bg-jonas-blue hover:text-white font-semibold transition-all duration-300" data-category="industrial">
+          Industriereinigung
+        </button>
+        <button class="case-filter px-6 py-3 rounded-full border-2 border-jonas-blue text-jonas-blue hover:bg-jonas-blue hover:text-white font-semibold transition-all duration-300" data-category="special">
+          Sonderreinigung
+        </button>
+        <button class="case-filter px-6 py-3 rounded-full border-2 border-jonas-blue text-jonas-blue hover:bg-jonas-blue hover:text-white font-semibold transition-all duration-300" data-category="medical">
+          Praxisreinigung
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="space-y-16" id="case-studies-container">
+        <!-- Case Study 1 -->
+        <div class="case-study" data-category="office">
+          <CaseStudy
+            title="Komplette Bürorenovierung und Grundreinigung"
+            client="TechSolutions GmbH"
+            industry="IT-Unternehmen"
+            location="Oldenburg"
+            challenge="Nach einer umfassenden Renovierung ihrer 800m² großen Bürofläche stand TechSolutions vor der Herausforderung, die Räumlichkeiten innerhalb von nur 48 Stunden bezugsfertig zu machen. Bauschutt, Farbreste und Staub waren überall verteilt, und die ersten Mitarbeiter sollten bereits am Montag einziehen."
+            solution="Wir stellten ein Spezialteam von 8 Reinigungskräften zusammen, die in zwei Schichten rund um die Uhr arbeiteten. Mit speziellen Industriestaubsaugern, Hochdruckreinigern und umweltfreundlichen Reinigungsmitteln wurden alle Oberflächen, Böden, Fenster und Sanitäranlagen gründlich gereinigt. Besonderes Augenmerk legten wir auf die IT-Infrastruktur und empfindliche Elektronik."
+            results={[
+              "Termingerechte Fertigstellung innerhalb von 36 Stunden",
+              "Vollständige Entfernung aller Baurückstände und Staubpartikel",
+              "Schutz empfindlicher IT-Ausrüstung während der Reinigung",
+              "Streifenfreie Glasflächen und makellose Oberflächen",
+              "Pünktlicher Einzug der Mitarbeiter ohne Verzögerungen"
+            ]}
+            testimonial={{
+              quote: "Das Team von Jonas Gebäudereinigung hat das Unmögliche möglich gemacht. Trotz des engen Zeitplans wurden alle Arbeiten perfekt ausgeführt. Unsere Mitarbeiter waren begeistert von der Sauberkeit am Montagmorgen.",
+              author: "Michael Schmidt",
+              position: "Facility Manager, TechSolutions GmbH"
+            }}
+            beforeImage="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+            afterImage="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+          />
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-study" data-category="industrial">
+          <CaseStudy
+            title="Industriereinigung nach Produktionsumstellung"
+            client="MetallTech GmbH"
+            industry="Metallverarbeitung"
+            location="Oldenburg"
+            challenge="Nach einer Produktionsumstellung musste die 2.500m² große Produktionshalle von MetallTech innerhalb eines Wochenendes komplett gereinigt werden. Ölrückstände, Metallspäne und industrieller Schmutz hatten sich über Jahre angesammelt. Die Produktion durfte nicht länger als 48 Stunden unterbrochen werden."
+            solution="Wir setzten ein spezialisiertes Team für Industriereinigung ein, das mit Hochdruckreinigern, Industriesaugern und speziellen Entfettungsmitteln arbeitete. Die Reinigung wurde in Zonen eingeteilt, um die Effizienz zu maximieren. Alle Maschinen wurden nach Herstellervorgaben gereinigt, und ein spezielles Augenmerk lag auf der Einhaltung aller Sicherheitsvorschriften."
+            results={[
+              "Termingerechte Fertigstellung innerhalb des 48-Stunden-Fensters",
+              "Vollständige Entfernung aller Öl- und Fettrückstände",
+              "Sichere Reinigung aller Maschinen ohne Beschädigungen",
+              "Verbesserung der Arbeitssicherheit durch saubere Böden",
+              "Reduzierung der Staubbelastung in der Produktionshalle"
+            ]}
+            testimonial={{
+              quote: "Die Professionalität des Teams war beeindruckend. Trotz des engen Zeitfensters und der komplexen Anforderungen wurde die Reinigung perfekt durchgeführt. Die Produktion konnte pünktlich wieder starten.",
+              author: "Stefan Koch",
+              position: "Betriebsleiter, MetallTech GmbH"
+            }}
+            beforeImage="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+            afterImage="https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+          />
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-study" data-category="special">
+          <CaseStudy
+            title="Notfallreinigung nach Wasserschaden"
+            client="City Center Oldenburg"
+            industry="Einkaufszentrum"
+            location="Oldenburg"
+            challenge="Nach einem Wasserrohrbruch im obersten Stockwerk des City Centers waren mehrere Geschäfte von Wasserschäden betroffen. Die Reinigung musste sofort beginnen, um weitere Schäden zu vermeiden und den Geschäftsbetrieb schnellstmöglich wieder aufnehmen zu können."
+            solution="Unser 24/7-Notfallteam war innerhalb von 30 Minuten vor Ort. Mit Wassersaugern, Trocknungsgeräten und speziellen Reinigungsmitteln begannen wir sofort mit der Schadensbegrenzung. Wir koordinierten die Arbeiten mit den Versicherungsexperten und sorgten für eine schnelle, aber gründliche Reinigung aller betroffenen Bereiche."
+            results={[
+              "Sofortige Reaktion innerhalb von 30 Minuten nach dem Notruf",
+              "Effektive Wasserschadenbeseitigung und Trocknung",
+              "Vermeidung von Folgeschäden wie Schimmelbildung",
+              "Wiederherstellung der Verkaufsflächen innerhalb von 24 Stunden",
+              "Reibungslose Koordination mit Versicherung und Geschäftsinhabern"
+            ]}
+            testimonial={{
+              quote: "Die schnelle Reaktion des Notfallteams hat größere Schäden verhindert. Die professionelle Arbeitsweise und die reibungslose Koordination waren beeindruckend. Dank Jonas Gebäudereinigung konnten wir den Betrieb viel schneller wieder aufnehmen als erwartet.",
+              author: "Julia Hoffmann",
+              position: "Centermanagerin, City Center Oldenburg"
+            }}
+          />
+        </div>
+
+        <!-- Case Study 4 -->
+        <div class="case-study" data-category="medical">
+          <CaseStudy
+            title="Hygienische Praxisreinigung nach Umbau"
+            client="Zahnarztpraxis Dr. Weber"
+            industry="Medizin"
+            location="Oldenburg"
+            challenge="Nach einem umfassenden Umbau und der Installation neuer medizinischer Geräte musste die 300m² große Zahnarztpraxis Dr. Weber innerhalb eines Wochenendes komplett gereinigt und desinfiziert werden. Alle hygienischen Vorschriften mussten strikt eingehalten werden, und am Montag sollten bereits die ersten Patienten empfangen werden."
+            solution="Wir setzten ein spezialisiertes Team für medizinische Reinigung ein, das mit klinisch zugelassenen Desinfektionsmitteln und speziellen Reinigungsverfahren arbeitete. Alle Oberflächen, Behandlungsräume, Wartebereiche und Sanitäranlagen wurden nach den strengen RKI-Richtlinien gereinigt und desinfiziert. Besonderes Augenmerk lag auf den neuen Dentalgeräten und sterilen Bereichen."
+            results={[
+              "Vollständige Einhaltung aller hygienischen Vorschriften für Zahnarztpraxen",
+              "Termingerechte Fertigstellung vor Praxisöffnung",
+              "Dokumentierte Desinfektion aller kritischen Bereiche",
+              "Streifenfreie Reinigung aller Glasflächen und Spiegel",
+              "Positive Bewertung bei der anschließenden Hygieneinspektion"
+            ]}
+            testimonial={{
+              quote: "Die Reinigung unserer umgebauten Praxis war absolut vorbildlich. Alle hygienischen Standards wurden perfekt eingehalten, und die Praxis strahlte zum Neustart. Unsere Patienten haben die frische, saubere Atmosphäre sofort bemerkt und positiv kommentiert.",
+              author: "Dr. Andrea Weber",
+              position: "Zahnärztin, Zahnarztpraxis Dr. Weber"
+            }}
+            beforeImage="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+            afterImage="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Bereit für Ihr Erfolgsprojekt?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Lassen Sie uns gemeinsam Ihre Reinigungsherausforderungen meistern. Kontaktieren Sie uns für eine kostenlose Beratung und ein maßgeschneidertes Angebot.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Jetzt Kontakt aufnehmen
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filters = document.querySelectorAll('.case-filter');
+    const caseStudies = document.querySelectorAll('.case-study');
+    
+    filters.forEach(filter => {
+      filter.addEventListener('click', function() {
+        // Update active filter
+        filters.forEach(f => {
+          f.classList.remove('active', 'bg-jonas-blue', 'text-white');
+          f.classList.add('text-jonas-blue');
+        });
+        this.classList.add('active', 'bg-jonas-blue', 'text-white');
+        this.classList.remove('text-jonas-blue');
+        
+        // Filter case studies
+        const category = this.dataset.category;
+        caseStudies.forEach(study => {
+          if (category === 'all' || study.dataset.category === category) {
+            study.style.display = 'block';
+            study.style.animation = 'fadeIn 0.5s ease-in-out';
+          } else {
+            study.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

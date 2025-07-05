@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout 
+  title="Downloads - Checklisten, Ratgeber & Ressourcen | Jonas Gebäudereinigung Oldenburg"
+  description="Kostenlose Downloads für Ihre Reinigungsanforderungen ✓ Checklisten ✓ Ratgeber ✓ Reinigungspläne ✓ Hygiene-Leitfäden ✓ Praktische Ressourcen"
+  keywords="Downloads Gebäudereinigung, Checklisten Reinigung, Reinigungsplan Vorlage, Hygiene-Leitfaden, Ratgeber Gebäudereinigung"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue via-jonas-dark-blue to-black text-white py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-20 h-20 bg-jonas-accent rounded-full opacity-20 animate-bounce"></div>
+      <div class="absolute top-40 right-20 w-16 h-16 bg-white rounded-lg opacity-10 animate-spin"></div>
+      <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-jonas-accent rounded-full opacity-15 animate-ping"></div>
+    </div>
+    
+    <div class="relative container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Kostenlose <span class="text-jonas-accent animate-pulse">Downloads</span>
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8 opacity-90">
+          Praktische Checklisten, Ratgeber und Ressourcen für Ihre Reinigungsanforderungen
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#checklisten" class="group bg-jonas-accent text-jonas-dark-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-pulse">📋 Zu den Checklisten</span>
+          </a>
+          <a href="#ratgeber" class="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-jonas-blue transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-bounce">📚 Zu den Ratgebern</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklists Section -->
+  <section id="checklisten" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Checklisten & Vorlagen</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Praktische Hilfsmittel für die professionelle Reinigung und Organisation
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Checklist 1 -->
+        <div class="bg-jonas-light-gray rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Büroreinigung Checkliste</h3>
+          <p class="text-jonas-gray mb-6">
+            Umfassende Checkliste für die professionelle Büroreinigung. Ideal für Facility Manager und Reinigungskräfte.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Tägliche Reinigungsaufgaben</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Wöchentliche Aufgaben</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Monatliche Tiefenreinigung</li>
+            <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Qualitätskontrolle</li>
+          </ul>
+          <Button variant="secondary" size="md" href="/downloads/bueroreinigung-checkliste.pdf">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Kostenlos herunterladen
+          </Button>
+        </div>
+
+        <!-- Checklist 2 -->
+        <div class="bg-jonas-light-gray rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-green-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Frühjahrsputz Checkliste</h3>
+          <p class="text-jonas-gray mb-6">
+            Detaillierte Checkliste für den professionellen Frühjahrsputz in Unternehmen und Büros.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Raum-für-Raum Anleitung</li>
+            <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Materialien und Ausrüstung</li>
+            <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Zeitplanung</li>
+            <li class="flex items-center"><span class="text-green-600 mr-2">✓</span> Professionelle Tipps</li>
+          </ul>
+          <Button variant="secondary" size="md" href="/downloads/fruehjahrsputz-checkliste.pdf">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Kostenlos herunterladen
+          </Button>
+        </div>
+
+        <!-- Checklist 3 -->
+        <div class="bg-jonas-light-gray rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-red-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Hygiene-Checkliste Gastronomie</h3>
+          <p class="text-jonas-gray mb-6">
+            HACCP-konforme Checkliste für Hygiene und Sauberkeit in gastronomischen Betrieben.
+          </p>
+          <ul class="space-y-2 text-jonas-gray mb-6">
+            <li class="flex items-center"><span class="text-red-600 mr-2">✓</span> Küchenhygiene</li>
+            <li class="flex items-center"><span class="text-red-600 mr-2">✓</span> Gästebereich</li>
+            <li class="flex items-center"><span class="text-red-600 mr-2">✓</span> Lagerräume</li>
+            <li class="flex items-center"><span class="text-red-600 mr-2">✓</span> Dokumentation</li>
+          </ul>
+          <Button variant="secondary" size="md" href="/downloads/hygiene-checkliste-gastronomie.pdf">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Kostenlos herunterladen
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guides Section -->
+  <section id="ratgeber" class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Ratgeber & Leitfäden</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Umfassende Informationen und Expertenwissen für optimale Reinigungsergebnisse
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Guide 1 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-start mb-6">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Leitfaden für nachhaltige Büroreinigung</h3>
+              <p class="text-jonas-gray">
+                Umfassender Ratgeber für umweltfreundliche und nachhaltige Reinigungspraktiken im Büro.
+              </p>
+            </div>
+          </div>
+          <div class="bg-jonas-light-gray p-4 rounded-lg mb-6">
+            <h4 class="font-bold text-jonas-dark-blue mb-2">Inhalt:</h4>
+            <ul class="space-y-1 text-jonas-gray text-sm">
+              <li>• Umweltfreundliche Reinigungsmittel</li>
+              <li>• Wassersparende Techniken</li>
+              <li>• Abfallreduzierung</li>
+              <li>• Energieeffiziente Reinigungsgeräte</li>
+              <li>• Zertifizierungen und Standards</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-sm text-jonas-gray">Format: PDF • 28 Seiten</span>
+            </div>
+            <Button variant="secondary" size="sm" href="/downloads/leitfaden-nachhaltige-bueroreinigung.pdf">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Herunterladen
+            </Button>
+          </div>
+        </div>
+
+        <!-- Guide 2 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-start mb-6">
+            <div class="bg-green-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Handbuch für Hygienemanagement</h3>
+              <p class="text-jonas-gray">
+                Umfassendes Handbuch für Hygienemanagement in Unternehmen, Praxen und öffentlichen Einrichtungen.
+              </p>
+            </div>
+          </div>
+          <div class="bg-jonas-light-gray p-4 rounded-lg mb-6">
+            <h4 class="font-bold text-jonas-dark-blue mb-2">Inhalt:</h4>
+            <ul class="space-y-1 text-jonas-gray text-sm">
+              <li>• Gesetzliche Anforderungen</li>
+              <li>• Hygieneplan-Erstellung</li>
+              <li>• Desinfektionsverfahren</li>
+              <li>• Schulung von Mitarbeitern</li>
+              <li>• Dokumentation und Nachweisführung</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-sm text-jonas-gray">Format: PDF • 42 Seiten</span>
+            </div>
+            <Button variant="secondary" size="sm" href="/downloads/handbuch-hygienemanagement.pdf">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Herunterladen
+            </Button>
+          </div>
+        </div>
+
+        <!-- Guide 3 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-start mb-6">
+            <div class="bg-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Leitfaden für Notfallreinigung</h3>
+              <p class="text-jonas-gray">
+                Praktischer Leitfaden für schnelle und effektive Reaktion bei Reinigungsnotfällen.
+              </p>
+            </div>
+          </div>
+          <div class="bg-jonas-light-gray p-4 rounded-lg mb-6">
+            <h4 class="font-bold text-jonas-dark-blue mb-2">Inhalt:</h4>
+            <ul class="space-y-1 text-jonas-gray text-sm">
+              <li>• Sofortmaßnahmen bei Wasserschäden</li>
+              <li>• Brandschadensanierung</li>
+              <li>• Umgang mit Chemikalienunfällen</li>
+              <li>• Notfallkontakte und Checklisten</li>
+              <li>• Versicherungsdokumentation</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-sm text-jonas-gray">Format: PDF • 24 Seiten</span>
+            </div>
+            <Button variant="secondary" size="sm" href="/downloads/leitfaden-notfallreinigung.pdf">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Herunterladen
+            </Button>
+          </div>
+        </div>
+
+        <!-- Guide 4 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-start mb-6">
+            <div class="bg-red-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-jonas-dark-blue mb-2">Industriereinigung Kompendium</h3>
+              <p class="text-jonas-gray">
+                Umfassendes Nachschlagewerk für alle Aspekte der professionellen Industriereinigung.
+              </p>
+            </div>
+          </div>
+          <div class="bg-jonas-light-gray p-4 rounded-lg mb-6">
+            <h4 class="font-bold text-jonas-dark-blue mb-2">Inhalt:</h4>
+            <ul class="space-y-1 text-jonas-gray text-sm">
+              <li>• Reinigungsverfahren für verschiedene Industrien</li>
+              <li>• Umgang mit Ölen, Fetten und Chemikalien</li>
+              <li>• Sicherheitsvorschriften und Schutzausrüstung</li>
+              <li>• Maschinenreinigung</li>
+              <li>• Spezialreinigungsverfahren</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-sm text-jonas-gray">Format: PDF • 56 Seiten</span>
+            </div>
+            <Button variant="secondary" size="sm" href="/downloads/industriereinigung-kompendium.pdf">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Herunterladen
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Templates Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Vorlagen & Planungshilfen</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Praktische Vorlagen für die Planung und Organisation Ihrer Reinigungsaufgaben
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Template 1 -->
+        <div class="bg-jonas-light-gray rounded-xl p-6 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">Reinigungsplan Vorlage</h3>
+          <p class="text-jonas-gray mb-4 text-sm">
+            Anpassbare Vorlage für wöchentliche, monatliche und quartalsweise Reinigungspläne.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-jonas-gray">Excel & PDF</span>
+            <Button variant="outline" size="sm" href="/downloads/reinigungsplan-vorlage.zip">
+              Herunterladen
+            </Button>
+          </div>
+        </div>
+
+        <!-- Template 2 -->
+        <div class="bg-jonas-light-gray rounded-xl p-6 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-green-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">Qualitätskontrolle Formular</h3>
+          <p class="text-jonas-gray mb-4 text-sm">
+            Professionelles Formular zur Qualitätskontrolle und Dokumentation von Reinigungsarbeiten.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-jonas-gray">Word & PDF</span>
+            <Button variant="outline" size="sm" href="/downloads/qualitaetskontrolle-formular.zip">
+              Herunterladen
+            </Button>
+          </div>
+        </div>
+
+        <!-- Template 3 -->
+        <div class="bg-jonas-light-gray rounded-xl p-6 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+          <div class="bg-purple-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-jonas-dark-blue mb-2">Kostenkalkulationsvorlage</h3>
+          <p class="text-jonas-gray mb-4 text-sm">
+            Excel-Vorlage zur Berechnung und Planung von Reinigungskosten für verschiedene Projekte.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-jonas-gray">Excel</span>
+            <Button variant="outline" size="sm" href="/downloads/kostenkalkulation-reinigung.xlsx">
+              Herunterladen
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Bleiben Sie informiert</h2>
+        <p class="text-xl mb-8">
+          Abonnieren Sie unseren Newsletter und erhalten Sie regelmäßig neue Downloads, Tipps und Expertenwissen
+        </p>
+        <form class="max-w-md mx-auto">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input 
+              type="email" 
+              placeholder="Ihre E-Mail-Adresse" 
+              class="flex-1 px-4 py-3 rounded-lg text-jonas-dark-blue focus:outline-none focus:ring-2 focus:ring-jonas-accent"
+              required
+            >
+            <Button variant="primary" size="md" type="submit">
+              Anmelden
+            </Button>
+          </div>
+          <p class="text-sm mt-4 opacity-80">
+            Wir respektieren Ihre Privatsphäre. Abmeldung jederzeit möglich.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    
+    form?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Vielen Dank für Ihre Anmeldung! Sie erhalten in Kürze eine Bestätigungs-E-Mail.');
+      form.reset();
+    });
+  });
+</script>

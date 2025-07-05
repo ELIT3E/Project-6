@@ -1,0 +1,335 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FAQ from '../components/FAQ.astro';
+import Button from '../components/Button.astro';
+
+const faqData = [
+  {
+    question: "Was ist der Unterschied zwischen Unterhaltsreinigung und Grundreinigung?",
+    answer: "Unterhaltsreinigung erfolgt regelmäßig (täglich, wöchentlich) zur Aufrechterhaltung der Sauberkeit. Grundreinigung ist eine intensive, einmalige Tiefenreinigung nach Bauarbeiten oder bei starker Verschmutzung."
+  },
+  {
+    question: "Für welche Branchen bieten Sie Gebäudereinigung an?",
+    answer: "Wir reinigen für alle Branchen: Bürogebäude, Praxen, Hotels, Restaurants, Einzelhandel, Industrieanlagen, Schulen und Wohnkomplexe. Jede Branche hat spezielle Anforderungen, die wir erfüllen."
+  },
+  {
+    question: "Wie flexibel sind Ihre Reinigungszeiten?",
+    answer: "Sehr flexibel! Wir passen uns Ihren Betriebszeiten an und reinigen gerne außerhalb der Geschäftszeiten, am Wochenende oder nachts, um Ihren Betriebsablauf nicht zu stören."
+  }
+];
+---
+
+<Layout 
+  title="Professionelle Gebäudereinigung Oldenburg - Ihr Partner für makellose Sauberkeit | Jonas Gebäudereinigung"
+  description="Professionelle Gebäudereinigung in Oldenburg ✓ Büros ✓ Gewerbe ✓ Wohnkomplexe ✓ Werterhalt ✓ Zuverlässig ✓ Umweltfreundlich ✓ Kostenlose Beratung"
+  keywords="Gebäudereinigung Oldenburg, Reinigungsfirma Oldenburg, Gebäudereiniger Oldenburg, professionelle Reinigung, Facility Management"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Professionelle <span class="text-jonas-accent">Gebäudereinigung</span> in Oldenburg: Ihr Partner für makellose Sauberkeit und Werterhalt
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Vertrauen Sie auf über 15 Jahre Erfahrung in der professionellen Gebäudereinigung. Wir sorgen für repräsentative Sauberkeit und langfristigen Werterhalt Ihrer Immobilie.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="primary" size="lg" href="/kontakt">
+            Kostenloses Angebot anfordern
+          </Button>
+          <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            0441 - XXX XXX
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Warum professionelle Gebäudereinigung?</h2>
+          <p class="text-xl text-jonas-gray leading-relaxed">
+            Der erste Eindruck entscheidet über Ihren Geschäftserfolg. Saubere, gepflegte Gebäude vermitteln Professionalität, 
+            schaffen Vertrauen bei Kunden und Geschäftspartnern und sorgen für ein gesundes Arbeitsumfeld. Gleichzeitig schützt 
+            regelmäßige professionelle Reinigung Ihre Immobilie vor vorzeitigem Verschleiß und erhält langfristig den Wert Ihrer Investition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Service Description -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Unser umfassender Gebäudereinigungsservice</h2>
+          <p class="text-xl text-jonas-gray">
+            Von Bürogebäuden bis zu Industrieanlagen - wir reinigen alle Arten von Immobilien nach höchsten Standards
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Bürogebäude</h3>
+            <ul class="space-y-2 text-jonas-gray text-sm">
+              <li>• Arbeitsplätze und Konferenzräume</li>
+              <li>• Sanitäranlagen und Küchen</li>
+              <li>• Empfangsbereiche und Flure</li>
+              <li>• Fenster und Glasflächen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Gewerbeobjekte</h3>
+            <ul class="space-y-2 text-jonas-gray text-sm">
+              <li>• Einzelhandelsgeschäfte</li>
+              <li>• Restaurants und Cafés</li>
+              <li>• Hotels und Pensionen</li>
+              <li>• Praxen und Kliniken</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Wohnkomplexe</h3>
+            <ul class="space-y-2 text-jonas-gray text-sm">
+              <li>• Treppenhäuser und Eingänge</li>
+              <li>• Gemeinschaftsräume</li>
+              <li>• Keller und Dachböden</li>
+              <li>• Außenanlagen</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-strong transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-jonas-blue text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Öffentliche Einrichtungen</h3>
+            <ul class="space-y-2 text-jonas-gray text-sm">
+              <li>• Schulen und Kindergärten</li>
+              <li>• Verwaltungsgebäude</li>
+              <li>• Kultureinrichtungen</li>
+              <li>• Sportstätten</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-jonas-dark-blue mb-6 text-center">Unsere Kernleistungen im Detail</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Bodenpflege & Oberflächenreinigung</h4>
+              <ul class="space-y-2 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Staubsaugen und Wischen aller Bodenbeläge</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Teppichreinigung und -pflege</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Desinfektion von Arbeitsflächen</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Entstaubung von Möbeln und Geräten</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-jonas-dark-blue mb-4">Sanitär & Hygienebereiche</h4>
+              <ul class="space-y-2 text-jonas-gray">
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Gründliche WC- und Waschraum-Reinigung</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Desinfektion aller Kontaktflächen</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Auffüllung von Verbrauchsmaterialien</li>
+                <li class="flex items-center"><span class="text-jonas-accent mr-2">✓</span> Müllentsorgung und Abfallmanagement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Ihre Vorteile mit Jonas Gebäudereinigung</h2>
+          <p class="text-xl text-jonas-gray">
+            Professionelle Gebäudereinigung ist eine Investition in Ihr Unternehmen und Ihre Immobilie
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Repräsentatives Erscheinungsbild</h3>
+            <p class="text-jonas-gray">
+              Saubere Gebäude vermitteln Professionalität und schaffen Vertrauen bei Kunden und Geschäftspartnern.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-green-500 to-green-700 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Gesundheit & Hygiene am Arbeitsplatz</h3>
+            <p class="text-jonas-gray">
+              Reduzierte Krankheitstage durch hygienische Arbeitsplätze und gesunde Raumluft für Ihre Mitarbeiter.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-yellow-500 to-yellow-700 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Werterhalt Ihrer Immobilie</h3>
+            <p class="text-jonas-gray">
+              Regelmäßige professionelle Reinigung schützt vor vorzeitigem Verschleiß und erhält den Immobilienwert.
+            </p>
+          </div>
+
+          <div class="text-center group">
+            <div class="bg-gradient-to-br from-purple-500 to-purple-700 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Individuelle Reinigungspläne</h3>
+            <p class="text-jonas-gray">
+              Maßgeschneiderte Lösungen nach Ihren Bedürfnissen - von täglich bis quartalsweise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust-Building Section -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-jonas-dark-blue mb-6">Qualität und Vertrauen seit über 15 Jahren</h2>
+          <p class="text-xl text-jonas-gray">
+            Unser Engagement für höchste Standards macht uns zum bevorzugten Partner für Gebäudereinigung in Oldenburg
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+            <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Umweltfreundliche Reinigungsmittel</h3>
+            <p class="text-jonas-gray">
+              Wir verwenden ausschließlich umweltschonende, biologisch abbaubare Reinigungsmittel zum Schutz von Mensch und Natur.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+            <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Moderne Reinigungstechnologie</h3>
+            <p class="text-jonas-gray">
+              Effiziente Reinigungssysteme und modernste Geräte für optimale Ergebnisse bei minimaler Umweltbelastung.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+            <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-jonas-dark-blue mb-4">Geschultes & Zuverlässiges Personal</h3>
+            <p class="text-jonas-gray">
+              Alle Mitarbeiter sind fachlich geschult, zertifiziert und arbeiten diskret und zuverlässig in Ihren Räumlichkeiten.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ questions={faqData} title="Häufig gestellte Fragen zur Gebäudereinigung" subtitle="Antworten auf die wichtigsten Fragen rund um professionelle Gebäudereinigung" />
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Sichern Sie sich ein glänzendes Ergebnis!</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Fordern Sie jetzt Ihr unverbindliches Angebot für Gebäudereinigung in Oldenburg an und überzeugen Sie sich von unserer Qualität.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" size="lg" href="/kontakt">
+          Kostenloses Angebot anfordern
+        </Button>
+        <Button variant="outline" size="lg" href="tel:+49441XXXXXXX">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          0441 - XXX XXX
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Gebäudereinigung Oldenburg",
+  "description": "Professionelle Gebäudereinigung für Büros, Gewerbe und Wohnkomplexe in Oldenburg",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jonas Gebäudereinigung",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oldenburg",
+      "addressRegion": "Niedersachsen",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49-441-XXXXXXX"
+  },
+  "areaServed": "Oldenburg",
+  "serviceType": "Gebäudereinigung"
+}
+</script>

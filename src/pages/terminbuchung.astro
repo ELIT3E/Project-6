@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BookingSystem from '../components/BookingSystem.astro';
+---
+
+<Layout 
+  title="Online Terminbuchung - Jonas Gebäudereinigung Oldenburg | Jetzt buchen"
+  description="Buchen Sie Ihren Reinigungstermin online ✓ Einfach & schnell ✓ Verfügbare Termine in Echtzeit ✓ Sofortige Bestätigung ✓ Flexible Zeiten"
+  keywords="Terminbuchung Gebäudereinigung, Online buchen Oldenburg, Reinigungstermin vereinbaren, Buchungssystem"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue via-jonas-dark-blue to-black text-white py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-20 h-20 bg-jonas-accent rounded-full opacity-20 animate-bounce"></div>
+      <div class="absolute top-40 right-20 w-16 h-16 bg-white rounded-lg opacity-10 animate-spin"></div>
+      <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-jonas-accent rounded-full opacity-15 animate-ping"></div>
+    </div>
+    
+    <div class="relative container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          <span class="text-jonas-accent animate-pulse">Online</span> Terminbuchung
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8 opacity-90">
+          Buchen Sie Ihren Reinigungstermin schnell und einfach online - Verfügbare Termine in Echtzeit
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#booking-form" class="group bg-jonas-accent text-jonas-dark-blue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-pulse">📅 Jetzt Termin buchen</span>
+          </a>
+          <a href="tel:+49441XXXXXXX" class="group border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-jonas-blue transition-all duration-300 transform hover:scale-105">
+            <span class="group-hover:animate-bounce">📞 Telefonisch buchen</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Advantages -->
+  <section class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">Vorteile der Online-Buchung</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          Buchen Sie bequem von zu Hause oder unterwegs - rund um die Uhr verfügbar
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="group text-center bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors">24/7 Verfügbar</h3>
+          <p class="text-jonas-gray">
+            Buchen Sie jederzeit, auch außerhalb unserer Geschäftszeiten
+          </p>
+        </div>
+
+        <div class="group text-center bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors">Sofortige Bestätigung</h3>
+          <p class="text-jonas-gray">
+            Erhalten Sie innerhalb von 2 Stunden eine Terminbestätigung
+          </p>
+        </div>
+
+        <div class="group text-center bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors">Echtzeit-Termine</h3>
+          <p class="text-jonas-gray">
+            Sehen Sie verfügbare Termine in Echtzeit und wählen Sie passende Zeiten
+          </p>
+        </div>
+
+        <div class="group text-center bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+          <div class="bg-jonas-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+            <svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-jonas-dark-blue mb-4 group-hover:text-jonas-blue transition-colors">Einfach & Sicher</h3>
+          <p class="text-jonas-gray">
+            Benutzerfreundliches System mit sicherer Datenübertragung
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking System -->
+  <BookingSystem />
+
+  <!-- How it Works -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-jonas-dark-blue mb-4">So funktioniert's</h2>
+        <p class="text-xl text-jonas-gray max-w-3xl mx-auto">
+          In nur 4 einfachen Schritten zu Ihrem Reinigungstermin
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              1
+            </div>
+            <h3 class="text-lg font-bold text-jonas-dark-blue mb-3">Service wählen</h3>
+            <p class="text-jonas-gray">Wählen Sie die gewünschte Reinigungsart aus unserem Angebot</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              2
+            </div>
+            <h3 class="text-lg font-bold text-jonas-dark-blue mb-3">Termin auswählen</h3>
+            <p class="text-jonas-gray">Wählen Sie aus den verfügbaren Terminen Ihren Wunschtermin</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              3
+            </div>
+            <h3 class="text-lg font-bold text-jonas-dark-blue mb-3">Daten eingeben</h3>
+            <p class="text-jonas-gray">Geben Sie Ihre Kontaktdaten und besonderen Wünsche ein</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+              4
+            </div>
+            <h3 class="text-lg font-bold text-jonas-dark-blue mb-3">Bestätigung erhalten</h3>
+            <p class="text-jonas-gray">Erhalten Sie eine Bestätigung per E-Mail und Telefon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Booking -->
+  <section class="py-16 bg-red-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-4">
+          🚨 NOTFALL-BUCHUNG 🚨
+        </h2>
+        <p class="text-xl mb-8">
+          Für dringende Reinigungsfälle sind wir 24/7 telefonisch erreichbar
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+49441XXXXXXX" class="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+            📞 NOTFALL-HOTLINE: 0441 - XXX XXX
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

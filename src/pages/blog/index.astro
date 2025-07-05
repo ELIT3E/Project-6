@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Button from '../../components/Button.astro';
+
+const blogPosts = [
+  {
+    title: "10 Tipps für ein sauberes Büro - Produktivität durch Ordnung",
+    excerpt: "Erfahren Sie, wie ein sauberes und organisiertes Büro die Produktivität Ihrer Mitarbeiter steigern kann und welche einfachen Maßnahmen Sie sofort umsetzen können.",
+    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    date: "2024-01-15",
+    category: "Büroreinigung",
+    slug: "10-tipps-sauberes-buero",
+    readTime: "5 min"
+  },
+  {
+    title: "Frühjahrsputz im Unternehmen - Checkliste für Gewerbetreibende",
+    excerpt: "Der ultimative Guide für den professionellen Frühjahrsputz in Ihrem Unternehmen. Mit kostenloser Checkliste zum Download.",
+    image: "https://images.pexels.com/photos/4099354/pexels-photo-4099354.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    date: "2024-01-10",
+    category: "Grundreinigung",
+    slug: "fruehjahrsputz-unternehmen",
+    readTime: "8 min"
+  },
+  {
+    title: "Hygiene-Standards in der Gastronomie - Was Sie wissen müssen",
+    excerpt: "Alles über die aktuellen Hygiene-Vorschriften in der Gastronomie und wie professionelle Reinigung dabei hilft, diese einzuhalten.",
+    image: "https://images.pexels.com/photos/5824901/pexels-photo-5824901.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    date: "2024-01-05",
+    category: "Hygiene",
+    slug: "hygiene-standards-gastronomie",
+    readTime: "6 min"
+  },
+  {
+    title: "Umweltfreundliche Reinigung - Nachhaltigkeit im Facility Management",
+    excerpt: "Wie Sie mit umweltfreundlichen Reinigungsmethoden nicht nur die Umwelt schonen, sondern auch Kosten sparen können.",
+    image: "https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    date: "2024-01-01",
+    category: "Nachhaltigkeit",
+    slug: "umweltfreundliche-reinigung",
+    readTime: "7 min"
+  },
+  {
+    title: "Winterdienst für Unternehmen - Sicherheit und Haftung",
+    excerpt: "Alles was Sie über Winterdienst, Räumpflicht und Haftung wissen müssen. Tipps für einen sicheren Winter.",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    date: "2023-12-20",
+    category: "Winterdienst",
+    slug: "winterdienst-unternehmen",
+    readTime: "4 min"
+  },
+  {
+    title: "Kostenoptimierung bei Reinigungsdienstleistungen",
+    excerpt: "Wie Sie die Kosten für Reinigungsdienstleistungen optimieren können, ohne Abstriche bei der Qualität zu machen.",
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    date: "2023-12-15",
+    category: "Kostenoptimierung",
+    slug: "kostenoptimierung-reinigung",
+    readTime: "6 min"
+  }
+];
+
+const categories = [...new Set(blogPosts.map(post => post.category))];
+---
+
+<Layout 
+  title="Blog - Reinigungstipps & Ratgeber | Jonas Gebäudereinigung Oldenburg"
+  description="Professionelle Tipps und Ratgeber rund um Gebäudereinigung, Hygiene und Facility Management. Expertenwissen von Jonas Gebäudereinigung Oldenburg."
+  keywords="Reinigungstipps, Gebäudereinigung Ratgeber, Hygiene Tipps, Facility Management, Oldenburg"
+>
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-jonas-blue to-jonas-dark-blue text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6">
+          Reinigungsratgeber & <span class="text-jonas-accent">Expertentipps</span>
+        </h1>
+        <p class="text-xl lg:text-2xl mb-8">
+          Professionelle Tipps und Ratgeber rund um Gebäudereinigung, Hygiene und Facility Management
+        </p>
+        <Button variant="primary" size="lg" href="#blog-posts">
+          Artikel entdecken
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Filter -->
+  <section class="py-12 bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button class="category-filter active px-6 py-3 rounded-full border-2 border-jonas-blue bg-jonas-blue text-white font-semibold transition-all duration-300" data-category="all">
+          Alle Artikel
+        </button>
+        {categories.map(category => (
+          <button class="category-filter px-6 py-3 rounded-full border-2 border-jonas-blue text-jonas-blue hover:bg-jonas-blue hover:text-white font-semibold transition-all duration-300" data-category={category}>
+            {category}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section id="blog-posts" class="py-20 bg-jonas-light-gray">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+        {blogPosts.map(post => (
+          <article class="blog-post bg-white rounded-xl shadow-lg hover:shadow-strong transition-all duration-500 transform hover:-translate-y-2 overflow-hidden" data-category={post.category}>
+            <div class="relative">
+              <img src={post.image} alt={post.title} class="w-full h-48 object-cover">
+              <div class="absolute top-4 left-4 bg-jonas-blue text-white px-3 py-1 rounded-full text-sm font-semibold">
+                {post.category}
+              </div>
+              <div class="absolute top-4 right-4 bg-white/90 text-jonas-dark-blue px-3 py-1 rounded-full text-sm font-semibold">
+                {post.readTime}
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-jonas-gray mb-3">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                {new Date(post.date).toLocaleDateString('de-DE', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </div>
+              <h3 class="text-xl font-bold text-jonas-dark-blue mb-3 hover:text-jonas-blue transition-colors duration-300">
+                <a href={`/blog/${post.slug}`}>{post.title}</a>
+              </h3>
+              <p class="text-jonas-gray mb-4 leading-relaxed">{post.excerpt}</p>
+              <Button variant="outline" size="sm" href={`/blog/${post.slug}`}>
+                Weiterlesen
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </Button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="py-20 bg-jonas-blue text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Bleiben Sie informiert</h2>
+        <p class="text-xl mb-8">
+          Erhalten Sie regelmäßig neue Reinigungstipps und Expertenwissen direkt in Ihr Postfach
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Ihre E-Mail-Adresse" 
+            class="flex-1 px-6 py-3 rounded-lg text-jonas-dark-blue focus:outline-none focus:ring-2 focus:ring-jonas-accent"
+            required
+          >
+          <Button variant="primary" size="md" type="submit">
+            Anmelden
+          </Button>
+        </form>
+        <p class="text-sm mt-4 opacity-90">
+          Kostenlos und jederzeit abbestellbar. Ihre Daten sind bei uns sicher.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const categoryFilters = document.querySelectorAll('.category-filter');
+    const blogPosts = document.querySelectorAll('.blog-post');
+
+    categoryFilters.forEach(filter => {
+      filter.addEventListener('click', function() {
+        const category = this.dataset.category;
+        
+        // Update active filter
+        categoryFilters.forEach(f => {
+          f.classList.remove('active', 'bg-jonas-blue', 'text-white');
+          f.classList.add('text-jonas-blue');
+        });
+        this.classList.add('active', 'bg-jonas-blue', 'text-white');
+        this.classList.remove('text-jonas-blue');
+
+        // Filter posts
+        blogPosts.forEach(post => {
+          if (category === 'all' || post.dataset.category === category) {
+            post.style.display = 'block';
+            post.style.animation = 'fadeIn 0.5s ease-in-out';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Newsletter form
+    const newsletterForm = document.querySelector('form');
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      alert(`Vielen Dank! Sie haben sich erfolgreich für unseren Newsletter angemeldet: ${email}`);
+      this.reset();
+    });
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
