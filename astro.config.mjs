@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
+import { storyblok } from '@storyblok/astro';
 
 export default defineConfig({
-  site: 'https://jonas-gebaeudereinigung.de',
   integrations: [
-    tailwind(),
-    sitemap()
+    storyblok({
+      accessToken: 'AUEOvz3RIoHPNPON3EEiCQtt', // Ihr Token
+      components: {
+        'Page': 'src/layouts/Page.astro',
+        'Welcome': 'src/components/Welcome.astro',
+      },
+    }),
   ],
-  output: 'static'
 });
